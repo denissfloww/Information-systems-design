@@ -72,7 +72,7 @@
 															},
 															"visible": false,
 															"font": "Arial;13;0",
-															"left": -192,
+															"left": -48,
 															"height": 13
 														},
 														{
@@ -82,7 +82,7 @@
 																"$ref": "AAAAAAF1UDx3Ak9+K94="
 															},
 															"font": "Arial;13;1",
-															"left": 613,
+															"left": 685,
 															"top": 47,
 															"width": 69.03955078125,
 															"height": 13,
@@ -96,7 +96,7 @@
 															},
 															"visible": false,
 															"font": "Arial;13;0",
-															"left": -192,
+															"left": -48,
 															"width": 106.20263671875,
 															"height": 13,
 															"text": "(from Interaction1)"
@@ -109,13 +109,13 @@
 															},
 															"visible": false,
 															"font": "Arial;13;0",
-															"left": -192,
+															"left": -48,
 															"height": 13,
 															"horizontalAlignment": 1
 														}
 													],
 													"font": "Arial;13;0",
-													"left": 608,
+													"left": 680,
 													"top": 40,
 													"width": 79.03955078125,
 													"height": 40,
@@ -142,14 +142,14 @@
 														"$ref": "AAAAAAF1UDx3AU98UWI="
 													},
 													"font": "Arial;13;0",
-													"left": 648,
+													"left": 720,
 													"top": 80,
 													"width": 1,
 													"height": 337
 												}
 											],
 											"font": "Arial;13;0",
-											"left": 608,
+											"left": 680,
 											"top": 40,
 											"width": 79.03955078125,
 											"height": 377,
@@ -300,9 +300,9 @@
 														"$ref": "AAAAAAF1UEdAsE/RkVQ="
 													},
 													"font": "Arial;13;0",
-													"left": 421,
+													"left": 411,
 													"top": 120,
-													"width": 114.10546875,
+													"width": 206.58447265625,
 													"height": 13,
 													"alpha": 1.5707963267948966,
 													"distance": 10,
@@ -310,7 +310,7 @@
 														"$ref": "AAAAAAF1UEdAsU/SSqI="
 													},
 													"edgePosition": 1,
-													"text": "1 : Открыть реестр"
+													"text": "1 : ОткрытьРеестрЗаказНарядов()"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -323,7 +323,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
+													"left": 514,
 													"top": 105,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -344,7 +344,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
+													"left": 514,
 													"top": 140,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -364,7 +364,7 @@
 														"$ref": "AAAAAAF1UEdAsE/RkVQ="
 													},
 													"font": "Arial;13;0",
-													"left": 641,
+													"left": 713,
 													"top": 136,
 													"width": 14,
 													"height": 29
@@ -377,7 +377,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1UEF6yk+r6TQ="
 											},
-											"points": "316:136;641:136",
+											"points": "316:136;713:136",
 											"nameLabel": {
 												"$ref": "AAAAAAF1UEdAsU/TtQA="
 											},
@@ -411,7 +411,7 @@
 														"$ref": "AAAAAAF1UEovY0/9z1M="
 													},
 													"font": "Arial;13;0",
-													"left": 367,
+													"left": 403,
 													"top": 164,
 													"width": 221.533203125,
 													"height": 13,
@@ -434,7 +434,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 477,
+													"left": 513,
 													"top": 179,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -455,7 +455,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
+													"left": 514,
 													"top": 144,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -489,7 +489,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1UDx3Ak+Dtt4="
 											},
-											"points": "641:160;316:160",
+											"points": "713:160;316:160",
 											"nameLabel": {
 												"$ref": "AAAAAAF1UEovY0//Rqo="
 											},
@@ -523,9 +523,9 @@
 														"$ref": "AAAAAAF1UEmcfk/nbEk="
 													},
 													"font": "Arial;13;0",
-													"left": 405,
+													"left": 392,
 													"top": 200,
-													"width": 146.6943359375,
+													"width": 244.70849609375,
 													"height": 13,
 													"alpha": 1.5707963267948966,
 													"distance": 10,
@@ -533,7 +533,7 @@
 														"$ref": "AAAAAAF1UEmcfk/o1es="
 													},
 													"edgePosition": 1,
-													"text": "3 : Выбрать заказ-наряд"
+													"text": "3 : ОткрытьЗаказНаряд(идЗаказНаряда)"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -546,7 +546,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
+													"left": 514,
 													"top": 185,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -567,7 +567,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
+													"left": 514,
 													"top": 220,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -587,7 +587,7 @@
 														"$ref": "AAAAAAF1UEmcfk/nbEk="
 													},
 													"font": "Arial;13;0",
-													"left": 641,
+													"left": 713,
 													"top": 216,
 													"width": 14,
 													"height": 29
@@ -600,7 +600,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1UEF6yk+r6TQ="
 											},
-											"points": "316:216;641:216",
+											"points": "316:216;713:216",
 											"nameLabel": {
 												"$ref": "AAAAAAF1UEmcfk/pTyM="
 											},
@@ -634,7 +634,7 @@
 														"$ref": "AAAAAAF1UExA91A4p5A="
 													},
 													"font": "Arial;13;0",
-													"left": 355,
+													"left": 391,
 													"top": 244,
 													"width": 245.77490234375,
 													"height": 13,
@@ -644,7 +644,7 @@
 														"$ref": "AAAAAAF1UExA91A5Ttc="
 													},
 													"edgePosition": 1,
-													"text": "4 : Информацию о заказ-наряде"
+													"text": "4 : Информация о заказ-наряде"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -657,7 +657,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 477,
+													"left": 513,
 													"top": 259,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -678,7 +678,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
+													"left": 514,
 													"top": 224,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -712,7 +712,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1UDx3Ak+Dtt4="
 											},
-											"points": "641:240;316:240",
+											"points": "713:240;316:240",
 											"nameLabel": {
 												"$ref": "AAAAAAF1UExA91A6v9M="
 											},
@@ -746,9 +746,9 @@
 														"$ref": "AAAAAAF1UE2LlFBU3Rk="
 													},
 													"font": "Arial;13;0",
-													"left": 367,
+													"left": 401,
 													"top": 277,
-													"width": 223.10107421875,
+													"width": 227.017578125,
 													"height": 13,
 													"alpha": 1.5707963267948966,
 													"distance": 10,
@@ -756,7 +756,7 @@
 														"$ref": "AAAAAAF1UE2LlFBVR6U="
 													},
 													"edgePosition": 1,
-													"text": "5 : Инициирует экспорт заказ-наярда"
+													"text": "5 : ИнициируетЭкспортЗаказНаярда()"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -769,7 +769,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
+													"left": 514,
 													"top": 262,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -790,7 +790,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
+													"left": 514,
 													"top": 297,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -810,7 +810,7 @@
 														"$ref": "AAAAAAF1UE2LlFBU3Rk="
 													},
 													"font": "Arial;13;0",
-													"left": 641,
+													"left": 713,
 													"top": 293,
 													"width": 14,
 													"height": 29
@@ -823,7 +823,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1UEF6yk+r6TQ="
 											},
-											"points": "316:293;641:293",
+											"points": "316:293;713:293",
 											"nameLabel": {
 												"$ref": "AAAAAAF1UE2LlFBWrPE="
 											},
@@ -857,7 +857,7 @@
 														"$ref": "AAAAAAF1UE3kdlBq6Yw="
 													},
 													"font": "Arial;13;0",
-													"left": 382,
+													"left": 418,
 													"top": 320,
 													"width": 191.8896484375,
 													"height": 13,
@@ -867,7 +867,7 @@
 														"$ref": "AAAAAAF1UE3kdlBrHnI="
 													},
 													"edgePosition": 1,
-													"text": "6 : Заказ-наряд в формате docx"
+													"text": "6 : Файл docx заказ-наряда"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -880,7 +880,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 477,
+													"left": 513,
 													"top": 335,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -901,7 +901,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
+													"left": 514,
 													"top": 300,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -935,7 +935,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1UDx3Ak+Dtt4="
 											},
-											"points": "641:316;316:316",
+											"points": "713:316;316:316",
 											"nameLabel": {
 												"$ref": "AAAAAAF1UE3kdlBs8nc="
 											},
@@ -959,7 +959,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF1UDwNhE9s+UA="
 									},
-									"name": "Открыть реестр",
+									"name": "ОткрытьРеестрЗаказНарядов()",
 									"source": {
 										"$ref": "AAAAAAF1UEF6yU+k3F0="
 									},
@@ -988,7 +988,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF1UDwNhE9s+UA="
 									},
-									"name": "Выбрать заказ-наряд",
+									"name": "ОткрытьЗаказНаряд(идЗаказНаряда)",
 									"source": {
 										"$ref": "AAAAAAF1UEF6yU+k3F0="
 									},
@@ -1002,7 +1002,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF1UDwNhE9s+UA="
 									},
-									"name": "Информацию о заказ-наряде",
+									"name": "Информация о заказ-наряде",
 									"source": {
 										"$ref": "AAAAAAF1UDx3AU98UWI="
 									},
@@ -1017,7 +1017,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF1UDwNhE9s+UA="
 									},
-									"name": "Инициирует экспорт заказ-наярда",
+									"name": "ИнициируетЭкспортЗаказНаярда()",
 									"source": {
 										"$ref": "AAAAAAF1UEF6yU+k3F0="
 									},
@@ -1031,7 +1031,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF1UDwNhE9s+UA="
 									},
-									"name": "Заказ-наряд в формате docx",
+									"name": "Файл docx заказ-наряда",
 									"source": {
 										"$ref": "AAAAAAF1UDx3AU98UWI="
 									},
@@ -1142,7 +1142,7 @@
 															},
 															"visible": false,
 															"font": "Arial;13;0",
-															"left": 16,
+															"left": -32,
 															"top": 32,
 															"height": 13
 														},
@@ -1153,7 +1153,7 @@
 																"$ref": "AAAAAAF1UH+z0VCbyVc="
 															},
 															"font": "Arial;13;1",
-															"left": 725,
+															"left": 701,
 															"top": 47,
 															"width": 69.03955078125,
 															"height": 13,
@@ -1167,7 +1167,7 @@
 															},
 															"visible": false,
 															"font": "Arial;13;0",
-															"left": 16,
+															"left": -32,
 															"top": 32,
 															"width": 106.20263671875,
 															"height": 13,
@@ -1181,14 +1181,14 @@
 															},
 															"visible": false,
 															"font": "Arial;13;0",
-															"left": 16,
+															"left": -32,
 															"top": 32,
 															"height": 13,
 															"horizontalAlignment": 1
 														}
 													],
 													"font": "Arial;13;0",
-													"left": 720,
+													"left": 696,
 													"top": 40,
 													"width": 79.03955078125,
 													"height": 40,
@@ -1215,14 +1215,14 @@
 														"$ref": "AAAAAAF1UH+z0FCZpTw="
 													},
 													"font": "Arial;13;0",
-													"left": 760,
+													"left": 736,
 													"top": 80,
 													"width": 1,
 													"height": 329
 												}
 											],
 											"font": "Arial;13;0",
-											"left": 720,
+											"left": 696,
 											"top": 40,
 											"width": 79.03955078125,
 											"height": 369,
@@ -1373,9 +1373,9 @@
 														"$ref": "AAAAAAF1UIrZSFEgdes="
 													},
 													"font": "Arial;13;0",
-													"left": 470,
+													"left": 410,
 													"top": 144,
-													"width": 114.10546875,
+													"width": 210.91357421875,
 													"height": 13,
 													"alpha": 1.5707963267948966,
 													"distance": 10,
@@ -1383,7 +1383,7 @@
 														"$ref": "AAAAAAF1UIrZSFEhbqQ="
 													},
 													"edgePosition": 1,
-													"text": "1 : Открыть реестр"
+													"text": "1 : ОткрытьРеестрЗаказНарядов()"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -1396,7 +1396,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 527,
+													"left": 515,
 													"top": 129,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -1417,7 +1417,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 527,
+													"left": 515,
 													"top": 164,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -1437,7 +1437,7 @@
 														"$ref": "AAAAAAF1UIrZSFEgdes="
 													},
 													"font": "Arial;13;0",
-													"left": 753,
+													"left": 729,
 													"top": 160,
 													"width": 14,
 													"height": 29
@@ -1450,7 +1450,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1UH+/xFC/pYc="
 											},
-											"points": "301:160;753:160",
+											"points": "301:160;729:160",
 											"nameLabel": {
 												"$ref": "AAAAAAF1UIrZSFEiHwA="
 											},
@@ -1484,7 +1484,7 @@
 														"$ref": "AAAAAAF1UIsBS1E2GdM="
 													},
 													"font": "Arial;13;0",
-													"left": 419,
+													"left": 407,
 													"top": 193,
 													"width": 221.533203125,
 													"height": 13,
@@ -1507,7 +1507,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 529,
+													"left": 517,
 													"top": 208,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -1528,7 +1528,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 530,
+													"left": 518,
 													"top": 173,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -1562,7 +1562,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1UH+z0VCgbwg="
 											},
-											"points": "760:189;301:189",
+											"points": "736:189;301:189",
 											"nameLabel": {
 												"$ref": "AAAAAAF1UIsBS1E4YQw="
 											},
@@ -1596,9 +1596,9 @@
 														"$ref": "AAAAAAF1UIs/uVFMYbA="
 													},
 													"font": "Arial;13;0",
-													"left": 455,
+													"left": 393,
 													"top": 240,
-													"width": 145.38671875,
+													"width": 244.70849609375,
 													"height": 13,
 													"alpha": 1.5707963267948966,
 													"distance": 10,
@@ -1606,7 +1606,7 @@
 														"$ref": "AAAAAAF1UIs/uVFNYq4="
 													},
 													"edgePosition": 1,
-													"text": "3 : Открыть заказ-наряд"
+													"text": "3 : ОткрытьЗаказНаряд(идЗаказНаряда)"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -1619,7 +1619,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 527,
+													"left": 515,
 													"top": 225,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -1640,7 +1640,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 527,
+													"left": 515,
 													"top": 260,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -1660,7 +1660,7 @@
 														"$ref": "AAAAAAF1UIs/uVFMYbA="
 													},
 													"font": "Arial;13;0",
-													"left": 753,
+													"left": 729,
 													"top": 256,
 													"width": 14,
 													"height": 29
@@ -1673,7 +1673,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1UH+/xFC/pYc="
 											},
-											"points": "301:256;753:256",
+											"points": "301:256;729:256",
 											"nameLabel": {
 												"$ref": "AAAAAAF1UIs/uVFOhL4="
 											},
@@ -1707,7 +1707,7 @@
 														"$ref": "AAAAAAF1UIzus1Fiu5Y="
 													},
 													"font": "Arial;13;0",
-													"left": 404,
+													"left": 392,
 													"top": 284,
 													"width": 245.77490234375,
 													"height": 13,
@@ -1717,7 +1717,7 @@
 														"$ref": "AAAAAAF1UIzutFFjqMA="
 													},
 													"edgePosition": 1,
-													"text": "4 : Информацию о заказ-наряде"
+													"text": "4 : Данные заказ-наряда"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -1730,7 +1730,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 526,
+													"left": 514,
 													"top": 299,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -1751,7 +1751,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 527,
+													"left": 515,
 													"top": 264,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -1785,7 +1785,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1UH+z0VCgbwg="
 											},
-											"points": "753:280;301:280",
+											"points": "729:280;301:280",
 											"nameLabel": {
 												"$ref": "AAAAAAF1UIzut1FkcZM="
 											},
@@ -1819,7 +1819,7 @@
 														"$ref": "AAAAAAF1UI2sYVF60S4="
 													},
 													"font": "Arial;13;0",
-													"left": 309,
+													"left": 297,
 													"top": 327,
 													"width": 426.7783203125,
 													"height": 13,
@@ -1829,7 +1829,7 @@
 														"$ref": "AAAAAAF1UI2sYVF7FhI="
 													},
 													"edgePosition": 1,
-													"text": "5 : Вводит данные о заказ-наряде(дата, место, исполнитель, заказчик)"
+													"text": "5 : ОбновитьЗаказНаряд(дата, место, исполнитель, заказчик)"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -1842,7 +1842,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 527,
+													"left": 515,
 													"top": 313,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -1863,7 +1863,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 527,
+													"left": 515,
 													"top": 348,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -1883,7 +1883,7 @@
 														"$ref": "AAAAAAF1UI2sYVF60S4="
 													},
 													"font": "Arial;13;0",
-													"left": 753,
+													"left": 729,
 													"top": 344,
 													"width": 14,
 													"height": 29
@@ -1896,7 +1896,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1UH+/xFC/pYc="
 											},
-											"points": "301:344;753:344",
+											"points": "301:344;729:344",
 											"nameLabel": {
 												"$ref": "AAAAAAF1UI2sYlF8CNs="
 											},
@@ -1930,7 +1930,7 @@
 														"$ref": "AAAAAAF1UJInTFGRIVk="
 													},
 													"font": "Arial;13;0",
-													"left": 412,
+													"left": 400,
 													"top": 372,
 													"width": 228.95361328125,
 													"height": 13,
@@ -1940,7 +1940,7 @@
 														"$ref": "AAAAAAF1UJInTFGSvQ8="
 													},
 													"edgePosition": 1,
-													"text": "6 : Ообновлённый заказ-наряд"
+													"text": "6 : Результат обновления"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -1953,7 +1953,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 526,
+													"left": 514,
 													"top": 387,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -1974,7 +1974,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 527,
+													"left": 515,
 													"top": 352,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -2008,7 +2008,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1UH+z0VCgbwg="
 											},
-											"points": "753:368;301:368",
+											"points": "729:368;301:368",
 											"nameLabel": {
 												"$ref": "AAAAAAF1UJInTFGTi0g="
 											},
@@ -2032,7 +2032,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF1UFRKxVCDwUc="
 									},
-									"name": "Открыть реестр",
+									"name": "ОткрытьРеестрЗаказНарядов()",
 									"source": {
 										"$ref": "AAAAAAF1UH+/vlC4Qfg="
 									},
@@ -2061,13 +2061,14 @@
 									"_parent": {
 										"$ref": "AAAAAAF1UFRKxVCDwUc="
 									},
-									"name": "Открыть заказ-наряд",
+									"name": "ОткрытьЗаказНаряд",
 									"source": {
 										"$ref": "AAAAAAF1UH+/vlC4Qfg="
 									},
 									"target": {
 										"$ref": "AAAAAAF1UH+z0FCZpTw="
-									}
+									},
+									"arguments": "идЗаказНаряда"
 								},
 								{
 									"_type": "UMLMessage",
@@ -2075,7 +2076,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF1UFRKxVCDwUc="
 									},
-									"name": "Информацию о заказ-наряде",
+									"name": "Данные заказ-наряда",
 									"source": {
 										"$ref": "AAAAAAF1UH+z0FCZpTw="
 									},
@@ -2090,7 +2091,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF1UFRKxVCDwUc="
 									},
-									"name": "Вводит данные о заказ-наряде",
+									"name": "ОбновитьЗаказНаряд",
 									"source": {
 										"$ref": "AAAAAAF1UH+/vlC4Qfg="
 									},
@@ -2105,7 +2106,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF1UFRKxVCDwUc="
 									},
-									"name": "Ообновлённый заказ-наряд",
+									"name": "Результат обновления",
 									"source": {
 										"$ref": "AAAAAAF1UH+z0FCZpTw="
 									},
@@ -2216,7 +2217,7 @@
 															},
 															"visible": false,
 															"font": "Arial;13;0",
-															"left": -192,
+															"left": -32,
 															"height": 13
 														},
 														{
@@ -2226,7 +2227,7 @@
 																"$ref": "AAAAAAF1VX1mRYOa+cc="
 															},
 															"font": "Arial;13;1",
-															"left": 613,
+															"left": 693,
 															"top": 47,
 															"width": 69.03955078125,
 															"height": 13,
@@ -2240,7 +2241,7 @@
 															},
 															"visible": false,
 															"font": "Arial;13;0",
-															"left": -192,
+															"left": -32,
 															"width": 106.20263671875,
 															"height": 13,
 															"text": "(from Interaction1)"
@@ -2253,13 +2254,13 @@
 															},
 															"visible": false,
 															"font": "Arial;13;0",
-															"left": -192,
+															"left": -32,
 															"height": 13,
 															"horizontalAlignment": 1
 														}
 													],
 													"font": "Arial;13;0",
-													"left": 608,
+													"left": 688,
 													"top": 40,
 													"width": 79.03955078125,
 													"height": 40,
@@ -2286,17 +2287,17 @@
 														"$ref": "AAAAAAF1VX1mR4PL9uA="
 													},
 													"font": "Arial;13;0",
-													"left": 648,
+													"left": 728,
 													"top": 80,
 													"width": 1,
-													"height": 337
+													"height": 483
 												}
 											],
 											"font": "Arial;13;0",
-											"left": 608,
+											"left": 688,
 											"top": 40,
 											"width": 79.03955078125,
-											"height": 377,
+											"height": 523,
 											"nameCompartment": {
 												"$ref": "AAAAAAF1VX1mRYOa+cc="
 											},
@@ -2332,7 +2333,7 @@
 															},
 															"visible": false,
 															"font": "Arial;13;0",
-															"left": 253,
+															"left": 173,
 															"top": 85,
 															"width": 126.18701171875,
 															"height": 13
@@ -2344,7 +2345,7 @@
 																"$ref": "AAAAAAF1VX1mRYOhiy0="
 															},
 															"font": "Arial;13;1",
-															"left": 253,
+															"left": 213,
 															"top": 87,
 															"width": 126.18701171875,
 															"height": 13,
@@ -2358,6 +2359,7 @@
 															},
 															"visible": false,
 															"font": "Arial;13;0",
+															"left": -80,
 															"width": 106.20263671875,
 															"height": 13,
 															"text": "(from Interaction1)"
@@ -2370,7 +2372,7 @@
 															},
 															"visible": false,
 															"font": "Arial;13;0",
-															"left": 253,
+															"left": 173,
 															"top": 102,
 															"width": 126.18701171875,
 															"height": 13,
@@ -2378,7 +2380,7 @@
 														}
 													],
 													"font": "Arial;13;0",
-													"left": 248,
+													"left": 208,
 													"top": 80,
 													"width": 136.18701171875,
 													"height": 25,
@@ -2405,17 +2407,17 @@
 														"$ref": "AAAAAAF1VX1mR4PMrPE="
 													},
 													"font": "Arial;13;0",
-													"left": 316,
+													"left": 276,
 													"top": 105,
 													"width": 1,
-													"height": 312
+													"height": 442
 												}
 											],
 											"font": "Arial;13;0",
-											"left": 248,
+											"left": 208,
 											"top": 40,
 											"width": 136.18701171875,
-											"height": 377,
+											"height": 507,
 											"stereotypeDisplay": "icon",
 											"nameCompartment": {
 												"$ref": "AAAAAAF1VX1mRYOhiy0="
@@ -2444,9 +2446,9 @@
 														"$ref": "AAAAAAF1VX1mRoPFXXI="
 													},
 													"font": "Arial;13;0",
-													"left": 421,
+													"left": 395,
 													"top": 120,
-													"width": 114.10546875,
+													"width": 206.58447265625,
 													"height": 13,
 													"alpha": 1.5707963267948966,
 													"distance": 10,
@@ -2454,7 +2456,7 @@
 														"$ref": "AAAAAAF1VX1mRoOnkU8="
 													},
 													"edgePosition": 1,
-													"text": "1 : Открыть реестр"
+													"text": "1 : ОткрытьРеестрЗаказНарядов()"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -2467,7 +2469,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
+													"left": 498,
 													"top": 105,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -2488,7 +2490,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
+													"left": 498,
 													"top": 140,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -2508,7 +2510,7 @@
 														"$ref": "AAAAAAF1VX1mRoPFXXI="
 													},
 													"font": "Arial;13;0",
-													"left": 641,
+													"left": 721,
 													"top": 136,
 													"width": 14,
 													"height": 29
@@ -2521,7 +2523,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1VX1mRYOmSu0="
 											},
-											"points": "316:136;641:136",
+											"points": "276:136;721:136",
 											"nameLabel": {
 												"$ref": "AAAAAAF1VX1mRoOom9E="
 											},
@@ -2555,7 +2557,7 @@
 														"$ref": "AAAAAAF1VX1mRoPGWq8="
 													},
 													"font": "Arial;13;0",
-													"left": 367,
+													"left": 387,
 													"top": 164,
 													"width": 221.533203125,
 													"height": 13,
@@ -2578,7 +2580,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 477,
+													"left": 497,
 													"top": 179,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -2599,7 +2601,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
+													"left": 498,
 													"top": 144,
 													"height": 13,
 													"alpha": -1.5707963267948966,
@@ -2620,7 +2622,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 316,
+													"left": 276,
 													"top": 160,
 													"width": 14,
 													"height": 25
@@ -2633,7 +2635,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1VX1mRYOfMnQ="
 											},
-											"points": "641:160;316:160",
+											"points": "721:160;276:160",
 											"nameLabel": {
 												"$ref": "AAAAAAF1VX1mRoOt5bk="
 											},
@@ -2667,8 +2669,8 @@
 														"$ref": "AAAAAAF1VX1mRoPH9+Y="
 													},
 													"font": "Arial;13;0",
-													"left": 329,
-													"top": 200,
+													"left": 349,
+													"top": 224,
 													"width": 299.203125,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -2677,7 +2679,7 @@
 														"$ref": "AAAAAAF1VX1mRoOxjfo="
 													},
 													"edgePosition": 1,
-													"text": "3 : Задает условия фильтрации и/или сортировки"
+													"text": "3 : ФильтроватьРеестр(фильтр)"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -2690,8 +2692,8 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
-													"top": 185,
+													"left": 498,
+													"top": 209,
 													"height": 13,
 													"alpha": 1.5707963267948966,
 													"distance": 25,
@@ -2711,8 +2713,8 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
-													"top": 220,
+													"left": 498,
+													"top": 244,
 													"height": 13,
 													"alpha": -1.5707963267948966,
 													"distance": 10,
@@ -2731,8 +2733,8 @@
 														"$ref": "AAAAAAF1VX1mRoPH9+Y="
 													},
 													"font": "Arial;13;0",
-													"left": 641,
-													"top": 216,
+													"left": 721,
+													"top": 240,
 													"width": 14,
 													"height": 29
 												}
@@ -2744,7 +2746,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1VX1mRYOmSu0="
 											},
-											"points": "316:216;641:216",
+											"points": "276:240;721:240",
 											"nameLabel": {
 												"$ref": "AAAAAAF1VX1mRoOyQFU="
 											},
@@ -2778,8 +2780,8 @@
 														"$ref": "AAAAAAF1VX1mRoPIt0c="
 													},
 													"font": "Arial;13;0",
-													"left": 355,
-													"top": 244,
+													"left": 375,
+													"top": 268,
 													"width": 245.77490234375,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -2788,7 +2790,7 @@
 														"$ref": "AAAAAAF1VX1mRoO2fGc="
 													},
 													"edgePosition": 1,
-													"text": "4 : Отобранные заказ-наряды"
+													"text": "4 : Соответствующие заказ-наряды"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -2801,8 +2803,8 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 477,
-													"top": 259,
+													"left": 497,
+													"top": 283,
 													"height": 13,
 													"alpha": 1.5707963267948966,
 													"distance": 25,
@@ -2822,8 +2824,8 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
-													"top": 224,
+													"left": 498,
+													"top": 248,
 													"height": 13,
 													"alpha": -1.5707963267948966,
 													"distance": 10,
@@ -2843,8 +2845,8 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 316,
-													"top": 240,
+													"left": 276,
+													"top": 264,
 													"width": 14,
 													"height": 25
 												}
@@ -2856,7 +2858,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1VX1mRYOfMnQ="
 											},
-											"points": "641:240;316:240",
+											"points": "721:264;276:264",
 											"nameLabel": {
 												"$ref": "AAAAAAF1VX1mRoO3fmQ="
 											},
@@ -2868,6 +2870,229 @@
 											},
 											"activation": {
 												"$ref": "AAAAAAF1VX1mRoO6Dp8="
+											}
+										},
+										{
+											"_type": "UMLSeqMessageView",
+											"_id": "AAAAAAF1Xuhu0yjU5EM=",
+											"_parent": {
+												"$ref": "AAAAAAF1VX1mRYOYWYg="
+											},
+											"model": {
+												"$ref": "AAAAAAF1Xuhu0ijTGms="
+											},
+											"subViews": [
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAF1Xuhu0yjVTrw=",
+													"_parent": {
+														"$ref": "AAAAAAF1Xuhu0yjU5EM="
+													},
+													"model": {
+														"$ref": "AAAAAAF1Xuhu0ijTGms="
+													},
+													"font": "Arial;13;0",
+													"left": 383,
+													"top": 310,
+													"width": 231.55615234375,
+													"height": 13,
+													"alpha": 1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAF1Xuhu0yjU5EM="
+													},
+													"edgePosition": 1,
+													"text": "5 : СортироватьРеестр(поле, порядок)"
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAF1Xuhu0yjW1lM=",
+													"_parent": {
+														"$ref": "AAAAAAF1Xuhu0yjU5EM="
+													},
+													"model": {
+														"$ref": "AAAAAAF1Xuhu0ijTGms="
+													},
+													"visible": false,
+													"font": "Arial;13;0",
+													"left": 498,
+													"top": 295,
+													"height": 13,
+													"alpha": 1.5707963267948966,
+													"distance": 25,
+													"hostEdge": {
+														"$ref": "AAAAAAF1Xuhu0yjU5EM="
+													},
+													"edgePosition": 1
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAF1Xuhu0yjX//s=",
+													"_parent": {
+														"$ref": "AAAAAAF1Xuhu0yjU5EM="
+													},
+													"model": {
+														"$ref": "AAAAAAF1Xuhu0ijTGms="
+													},
+													"visible": false,
+													"font": "Arial;13;0",
+													"left": 498,
+													"top": 330,
+													"height": 13,
+													"alpha": -1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAF1Xuhu0yjU5EM="
+													},
+													"edgePosition": 1
+												},
+												{
+													"_type": "UMLActivationView",
+													"_id": "AAAAAAF1Xuhu1CjY0TQ=",
+													"_parent": {
+														"$ref": "AAAAAAF1Xuhu0yjU5EM="
+													},
+													"model": {
+														"$ref": "AAAAAAF1Xuhu0ijTGms="
+													},
+													"font": "Arial;13;0",
+													"left": 721,
+													"top": 326,
+													"width": 14,
+													"height": 29
+												}
+											],
+											"font": "Arial;13;0",
+											"head": {
+												"$ref": "AAAAAAF1VX1mRYOfMnQ="
+											},
+											"tail": {
+												"$ref": "AAAAAAF1VX1mRYOmSu0="
+											},
+											"points": "276:326;721:326",
+											"nameLabel": {
+												"$ref": "AAAAAAF1Xuhu0yjVTrw="
+											},
+											"stereotypeLabel": {
+												"$ref": "AAAAAAF1Xuhu0yjW1lM="
+											},
+											"propertyLabel": {
+												"$ref": "AAAAAAF1Xuhu0yjX//s="
+											},
+											"activation": {
+												"$ref": "AAAAAAF1Xuhu1CjY0TQ="
+											}
+										},
+										{
+											"_type": "UMLSeqMessageView",
+											"_id": "AAAAAAF1XujlOSjscKc=",
+											"_parent": {
+												"$ref": "AAAAAAF1VX1mRYOYWYg="
+											},
+											"model": {
+												"$ref": "AAAAAAF1XujlOSjrktM="
+											},
+											"subViews": [
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAF1XujlOSjtpTU=",
+													"_parent": {
+														"$ref": "AAAAAAF1XujlOSjscKc="
+													},
+													"model": {
+														"$ref": "AAAAAAF1XujlOSjrktM="
+													},
+													"font": "Arial;13;0",
+													"left": 395,
+													"top": 358,
+													"width": 213.50341796875,
+													"height": 13,
+													"alpha": 1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAF1XujlOSjscKc="
+													},
+													"edgePosition": 1,
+													"text": "6 : Соответствующие заказ-наряды"
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAF1XujlOSjuHlc=",
+													"_parent": {
+														"$ref": "AAAAAAF1XujlOSjscKc="
+													},
+													"model": {
+														"$ref": "AAAAAAF1XujlOSjrktM="
+													},
+													"visible": false,
+													"font": "Arial;13;0",
+													"left": 501,
+													"top": 373,
+													"height": 13,
+													"alpha": 1.5707963267948966,
+													"distance": 25,
+													"hostEdge": {
+														"$ref": "AAAAAAF1XujlOSjscKc="
+													},
+													"edgePosition": 1
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAF1XujlOSjvHYg=",
+													"_parent": {
+														"$ref": "AAAAAAF1XujlOSjscKc="
+													},
+													"model": {
+														"$ref": "AAAAAAF1XujlOSjrktM="
+													},
+													"visible": false,
+													"font": "Arial;13;0",
+													"left": 502,
+													"top": 338,
+													"height": 13,
+													"alpha": -1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAF1XujlOSjscKc="
+													},
+													"edgePosition": 1
+												},
+												{
+													"_type": "UMLActivationView",
+													"_id": "AAAAAAF1XujlOSjw7Ts=",
+													"_parent": {
+														"$ref": "AAAAAAF1XujlOSjscKc="
+													},
+													"model": {
+														"$ref": "AAAAAAF1XujlOSjrktM="
+													},
+													"visible": false,
+													"font": "Arial;13;0",
+													"left": 276,
+													"top": 354,
+													"width": 14,
+													"height": 25
+												}
+											],
+											"font": "Arial;13;0",
+											"head": {
+												"$ref": "AAAAAAF1VX1mRYOmSu0="
+											},
+											"tail": {
+												"$ref": "AAAAAAF1VX1mRYOfMnQ="
+											},
+											"points": "728:354;276:354",
+											"nameLabel": {
+												"$ref": "AAAAAAF1XujlOSjtpTU="
+											},
+											"stereotypeLabel": {
+												"$ref": "AAAAAAF1XujlOSjuHlc="
+											},
+											"propertyLabel": {
+												"$ref": "AAAAAAF1XujlOSjvHYg="
+											},
+											"activation": {
+												"$ref": "AAAAAAF1XujlOSjw7Ts="
 											}
 										},
 										{
@@ -2890,8 +3115,8 @@
 														"$ref": "AAAAAAF1VX1mRoPJ1ZQ="
 													},
 													"font": "Arial;13;0",
-													"left": 363,
-													"top": 277,
+													"left": 383,
+													"top": 437,
 													"width": 230.00732421875,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -2900,7 +3125,7 @@
 														"$ref": "AAAAAAF1VX1mRoO7EAU="
 													},
 													"edgePosition": 1,
-													"text": "5 : Инициирует экспорт заказ-наярдов"
+													"text": "7 : Инициирует экспорт заказ-наярдов"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -2913,8 +3138,8 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
-													"top": 262,
+													"left": 498,
+													"top": 422,
 													"height": 13,
 													"alpha": 1.5707963267948966,
 													"distance": 25,
@@ -2934,8 +3159,8 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
-													"top": 297,
+													"left": 498,
+													"top": 457,
 													"height": 13,
 													"alpha": -1.5707963267948966,
 													"distance": 10,
@@ -2954,8 +3179,8 @@
 														"$ref": "AAAAAAF1VX1mRoPJ1ZQ="
 													},
 													"font": "Arial;13;0",
-													"left": 641,
-													"top": 293,
+													"left": 721,
+													"top": 453,
 													"width": 14,
 													"height": 29
 												}
@@ -2967,7 +3192,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1VX1mRYOmSu0="
 											},
-											"points": "316:293;641:293",
+											"points": "276:453;721:453",
 											"nameLabel": {
 												"$ref": "AAAAAAF1VX1mRoO893s="
 											},
@@ -3001,8 +3226,8 @@
 														"$ref": "AAAAAAF1VX1mR4PK4ok="
 													},
 													"font": "Arial;13;0",
-													"left": 379,
-													"top": 320,
+													"left": 399,
+													"top": 480,
 													"width": 196.16162109375,
 													"height": 13,
 													"alpha": 1.5707963267948966,
@@ -3011,7 +3236,7 @@
 														"$ref": "AAAAAAF1VX1mRoPA5bY="
 													},
 													"edgePosition": 1,
-													"text": "6 : Заказ-наряды в формате xlsx"
+													"text": "8 : Файл xlsx заказ-нарядов"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -3024,8 +3249,8 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 477,
-													"top": 335,
+													"left": 497,
+													"top": 495,
 													"height": 13,
 													"alpha": 1.5707963267948966,
 													"distance": 25,
@@ -3045,8 +3270,8 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 478,
-													"top": 300,
+													"left": 498,
+													"top": 460,
 													"height": 13,
 													"alpha": -1.5707963267948966,
 													"distance": 10,
@@ -3066,8 +3291,8 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 316,
-													"top": 316,
+													"left": 276,
+													"top": 476,
 													"width": 14,
 													"height": 25
 												}
@@ -3079,7 +3304,7 @@
 											"tail": {
 												"$ref": "AAAAAAF1VX1mRYOfMnQ="
 											},
-											"points": "641:316;316:316",
+											"points": "721:476;276:476",
 											"nameLabel": {
 												"$ref": "AAAAAAF1VX1mRoPBi8g="
 											},
@@ -3092,6 +3317,107 @@
 											"activation": {
 												"$ref": "AAAAAAF1VX1mRoPEaAU="
 											}
+										},
+										{
+											"_type": "UMLCombinedFragmentView",
+											"_id": "AAAAAAF1Xu1OCilTH3g=",
+											"_parent": {
+												"$ref": "AAAAAAF1VX1mRYOYWYg="
+											},
+											"model": {
+												"$ref": "AAAAAAF1Xu1OCilRFlU="
+											},
+											"subViews": [
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAF1Xu1OCilUgFw=",
+													"_parent": {
+														"$ref": "AAAAAAF1Xu1OCilTH3g="
+													},
+													"visible": false,
+													"font": "Arial;13;0",
+													"left": 229.07177734375,
+													"top": 221,
+													"width": 1,
+													"height": 13
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAF1Xu1OCilVANE=",
+													"_parent": {
+														"$ref": "AAAAAAF1Xu1OCilTH3g="
+													},
+													"font": "Arial;13;1",
+													"left": 205,
+													"top": 221,
+													"width": 19.07177734375,
+													"height": 13,
+													"text": "opt"
+												},
+												{
+													"_type": "UMLInteractionOperandCompartmentView",
+													"_id": "AAAAAAF1Xu1OCilWpBA=",
+													"_parent": {
+														"$ref": "AAAAAAF1Xu1OCilTH3g="
+													},
+													"model": {
+														"$ref": "AAAAAAF1Xu1OCilRFlU="
+													},
+													"subViews": [
+														{
+															"_type": "UMLInteractionOperandView",
+															"_id": "AAAAAAF1Xu1ORClifCE=",
+															"_parent": {
+																"$ref": "AAAAAAF1Xu1OCilWpBA="
+															},
+															"model": {
+																"$ref": "AAAAAAF1Xu1OCilSuvw="
+															},
+															"subViews": [
+																{
+																	"_type": "LabelView",
+																	"_id": "AAAAAAF1Xu1ORClj0XM=",
+																	"_parent": {
+																		"$ref": "AAAAAAF1Xu1ORClifCE="
+																	},
+																	"visible": false,
+																	"font": "Arial;13;0",
+																	"left": 220,
+																	"top": 254,
+																	"height": 13
+																}
+															],
+															"font": "Arial;13;0",
+															"left": 200,
+															"top": 239,
+															"width": 585,
+															"height": 43,
+															"guardLabel": {
+																"$ref": "AAAAAAF1Xu1ORClj0XM="
+															}
+														}
+													],
+													"font": "Arial;13;0",
+													"left": 200,
+													"top": 239,
+													"width": 585,
+													"height": 43
+												}
+											],
+											"font": "Arial;13;0",
+											"left": 200,
+											"top": 216,
+											"width": 585,
+											"height": 169,
+											"nameLabel": {
+												"$ref": "AAAAAAF1Xu1OCilUgFw="
+											},
+											"frameTypeLabel": {
+												"$ref": "AAAAAAF1Xu1OCilVANE="
+											},
+											"operandCompartment": {
+												"$ref": "AAAAAAF1Xu1OCilWpBA="
+											}
 										}
 									]
 								}
@@ -3103,7 +3429,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF1VX1mRYOXAxw="
 									},
-									"name": "Открыть реестр",
+									"name": "ОткрытьРеестрЗаказНарядов()",
 									"source": {
 										"$ref": "AAAAAAF1VX1mR4PMrPE="
 									},
@@ -3132,7 +3458,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF1VX1mRYOXAxw="
 									},
-									"name": "Задает условия фильтрации и/или сортировки",
+									"name": "ФильтроватьРеестр(фильтр)",
 									"source": {
 										"$ref": "AAAAAAF1VX1mR4PMrPE="
 									},
@@ -3146,7 +3472,36 @@
 									"_parent": {
 										"$ref": "AAAAAAF1VX1mRYOXAxw="
 									},
-									"name": "Отобранные заказ-наряды",
+									"name": "Соответствующие заказ-наряды",
+									"source": {
+										"$ref": "AAAAAAF1VX1mR4PL9uA="
+									},
+									"target": {
+										"$ref": "AAAAAAF1VX1mR4PMrPE="
+									},
+									"messageSort": "reply"
+								},
+								{
+									"_type": "UMLMessage",
+									"_id": "AAAAAAF1Xuhu0ijTGms=",
+									"_parent": {
+										"$ref": "AAAAAAF1VX1mRYOXAxw="
+									},
+									"name": "СортироватьРеестр(поле, порядок)",
+									"source": {
+										"$ref": "AAAAAAF1VX1mR4PMrPE="
+									},
+									"target": {
+										"$ref": "AAAAAAF1VX1mR4PL9uA="
+									}
+								},
+								{
+									"_type": "UMLMessage",
+									"_id": "AAAAAAF1XujlOSjrktM=",
+									"_parent": {
+										"$ref": "AAAAAAF1VX1mRYOXAxw="
+									},
+									"name": "Соответствующие заказ-наряды",
 									"source": {
 										"$ref": "AAAAAAF1VX1mR4PL9uA="
 									},
@@ -3175,7 +3530,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF1VX1mRYOXAxw="
 									},
-									"name": "Заказ-наряды в формате xlsx",
+									"name": "Файл xlsx заказ-нарядов",
 									"source": {
 										"$ref": "AAAAAAF1VX1mR4PL9uA="
 									},
@@ -3209,6 +3564,26 @@
 										"$ref": "AAAAAAF1VX1mR4POM4w="
 									},
 									"isMultiInstance": false
+								}
+							],
+							"fragments": [
+								{
+									"_type": "UMLCombinedFragment",
+									"_id": "AAAAAAF1Xu1OCilRFlU=",
+									"_parent": {
+										"$ref": "AAAAAAF1VX1mRYOXAxw="
+									},
+									"interactionOperator": "opt",
+									"operands": [
+										{
+											"_type": "UMLInteractionOperand",
+											"_id": "AAAAAAF1Xu1OCilSuvw=",
+											"_parent": {
+												"$ref": "AAAAAAF1Xu1OCilRFlU="
+											},
+											"name": "Operand1"
+										}
+									]
 								}
 							]
 						}
@@ -10268,7 +10643,7 @@
 									"containerExtending": true,
 									"left": 236,
 									"top": 644,
-									"width": 79.380859375,
+									"width": 71.3125,
 									"height": 36,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFFwL4D0mBbBNE="
@@ -10456,7 +10831,7 @@
 									"containerExtending": true,
 									"left": 236,
 									"top": 708,
-									"width": 79.380859375,
+									"width": 71.3125,
 									"height": 36,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFFwL4h4mCE1YI="
@@ -10644,7 +11019,7 @@
 									"containerExtending": true,
 									"left": 236,
 									"top": 764,
-									"width": 79.380859375,
+									"width": 71.3125,
 									"height": 36,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFFwL45WWCtTBI="
@@ -10832,7 +11207,7 @@
 									"containerExtending": true,
 									"left": 236,
 									"top": 820,
-									"width": 92.013671875,
+									"width": 82.685546875,
 									"height": 36,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFFwL5hQGDWrwI="
@@ -11020,7 +11395,7 @@
 									"containerExtending": true,
 									"left": 236,
 									"top": 876,
-									"width": 79.380859375,
+									"width": 71.3125,
 									"height": 36,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFFwL7KdWEspPc="
@@ -11134,7 +11509,7 @@
 									"visible": false,
 									"font": "Arial;12;0",
 									"containerExtending": true,
-									"left": 347,
+									"left": 343,
 									"top": 634,
 									"height": 12,
 									"alpha": 1.5707963267948966,
@@ -11156,7 +11531,7 @@
 									"visible": null,
 									"font": "Arial;12;0",
 									"containerExtending": true,
-									"left": 347,
+									"left": 343,
 									"top": 619,
 									"height": 12,
 									"alpha": 1.5707963267948966,
@@ -11178,7 +11553,7 @@
 									"visible": false,
 									"font": "Arial;12;0",
 									"containerExtending": true,
-									"left": 347,
+									"left": 343,
 									"top": 664,
 									"height": 12,
 									"alpha": -1.5707963267948966,
@@ -11948,7 +12323,7 @@
 									"containerExtending": true,
 									"left": 740,
 									"top": 60,
-									"width": 120.396484375,
+									"width": 112.427734375,
 									"height": 22
 								},
 								{
@@ -12105,7 +12480,7 @@
 									"containerExtending": true,
 									"left": 740,
 									"top": 96,
-									"width": 79.380859375,
+									"width": 71.3125,
 									"height": 36,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFFwMGo6mIgcys="
@@ -12293,7 +12668,7 @@
 									"containerExtending": true,
 									"left": 740,
 									"top": 148,
-									"width": 79.380859375,
+									"width": 71.3125,
 									"height": 36,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFFwMGrimJIfxU="
