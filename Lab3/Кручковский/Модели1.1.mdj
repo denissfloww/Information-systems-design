@@ -344,9 +344,9 @@
 														"$ref": "AAAAAAF1WZ5oInCybz8="
 													},
 													"font": "Arial;13;0",
-													"left": 239,
+													"left": 190,
 													"top": 104,
-													"width": 213.1669921875,
+													"width": 310.16552734375,
 													"height": 13,
 													"alpha": 1.5707963267948966,
 													"distance": 10,
@@ -354,7 +354,7 @@
 														"$ref": "AAAAAAF1WZ5oInCz2C0="
 													},
 													"edgePosition": 1,
-													"text": "1 : ОткрытьРеестрЗаказ-нарядов()"
+													"text": "1 : ОткрытьРеестрЗаказ-нарядов(Код организации)"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -1327,13 +1327,14 @@
 									"_parent": {
 										"$ref": "AAAAAAF1WVQUCnBe8Fs="
 									},
-									"name": "ОткрытьРеестрЗаказ-нарядов()",
+									"name": "ОткрытьРеестрЗаказ-нарядов",
 									"source": {
 										"$ref": "AAAAAAF1WVSoqXBtLAo="
 									},
 									"target": {
 										"$ref": "AAAAAAF1WZqxk3CPG2Q="
-									}
+									},
+									"arguments": "Код организации"
 								},
 								{
 									"_type": "UMLMessage",
@@ -1596,7 +1597,7 @@
 									"font": "Arial;13;0",
 									"left": 48,
 									"top": 8,
-									"width": 481,
+									"width": 577,
 									"height": 265,
 									"nameLabel": {
 										"$ref": "AAAAAAF1VX2iAG5pPiU="
@@ -1746,7 +1747,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": -112,
+													"left": 48,
 													"height": 13
 												},
 												{
@@ -1756,7 +1757,7 @@
 														"$ref": "AAAAAAF1VX3ytW6YVo0="
 													},
 													"font": "Arial;13;1",
-													"left": 333,
+													"left": 413,
 													"top": 47,
 													"width": 135,
 													"height": 13,
@@ -1770,7 +1771,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": -112,
+													"left": 48,
 													"width": 106.20263671875,
 													"height": 13,
 													"text": "(from Interaction1)"
@@ -1783,13 +1784,13 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": -112,
+													"left": 48,
 													"height": 13,
 													"horizontalAlignment": 1
 												}
 											],
 											"font": "Arial;13;0",
-											"left": 328,
+											"left": 408,
 											"top": 40,
 											"width": 145,
 											"height": 40,
@@ -1816,14 +1817,14 @@
 												"$ref": "AAAAAAF1VX3ytW6W+zs="
 											},
 											"font": "Arial;13;0",
-											"left": 401,
+											"left": 481,
 											"top": 80,
 											"width": 1,
 											"height": 129
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 328,
+									"left": 408,
 									"top": 40,
 									"width": 145,
 									"height": 169,
@@ -1854,9 +1855,9 @@
 												"$ref": "AAAAAAF1VYDvtG6+GZM="
 											},
 											"font": "Arial;13;0",
-											"left": 168,
+											"left": 159,
 											"top": 128,
-											"width": 213.1669921875,
+											"width": 310.16552734375,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 10,
@@ -1864,7 +1865,7 @@
 												"$ref": "AAAAAAF1VYDvtG6/D+4="
 											},
 											"edgePosition": 1,
-											"text": "1 : ОткрытьРеестрЗаказ-нарядов()"
+											"text": "1 : ОткрытьРеестрЗаказ-нарядов(Код организации)"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1877,7 +1878,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 274,
+											"left": 314,
 											"top": 113,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -1898,7 +1899,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 274,
+											"left": 314,
 											"top": 148,
 											"height": 13,
 											"alpha": -1.5707963267948966,
@@ -1918,7 +1919,7 @@
 												"$ref": "AAAAAAF1VYDvtG6+GZM="
 											},
 											"font": "Arial;13;0",
-											"left": 394,
+											"left": 474,
 											"top": 144,
 											"width": 14,
 											"height": 29
@@ -1931,7 +1932,7 @@
 									"tail": {
 										"$ref": "AAAAAAF1VX2x12587yU="
 									},
-									"points": "154:144;394:144",
+									"points": "154:144;474:144",
 									"nameLabel": {
 										"$ref": "AAAAAAF1VYDvtG7At3U="
 									},
@@ -1965,7 +1966,7 @@
 												"$ref": "AAAAAAF1VYJK927W9uo="
 											},
 											"font": "Arial;13;0",
-											"left": 165,
+											"left": 205,
 											"top": 168,
 											"width": 205.01025390625,
 											"height": 13,
@@ -1988,7 +1989,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 273,
+											"left": 313,
 											"top": 187,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -2009,7 +2010,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 274,
+											"left": 314,
 											"top": 152,
 											"height": 13,
 											"alpha": -1.5707963267948966,
@@ -2043,7 +2044,7 @@
 									"tail": {
 										"$ref": "AAAAAAF1VX3ytW6dwiY="
 									},
-									"points": "394:168;154:168",
+									"points": "474:168;154:168",
 									"nameLabel": {
 										"$ref": "AAAAAAF1VYJK+G7YIwU="
 									},
@@ -2067,13 +2068,14 @@
 							"_parent": {
 								"$ref": "AAAAAAF1VX2h/25mpyY="
 							},
-							"name": "ОткрытьРеестрЗаказ-нарядов()",
+							"name": "ОткрытьРеестрЗаказ-нарядов",
 							"source": {
 								"$ref": "AAAAAAF1VX2x1251EXY="
 							},
 							"target": {
 								"$ref": "AAAAAAF1VX3ytW6W+zs="
-							}
+							},
+							"arguments": "Код организации"
 						},
 						{
 							"_type": "UMLMessage",
@@ -2504,9 +2506,9 @@
 												"$ref": "AAAAAAF1WU4lB2/xb7k="
 											},
 											"font": "Arial;13;0",
-											"left": 198,
+											"left": 158,
 											"top": 95,
-											"width": 213.1669921875,
+											"width": 292.10009765625,
 											"height": 13,
 											"alpha": -4.656891028985144,
 											"distance": 18.027756377319946,
@@ -2514,7 +2516,7 @@
 												"$ref": "AAAAAAF1WU4lB2/yNIQ="
 											},
 											"edgePosition": 1,
-											"text": "ОткрытьРеестрЗаказ-нарядов()"
+											"text": "ОткрытьРеестрЗаказ-нарядов(Код организации)"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3265,13 +3267,14 @@
 							"_parent": {
 								"$ref": "AAAAAAF1WUqblm8FxUc="
 							},
-							"name": "ОткрытьРеестрЗаказ-нарядов()",
+							"name": "ОткрытьРеестрЗаказ-нарядов",
 							"source": {
 								"$ref": "AAAAAAF1WU3Mam+wNXY="
 							},
 							"target": {
 								"$ref": "AAAAAAF1WU3m+W/Q3l8="
-							}
+							},
+							"arguments": "Код организации"
 						},
 						{
 							"_type": "UMLMessage",
