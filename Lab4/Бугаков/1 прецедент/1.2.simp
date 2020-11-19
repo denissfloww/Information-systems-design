@@ -15,7 +15,7 @@
     <entity-ids>
       <counter>
         <item-type type-id="group" type="Group" />
-        <value>123</value>
+        <value>165</value>
       </counter>
       <counter>
         <item-type type-id="lifeline" type="Lifeline" />
@@ -66,6 +66,16 @@
         <phone-number />
         <description />
         <color>#00000000</color>
+        <working-schedule uid="ws-7ade2c02d81641b2a4ea1a2cda126e47" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+      <person id="">
+        <first-name>Денис</first-name>
+        <last-name>бугаков</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
       </person>
     </persons>
     <teams />
@@ -97,7 +107,7 @@
       </meta>
       <abstract-items />
       <sub-models />
-      <diagram type="uml-communication" id="p049fdd7029924f1bbb4c62aa11c85ffc_586551611" name="CommunicationDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-field-tags="true" show-empty-compartments="true" show-special-indicators="false" show-rules="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-visibility-sign="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-data="true" show-description="false" show-field-description="false" auto-routed-paths="false" default-line-style="default" view-location="-224,-151" zoom="0.8">
+      <diagram type="uml-communication" id="p049fdd7029924f1bbb4c62aa11c85ffc_586551611" name="CommunicationDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-field-tags="true" show-empty-compartments="true" show-special-indicators="false" show-rules="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-visibility-sign="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-data="true" show-description="false" show-field-description="false" auto-routed-paths="false" default-line-style="default" view-location="-174,-80" zoom="0.8">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -114,19 +124,19 @@
           <version />
         </meta>
         <abstract-items>
-          <item id="abe11767c29f4fdd8e3dc4a2bd26649a" cid="LL001" type="lifeline" name="Контроллер" style-class="" change-tracking-state="added" creator="" creation-date="11/13/2020 17:05:19" visibility="undefined">
+          <item id="abe11767c29f4fdd8e3dc4a2bd26649a" cid="LL001" type="lifeline" name="PlanScheduleController" style-class="" change-tracking-state="added" creator="" creation-date="11/13/2020 17:05:19" visibility="undefined">
             <lifeline classifier-name="" selector="" is-multi-object="false" />
           </item>
-          <item id="a4c3b1631053417da275bf894cd92b70" cid="LL002" type="lifeline" name="План-график" style-class="" change-tracking-state="added" creator="" creation-date="11/13/2020 17:05:47" visibility="undefined">
+          <item id="a4c3b1631053417da275bf894cd92b70" cid="LL002" type="lifeline" name="PlanSchedule" style-class="" change-tracking-state="added" creator="" creation-date="11/13/2020 17:05:47" visibility="undefined">
             <lifeline classifier-name="" selector="" is-multi-object="false" />
           </item>
           <item id="9963e05ad981492198118b9646c0b87f" cid="CMSG001" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/13/2020 18:07:12" from="abe11767c29f4fdd8e3dc4a2bd26649a" to="a4c3b1631053417da275bf894cd92b70">
             <communication-message from="abe11767c29f4fdd8e3dc4a2bd26649a" to="a4c3b1631053417da275bf894cd92b70">
               <messages>
-                <message id="se8288d02efae4306bdb0e00437663679137" seq-number="1" text="ВыбратьДатуОтлова(date)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                <message id="se8288d02efae4306bdb0e00437663679137" seq-number="1" text="SelectCatchDate(date)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
                 </message>
-                <message id="sc42e6e40f3f44dd09a942d8e358ed99c985" seq-number="1.1" text="МестаОтлова" reverse="true" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                <message id="sc42e6e40f3f44dd09a942d8e358ed99c985" seq-number="1.1" text="PlacesOfCatch" reverse="true" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
                 </message>
               </messages>
@@ -135,10 +145,10 @@
           <item id="7c5a73b46c0e4afb9bcd57ffa3c0ea11" cid="CMSG002" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/13/2020 18:07:16" to="abe11767c29f4fdd8e3dc4a2bd26649a">
             <communication-message to="abe11767c29f4fdd8e3dc4a2bd26649a">
               <messages>
-                <message id="sc11133925d4a4008b5cdde7c43750bf6457" seq-number="ВыбратьДатуОтлова(date)" text="" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                <message id="sc11133925d4a4008b5cdde7c43750bf6457" seq-number="SelectCatchDate(date)" text="" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
                 </message>
-                <message id="se7e284b25733418cb36598be2ab70dce478" seq-number="МестаОтлова" text="" reverse="true" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                <message id="se7e284b25733418cb36598be2ab70dce478" seq-number="PlacesOfCatch" text="" reverse="true" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
                 </message>
               </messages>
@@ -153,7 +163,7 @@
             <layout line-disabled="true" ax="585" ay="105" awidth="140" aheight="60" x="585" y="105" width="140" height="60" container-layout="simple" />
           </item>
           <item id="9963e05ad981492198118b9646c0b87f" iid="951430a0146e403caf9bbaf74ed13a1a" creation-date="11/13/2020 18:07:12" order-index="2" type="relation">
-            <layout normal-message-position="-82,-31" reverse-message-position="-53,31" line-style="oblique" lock-to-fields="false" auto-path="" x1="237" y1="135" x2="585" y2="135" start-border-pos="0.375" end-border-pos="0.875">
+            <layout normal-message-position="-82,-31" reverse-message-position="-63,32" line-style="oblique" lock-to-fields="false" auto-path="" x1="237" y1="135" x2="585" y2="135" start-border-pos="0.375" end-border-pos="0.875">
               <points>
                 <point x="237" y="135" />
                 <point x="585" y="135" />

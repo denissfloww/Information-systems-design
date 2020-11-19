@@ -39,7 +39,7 @@
     <entity-ids>
       <counter>
         <item-type type-id="group" type="Group" />
-        <value>768</value>
+        <value>769</value>
       </counter>
       <counter>
         <item-type type-id="lifeline" type="Lifeline" />
