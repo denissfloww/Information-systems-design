@@ -39,7 +39,7 @@
     <entity-ids>
       <counter>
         <item-type type-id="group" type="Group" />
-        <value>769</value>
+        <value>775</value>
       </counter>
       <counter>
         <item-type type-id="lifeline" type="Lifeline" />
@@ -139,6 +139,16 @@
         <description />
         <color>#00000000</color>
         <working-schedule uid="ws-e19f38cb97a340ef9715ba040b32c16e" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+      <person id="">
+        <first-name>Денис</first-name>
+        <last-name>бугаков</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+        <working-schedule uid="ws-dd08ed72ee26455b908369302a28f740" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
       </person>
       <person id="">
         <first-name>Денис</first-name>

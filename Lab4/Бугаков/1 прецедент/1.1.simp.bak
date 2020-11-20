@@ -9,7 +9,7 @@
     <entity-names>
       <counter>
         <item-type type-id="lifeline" type="Lifeline" />
-        <value>4</value>
+        <value>7</value>
       </counter>
       <counter>
         <item-type type-id="drawing-moon" type="Moon" />
@@ -35,15 +35,15 @@
     <entity-ids>
       <counter>
         <item-type type-id="group" type="Group" />
-        <value>426</value>
+        <value>472</value>
       </counter>
       <counter>
         <item-type type-id="lifeline" type="Lifeline" />
-        <value>5</value>
+        <value>8</value>
       </counter>
       <counter>
         <item-type type-id="communication-message" type="Message" />
-        <value>4</value>
+        <value>5</value>
       </counter>
       <counter>
         <item-type type-id="drawing-moon" type="Moon" />
@@ -96,6 +96,26 @@
         <phone-number />
         <description />
         <color>#00000000</color>
+        <working-schedule uid="ws-94da2572cf8040e1a36208e4f02b104d" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+      <person id="">
+        <first-name>Денис</first-name>
+        <last-name>бугаков</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+        <working-schedule uid="ws-25cfcf193edd46e1866cdac5c9127fb0" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+      <person id="">
+        <first-name>Денис</first-name>
+        <last-name>бугаков</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
       </person>
     </persons>
     <teams />
@@ -127,7 +147,7 @@
       </meta>
       <abstract-items />
       <sub-models />
-      <diagram type="uml-communication" id="pa6b818fc546f41b6a855532519a9d645_826815390" name="CommunicationDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-field-tags="true" show-empty-compartments="true" show-special-indicators="false" show-rules="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-visibility-sign="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-data="true" show-description="false" show-field-description="false" auto-routed-paths="false" default-line-style="default" view-location="-207,-69" zoom="0.7">
+      <diagram type="uml-communication" id="pa6b818fc546f41b6a855532519a9d645_826815390" name="CommunicationDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-field-tags="true" show-empty-compartments="true" show-special-indicators="false" show-rules="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-visibility-sign="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-data="true" show-description="false" show-field-description="false" auto-routed-paths="false" default-line-style="default" view-location="-251,-89" zoom="0.9">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -139,12 +159,12 @@
           </authors>
           <description />
           <creation-date>11/13/2020 16:23:27</creation-date>
-          <change-date>11/13/2020 19:17:16</change-date>
+          <change-date>11/13/2020 23:54:51</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
         <abstract-items>
-          <item id="4759b08aa9324c189b60737fd249f6ef" cid="LL001" type="lifeline" name="Пользователь" style-class="" change-tracking-state="added" creator="" creation-date="11/13/2020 16:23:33" visibility="undefined">
+          <item id="4759b08aa9324c189b60737fd249f6ef" cid="LL001" type="lifeline" name="Контроллер" style-class="" change-tracking-state="added" creator="" creation-date="11/13/2020 16:23:33" visibility="undefined">
             <lifeline classifier-name="" selector="" is-multi-object="false" />
           </item>
           <item id="7dc4401939fb4437955374783a3d0a04" cid="LL002" type="lifeline" name="План-график" style-class="" change-tracking-state="added" creator="" creation-date="11/13/2020 16:23:36" visibility="undefined">
@@ -157,6 +177,9 @@
             <communication-message to="4759b08aa9324c189b60737fd249f6ef">
               <messages>
                 <message id="sf2042039461d4f4dbdc169981dd6b773535" seq-number="ВыбратьАктуальныеДаты()" text="" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                  <parameters />
+                </message>
+                <message id="s2c51310fe8f541af83632a7ee4afdecf630" seq-number="2" text="АктуальныеДаты" reverse="true" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
                 </message>
               </messages>
@@ -190,6 +213,17 @@
           <item id="84b312222b7a4f099a8771cea3b775e0" cid="LL004" type="lifeline" name="КонтроллерПользователя" style-class="" change-tracking-state="added" creator="" creation-date="11/13/2020 19:15:19" visibility="undefined">
             <lifeline classifier-name="" selector="" is-multi-object="false" />
           </item>
+          <item id="76da3287ab6b48a1929cf323c34b3319" cid="LL005" type="lifeline" name="Пользователь" style-class="" change-tracking-state="added" creator="" creation-date="11/13/2020 23:53:55" visibility="undefined">
+            <lifeline classifier-name="" selector="" is-multi-object="false" />
+          </item>
+          <item id="ca98d992c62f4cff8d08f280a051a020" cid="LL006" type="lifeline" name="Lifeline6" style-class="" change-tracking-state="added" creator="" creation-date="11/13/2020 23:54:26" visibility="undefined">
+            <lifeline classifier-name="" selector="" is-multi-object="false" />
+          </item>
+          <item id="6d5401543d184b378c2c6e1588f0f58b" cid="CMSG004" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/13/2020 23:54:32" from="4759b08aa9324c189b60737fd249f6ef">
+            <communication-message from="4759b08aa9324c189b60737fd249f6ef">
+              <messages />
+            </communication-message>
+          </item>
         </abstract-items>
         <layer id="2fea695779d940f1990dea42a7721222" name="Default" visible="true" enabled="true" locked="false">
           <item id="4759b08aa9324c189b60737fd249f6ef" iid="ae881a426fd24828b60a235cd2f7ddaf" creation-date="11/13/2020 16:23:33" order-index="0" type="lifeline">
@@ -199,7 +233,7 @@
             <layout line-disabled="true" ax="540" ay="38" awidth="140" aheight="60" x="540" y="38" width="140" height="60" container-layout="simple" />
           </item>
           <item id="62d7a6d839fa468484557d4b7b296bfc" iid="2daaf9458e814aebaec0c043d34e4761" creation-date="11/13/2020 16:24:22" order-index="3" type="relation">
-            <layout normal-message-position="-84,-29" reverse-message-position="0,30" line-style="oblique" lock-to-fields="false" auto-path="" x1="-189" y1="68" x2="29" y2="68" start-border-pos="-1" end-border-pos="0.875">
+            <layout normal-message-position="-84,-29" reverse-message-position="-54,39" line-style="oblique" lock-to-fields="false" auto-path="" x1="-189" y1="68" x2="29" y2="68" start-border-pos="-1" end-border-pos="0.875">
               <points>
                 <point x="-189" y="68" />
                 <point x="29" y="68" />
