@@ -15,7 +15,7 @@
     <entity-ids>
       <counter>
         <item-type type-id="group" type="Group" />
-        <value>225</value>
+        <value>258</value>
       </counter>
       <counter>
         <item-type type-id="lifeline" type="Lifeline" />
@@ -36,7 +36,18 @@
   </counters>
   <alias-groups />
   <management uid="md-c854299727ba470887960430acf9a6d9" name="" task-id-sequence="0">
+    <working-schedule uid="ws-4c789ce53ea2464290e89273486be00e" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
     <persons>
+      <person id="">
+        <first-name>Денис</first-name>
+        <last-name>бугаков</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+        <working-schedule uid="ws-d4a1ec43c1714164bf74d84ee4493a96" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
       <person id="">
         <first-name>Денис</first-name>
         <last-name>бугаков</last-name>
@@ -76,7 +87,7 @@
       </meta>
       <abstract-items />
       <sub-models />
-      <diagram type="uml-communication" id="pfa87cd86feaa4bda943bbb49d1ffc409_630535261" name="CommunicationDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-field-tags="true" show-empty-compartments="true" show-special-indicators="false" show-rules="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-visibility-sign="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-data="true" show-description="false" show-field-description="false" auto-routed-paths="false" default-line-style="default" view-location="-102,-175">
+      <diagram type="uml-communication" id="pfa87cd86feaa4bda943bbb49d1ffc409_630535261" name="CommunicationDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-field-tags="true" show-empty-compartments="true" show-special-indicators="false" show-rules="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-visibility-sign="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-data="true" show-description="false" show-field-description="false" auto-routed-paths="false" default-line-style="default" view-location="-229,-100">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -93,10 +104,10 @@
           <version />
         </meta>
         <abstract-items>
-          <item id="cb03b65fc3224bfeaa24e7983f40e620" cid="LL001" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:04:13">
+          <item id="cb03b65fc3224bfeaa24e7983f40e620" cid="LL001" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:04:13" visibility="undefined">
             <lifeline classifier-name="OrderController" selector="" is-multi-object="false" />
           </item>
-          <item id="c658fdf9aaad473b97ea7f8391bac934" cid="LL002" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:04:36">
+          <item id="c658fdf9aaad473b97ea7f8391bac934" cid="LL002" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:04:36" visibility="undefined">
             <lifeline classifier-name="OrderService" selector="" is-multi-object="false" />
           </item>
           <item id="22b0dcf59b104bae87998fe285eefeaa" cid="CMSG001" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:05:35" to="cb03b65fc3224bfeaa24e7983f40e620">
@@ -117,22 +128,22 @@
               </messages>
             </communication-message>
           </item>
-          <item id="44eddff1bfaf49fc9a37b0e1d9089c9c" cid="LL003" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:06:21">
-            <lifeline classifier-name="Logger" selector="" is-multi-object="false" />
+          <item id="44eddff1bfaf49fc9a37b0e1d9089c9c" cid="LL003" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:06:21" visibility="undefined">
+            <lifeline classifier-name="LogService" selector="" is-multi-object="false" />
           </item>
-          <item id="9ef0891b8769404394874b7bb5bb95ee" cid="LL004" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:06:49">
+          <item id="9ef0891b8769404394874b7bb5bb95ee" cid="LL004" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:06:49" visibility="undefined">
             <lifeline classifier-name="UserService" selector="" is-multi-object="false" />
           </item>
-          <item id="f327a6cf33b34e7093494e32850baac4" cid="LL005" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:07:08">
+          <item id="f327a6cf33b34e7093494e32850baac4" cid="LL005" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:07:08" visibility="undefined">
             <lifeline classifier-name="userRepo:GenericRepository" selector="" is-multi-object="false" />
           </item>
-          <item id="89d894a78dce4bda82459cd77043e10c" cid="LL006" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:07:56">
+          <item id="89d894a78dce4bda82459cd77043e10c" cid="LL006" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:07:56" visibility="undefined">
             <lifeline classifier-name="orderRepo:GenericRepository" selector="" is-multi-object="false" />
           </item>
           <item id="290edfcbfc19449792f712108572f86d" cid="CMSG003" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:08:22" from="cb03b65fc3224bfeaa24e7983f40e620" to="44eddff1bfaf49fc9a37b0e1d9089c9c">
             <communication-message from="cb03b65fc3224bfeaa24e7983f40e620" to="44eddff1bfaf49fc9a37b0e1d9089c9c">
               <messages>
-                <message id="s43c2d4abdd654c429c0e2c80f5ca4d8b827" seq-number="2" text="log(nowDate, userId, orderId, actionText)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                <message id="s43c2d4abdd654c429c0e2c80f5ca4d8b827" seq-number="2" text="log(msg, context, logType)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
                 </message>
               </messages>
@@ -141,7 +152,7 @@
           <item id="198c151000794a9389408bb9094ba510" cid="CMSG004" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:10:30" from="c658fdf9aaad473b97ea7f8391bac934" to="9ef0891b8769404394874b7bb5bb95ee">
             <communication-message from="c658fdf9aaad473b97ea7f8391bac934" to="9ef0891b8769404394874b7bb5bb95ee">
               <messages>
-                <message id="scda194ea69dc47f5a20a40171018231a603" seq-number="1.1" text="user = getUser(userId)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                <message id="scda194ea69dc47f5a20a40171018231a603" seq-number="1.1" text="user = GetUser(userId)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
                 </message>
               </messages>
@@ -150,7 +161,7 @@
           <item id="7943edee84384042aa44d84f65779543" cid="CMSG005" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:10:36" from="9ef0891b8769404394874b7bb5bb95ee" to="f327a6cf33b34e7093494e32850baac4">
             <communication-message from="9ef0891b8769404394874b7bb5bb95ee" to="f327a6cf33b34e7093494e32850baac4">
               <messages>
-                <message id="s0072e73c2051421f906e84d0c206966c231" seq-number="1.1.1" text="user = get(userId)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                <message id="s0072e73c2051421f906e84d0c206966c231" seq-number="1.1.1" text="user = GetById(userId)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
                 </message>
               </messages>
@@ -159,7 +170,7 @@
           <item id="3677160717bc4545883ad71424a7eafc" cid="CMSG006" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:10:39" from="c658fdf9aaad473b97ea7f8391bac934" to="89d894a78dce4bda82459cd77043e10c">
             <communication-message from="c658fdf9aaad473b97ea7f8391bac934" to="89d894a78dce4bda82459cd77043e10c">
               <messages>
-                <message id="s7eca3287dffd42bca23c972faee3ef90476" seq-number="1.2" text="Delete(orderId)" reverse="false" guard="operator = true" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                <message id="s7eca3287dffd42bca23c972faee3ef90476" seq-number="1.2" text="Remove(orderId)" reverse="false" guard="operator = true" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
                 </message>
               </messages>
@@ -226,7 +237,7 @@
             <communication-message />
           </item>
           <item id="7943edee84384042aa44d84f65779543" iid="4624e8c8e65e430dac0a9cce4e09e79e" creation-date="11/25/2020 15:10:36" order-index="10" type="relation">
-            <layout normal-message-position="-69,-29" reverse-message-position="0,30" line-style="oblique" lock-to-fields="false" auto-path="" x1="888" y1="349" x2="1268" y2="349" start-border-pos="0.375" end-border-pos="0.875">
+            <layout normal-message-position="-83,-29" reverse-message-position="0,30" line-style="oblique" lock-to-fields="false" auto-path="" x1="888" y1="349" x2="1268" y2="349" start-border-pos="0.375" end-border-pos="0.875">
               <points>
                 <point x="888" y="349" />
                 <point x="1268" y="349" />
@@ -236,7 +247,7 @@
             <communication-message />
           </item>
           <item id="3677160717bc4545883ad71424a7eafc" iid="b140c38fae154dbfa7eb6849bb55d93d" creation-date="11/25/2020 15:10:39" order-index="11" type="relation">
-            <layout normal-message-position="-100,-33" reverse-message-position="0,30" line-style="oblique" lock-to-fields="false" auto-path="" x1="888" y1="151" x2="1268" y2="151" start-border-pos="0.375" end-border-pos="0.875">
+            <layout normal-message-position="-105,-33" reverse-message-position="0,30" line-style="oblique" lock-to-fields="false" auto-path="" x1="888" y1="151" x2="1268" y2="151" start-border-pos="0.375" end-border-pos="0.875">
               <points>
                 <point x="888" y="151" />
                 <point x="1268" y="151" />
