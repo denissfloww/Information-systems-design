@@ -15,7 +15,7 @@
     <entity-ids>
       <counter>
         <item-type type-id="group" type="Group" />
-        <value>158</value>
+        <value>166</value>
       </counter>
       <counter>
         <item-type type-id="lifeline" type="Lifeline" />
@@ -56,6 +56,16 @@
         <phone-number />
         <description />
         <color>#00000000</color>
+        <working-schedule uid="ws-52c57ba48c364be0a4b8ef6349d92d64" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+      <person id="">
+        <first-name>Денис</first-name>
+        <last-name>бугаков</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
       </person>
     </persons>
     <teams />
@@ -87,7 +97,7 @@
       </meta>
       <abstract-items />
       <sub-models />
-      <diagram type="uml-communication" id="pe4448a25da47497fa70d386d6492b204_693870166" name="CommunicationDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-field-tags="true" show-empty-compartments="true" show-special-indicators="false" show-rules="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-visibility-sign="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-data="true" show-description="false" show-field-description="false" auto-routed-paths="false" default-line-style="default" view-location="-157,-100">
+      <diagram type="uml-communication" id="pe4448a25da47497fa70d386d6492b204_693870166" name="CommunicationDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-field-tags="true" show-empty-compartments="true" show-special-indicators="false" show-rules="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-visibility-sign="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-data="true" show-description="false" show-field-description="false" auto-routed-paths="false" default-line-style="default" view-location="-142,-100">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -113,7 +123,7 @@
           <item id="d96fb1d0fc9e428fb50ffbf48b846beb" cid="CMSG001" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:27:34" to="615eddbebeb741aaacee5e436a6fda5b">
             <communication-message to="615eddbebeb741aaacee5e436a6fda5b">
               <messages>
-                <message id="sf30b0226b1dd420c9b69232f0d1b9bf3556" seq-number="" text="order = GetOrder(orderId)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                <message id="sf30b0226b1dd420c9b69232f0d1b9bf3556" seq-number="" text="info = GetOrder(orderId)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
                 </message>
               </messages>

@@ -15,7 +15,7 @@
     <entity-ids>
       <counter>
         <item-type type-id="group" type="Group" />
-        <value>1555</value>
+        <value>1597</value>
       </counter>
       <counter>
         <item-type type-id="lifeline" type="Lifeline" />
@@ -76,6 +76,16 @@
         <phone-number />
         <description />
         <color>#00000000</color>
+        <working-schedule uid="ws-3e5a69c2aef04703aac6875122019386" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+      <person id="">
+        <first-name>Денис</first-name>
+        <last-name>бугаков</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
       </person>
     </persons>
     <teams />
@@ -111,7 +121,7 @@
       </meta>
       <abstract-items />
       <sub-models />
-      <diagram type="uml-communication" id="p0f866dbd63874578ae58e2a90f194549_820118498" name="CommunicationDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-field-tags="true" show-empty-compartments="true" show-special-indicators="false" show-rules="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-visibility-sign="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-data="true" show-description="false" show-field-description="false" auto-routed-paths="false" default-line-style="default" view-location="-19,-62" zoom="0.9">
+      <diagram type="uml-communication" id="p0f866dbd63874578ae58e2a90f194549_820118498" name="CommunicationDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-field-tags="true" show-empty-compartments="true" show-special-indicators="false" show-rules="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-visibility-sign="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-data="true" show-description="false" show-field-description="false" auto-routed-paths="false" default-line-style="default" view-location="125,118" zoom="0.9">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -209,7 +219,7 @@
           <item id="43c0d76921d0498c87531d114c71afa8" cid="CMSG006" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/13/2020 21:55:57" to="55982ed8bf94444a9de44f7f84c4c6d5">
             <communication-message to="55982ed8bf94444a9de44f7f84c4c6d5">
               <messages>
-                <message id="s50799e7e25ee498c81901e74657576a6252" seq-number="" text="Info = CreateOrder(userId, planId)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                <message id="s50799e7e25ee498c81901e74657576a6252" seq-number="" text="info = CreateOrder(userId, planId)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
                 </message>
               </messages>
@@ -242,8 +252,8 @@
               </messages>
             </communication-message>
           </item>
-          <item id="7ce221cfd1174b458fd9018da584fcab" cid="CMSG009" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/19/2020 20:44:39" from="55982ed8bf94444a9de44f7f84c4c6d5" to="59521f70889f4408938db88263ce8c69">
-            <communication-message from="55982ed8bf94444a9de44f7f84c4c6d5" to="59521f70889f4408938db88263ce8c69">
+          <item id="7ce221cfd1174b458fd9018da584fcab" cid="CMSG009" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/19/2020 20:44:39" from="ac396fbe3da54d9ab073db7d7d1407af" to="59521f70889f4408938db88263ce8c69">
+            <communication-message from="ac396fbe3da54d9ab073db7d7d1407af" to="59521f70889f4408938db88263ce8c69">
               <messages>
                 <message id="s06c8ffd5fdbe4c0a852c5b6b2f98e3ab611" seq-number="2" text="Log(msg, context, logType)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
@@ -257,7 +267,7 @@
           <item id="dc07535c0d444e34b88994f65cd126b5" cid="CMSG010" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/24/2020 16:33:09" from="55982ed8bf94444a9de44f7f84c4c6d5" to="ac396fbe3da54d9ab073db7d7d1407af">
             <communication-message from="55982ed8bf94444a9de44f7f84c4c6d5" to="ac396fbe3da54d9ab073db7d7d1407af">
               <messages>
-                <message id="scbc510a1088e45e0b9ab02f0669a3733323" seq-number="1" text="Info = CreateOrder(userId, planId)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                <message id="scbc510a1088e45e0b9ab02f0669a3733323" seq-number="1" text="CreateOrder(userId, planId)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
                 </message>
               </messages>
@@ -278,7 +288,7 @@
           <item id="f082928cca9a432fb576f27b62e0fc04" cid="CMSG011" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/24/2020 17:03:58" from="ac396fbe3da54d9ab073db7d7d1407af" to="83deb0462c3b43c7a58e0326faddf758">
             <communication-message from="ac396fbe3da54d9ab073db7d7d1407af" to="83deb0462c3b43c7a58e0326faddf758">
               <messages>
-                <message id="s40c7b6ada43f4eb0b855cca299d1451a532" seq-number="1.3" text="orderId = Create(order)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                <message id="s40c7b6ada43f4eb0b855cca299d1451a532" seq-number="1.3" text="order = Create(order)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
                 </message>
               </messages>
@@ -412,7 +422,7 @@
             <layout line-disabled="true" ax="190" ay="416" awidth="140" aheight="60" x="190" y="416" width="140" height="60" container-layout="simple" />
           </item>
           <item id="43c0d76921d0498c87531d114c71afa8" iid="b2f4919090d64ec7b150a08ef066b0d5" creation-date="11/13/2020 21:55:57" order-index="3" type="relation">
-            <layout normal-message-position="-103,-32" reverse-message-position="-63,37" line-style="oblique" lock-to-fields="false" auto-path="" x1="-53" y1="446" x2="190" y2="446" start-border-pos="-1" end-border-pos="0.875">
+            <layout normal-message-position="-114,-30" reverse-message-position="-63,37" line-style="oblique" lock-to-fields="false" auto-path="" x1="-53" y1="446" x2="190" y2="446" start-border-pos="-1" end-border-pos="0.875">
               <points>
                 <point x="-53" y="446" />
                 <point x="190" y="446" />
@@ -422,23 +432,25 @@
             <communication-message />
           </item>
           <item id="59521f70889f4408938db88263ce8c69" iid="d45028c148e94d7dadcf9c5417e7d791" creation-date="11/13/2020 22:28:12" order-index="6" type="lifeline">
-            <layout line-disabled="true" ax="190" ay="650" awidth="140" aheight="60" x="190" y="650" width="140" height="60" container-layout="simple" />
+            <layout line-disabled="true" ax="190" ay="667" awidth="140" aheight="60" x="190" y="667" width="140" height="60" container-layout="simple" />
           </item>
           <item id="7ce221cfd1174b458fd9018da584fcab" iid="27e91546c3a54746a84403513be914d4" creation-date="11/19/2020 20:44:39" order-index="8" type="relation">
-            <layout normal-message-position="30,-16" reverse-message-position="0,30" line-style="oblique" lock-start-point="true" lock-to-fields="false" auto-path="" x1="262" y1="476" x2="260" y2="650" start-border-pos="0.621428571428571" end-border-pos="0.125525229317801" start-local-pos="72">
+            <layout normal-message-position="-36,15" reverse-message-position="0,30" line-style="oblique" lock-start-point="true" lock-to-fields="false" auto-path="" x1="740" y1="476" x2="260" y2="667" start-border-pos="0.717857142857143" end-border-pos="0.125" start-local-pos="18">
               <points>
-                <point x="262" y="476" />
-                <point x="260" y="650" />
+                <point x="740" y="476" />
+                <point x="740" y="568" />
+                <point x="260" y="568" />
+                <point x="260" y="667" />
               </points>
             </layout>
-            <relation from="55982ed8bf94444a9de44f7f84c4c6d5" from-iid="c804bf3c21724e2dbfd23d3409f1f4f4" to="59521f70889f4408938db88263ce8c69" to-iid="d45028c148e94d7dadcf9c5417e7d791" />
+            <relation from="ac396fbe3da54d9ab073db7d7d1407af" from-iid="418bbef32e6e49b7b13e132edaaf5322" to="59521f70889f4408938db88263ce8c69" to-iid="d45028c148e94d7dadcf9c5417e7d791" />
             <communication-message />
           </item>
           <item id="ac396fbe3da54d9ab073db7d7d1407af" iid="418bbef32e6e49b7b13e132edaaf5322" creation-date="11/24/2020 16:26:46" order-index="11" type="lifeline">
             <layout line-disabled="true" ax="722" ay="416" awidth="140" aheight="60" x="722" y="416" width="140" height="60" container-layout="simple" />
           </item>
           <item id="dc07535c0d444e34b88994f65cd126b5" iid="ca335deb346345d5a667977f43dc580a" creation-date="11/24/2020 16:33:09" order-index="12" type="relation">
-            <layout normal-message-position="-116,-28" reverse-message-position="0,30" line-style="oblique" lock-to-fields="false" auto-path="" x1="330" y1="446" x2="722" y2="446" start-border-pos="0.375" end-border-pos="0.875">
+            <layout normal-message-position="-88,-32" reverse-message-position="0,30" line-style="oblique" lock-to-fields="false" auto-path="" x1="330" y1="446" x2="722" y2="446" start-border-pos="0.375" end-border-pos="0.875">
               <points>
                 <point x="330" y="446" />
                 <point x="722" y="446" />
