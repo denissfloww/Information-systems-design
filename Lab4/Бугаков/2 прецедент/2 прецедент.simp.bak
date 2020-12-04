@@ -9,21 +9,25 @@
     <entity-names>
       <counter>
         <item-type type-id="lifeline" type="Lifeline" />
-        <value>6</value>
+        <value>7</value>
+      </counter>
+      <counter>
+        <item-type type="Unknown" />
+        <value>1</value>
       </counter>
     </entity-names>
     <entity-ids>
       <counter>
         <item-type type-id="group" type="Group" />
-        <value>266</value>
+        <value>358</value>
       </counter>
       <counter>
         <item-type type-id="lifeline" type="Lifeline" />
-        <value>7</value>
+        <value>9</value>
       </counter>
       <counter>
         <item-type type-id="communication-message" type="Message" />
-        <value>7</value>
+        <value>9</value>
       </counter>
     </entity-ids>
     <diagrams>
@@ -66,6 +70,16 @@
         <phone-number />
         <description />
         <color>#00000000</color>
+        <working-schedule uid="ws-3dda634d9fb54b08a27aa78c8df38b93" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+      <person id="">
+        <first-name>Денис</first-name>
+        <last-name>бугаков</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
       </person>
     </persons>
     <teams />
@@ -97,7 +111,7 @@
       </meta>
       <abstract-items />
       <sub-models />
-      <diagram type="uml-communication" id="pfa87cd86feaa4bda943bbb49d1ffc409_630535261" name="CommunicationDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-field-tags="true" show-empty-compartments="true" show-special-indicators="false" show-rules="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-visibility-sign="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-data="true" show-description="false" show-field-description="false" auto-routed-paths="false" default-line-style="default" view-location="-77,-100">
+      <diagram type="uml-communication" id="pfa87cd86feaa4bda943bbb49d1ffc409_630535261" name="CommunicationDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-field-tags="true" show-empty-compartments="true" show-special-indicators="false" show-rules="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-visibility-sign="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-data="true" show-description="false" show-field-description="false" auto-routed-paths="false" default-line-style="default" view-location="276,-190">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -109,7 +123,7 @@
           </authors>
           <description />
           <creation-date>11/25/2020 15:03:26</creation-date>
-          <change-date>11/25/2020 15:10:39</change-date>
+          <change-date>12/04/2020 19:29:27</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
@@ -150,8 +164,8 @@
           <item id="89d894a78dce4bda82459cd77043e10c" cid="LL006" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:07:56" visibility="undefined">
             <lifeline classifier-name="orderRepo:GenericRepository" selector="" is-multi-object="false" />
           </item>
-          <item id="290edfcbfc19449792f712108572f86d" cid="CMSG003" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:08:22" from="cb03b65fc3224bfeaa24e7983f40e620" to="44eddff1bfaf49fc9a37b0e1d9089c9c">
-            <communication-message from="cb03b65fc3224bfeaa24e7983f40e620" to="44eddff1bfaf49fc9a37b0e1d9089c9c">
+          <item id="290edfcbfc19449792f712108572f86d" cid="CMSG003" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:08:22" from="c658fdf9aaad473b97ea7f8391bac934" to="44eddff1bfaf49fc9a37b0e1d9089c9c">
+            <communication-message from="c658fdf9aaad473b97ea7f8391bac934" to="44eddff1bfaf49fc9a37b0e1d9089c9c">
               <messages>
                 <message id="s43c2d4abdd654c429c0e2c80f5ca4d8b827" seq-number="2" text="Log(msg, context, logType)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
@@ -181,6 +195,30 @@
             <communication-message from="c658fdf9aaad473b97ea7f8391bac934" to="89d894a78dce4bda82459cd77043e10c">
               <messages>
                 <message id="s7eca3287dffd42bca23c972faee3ef90476" seq-number="1.2" text="Remove(orderId)" reverse="false" guard="operator = true" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                  <parameters />
+                </message>
+              </messages>
+            </communication-message>
+          </item>
+          <item id="6768ed8a2cbe4fbc995e2a23491a541e" cid="LL007" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="12/04/2020 19:20:57">
+            <lifeline classifier-name="PlanService" selector="" is-multi-object="false" />
+          </item>
+          <item id="e35ed8ee3c05499193339953d5864513" cid="CMSG007" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="12/04/2020 19:28:43" from="c658fdf9aaad473b97ea7f8391bac934" to="6768ed8a2cbe4fbc995e2a23491a541e">
+            <communication-message from="c658fdf9aaad473b97ea7f8391bac934" to="6768ed8a2cbe4fbc995e2a23491a541e">
+              <messages>
+                <message id="s79271625c5574a8f9195b24cca21ab09904" seq-number="1" text="UpdatePlan(planId, orderId = null)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                  <parameters />
+                </message>
+              </messages>
+            </communication-message>
+          </item>
+          <item id="7e64da510f414313b49a229cf10ceeff" cid="LL008" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="12/04/2020 19:28:59">
+            <lifeline classifier-name="GenericRepository" selector="" is-multi-object="false" />
+          </item>
+          <item id="7daf7f14ae9d4d739591c81528c52b9c" cid="CMSG008" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="12/04/2020 19:29:27" from="6768ed8a2cbe4fbc995e2a23491a541e" to="7e64da510f414313b49a229cf10ceeff">
+            <communication-message from="6768ed8a2cbe4fbc995e2a23491a541e" to="7e64da510f414313b49a229cf10ceeff">
+              <messages>
+                <message id="sa2396299c3f8419d868f1e618cb4ee8c515" seq-number="1" text="Update(planId, orderId = null)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
                 </message>
               </messages>
@@ -227,13 +265,15 @@
             <layout line-disabled="true" ax="1268" ay="121" awidth="241" aheight="60" x="1268" y="121" width="241" height="60" rotation-center="-50.5,0" container-layout="simple" />
           </item>
           <item id="290edfcbfc19449792f712108572f86d" iid="8e3ce2ed7db742a48fe875414492bfe1" creation-date="11/25/2020 15:08:22" order-index="8" type="relation">
-            <layout normal-message-position="32,-14" reverse-message-position="0,30" line-style="oblique" lock-to-fields="false" auto-path="" x1="340" y1="181" x2="340" y2="319" start-border-pos="0.625" end-border-pos="0.125">
+            <layout normal-message-position="-42,15" reverse-message-position="0,30" line-style="oblique" lock-start-point="true" lock-to-fields="false" auto-path="" x1="787" y1="181" x2="340" y2="319" start-border-pos="0.680357142857143" end-border-pos="0.125" start-local-pos="39">
               <points>
-                <point x="340" y="181" />
+                <point x="787" y="181" />
+                <point x="787" y="251" />
+                <point x="340" y="251" />
                 <point x="340" y="319" />
               </points>
             </layout>
-            <relation from="cb03b65fc3224bfeaa24e7983f40e620" from-iid="aab1b7151e8a4f93885bcc6b7af7b548" to="44eddff1bfaf49fc9a37b0e1d9089c9c" to-iid="ca8326b57a9d4b93819ee110abd5fd8c" />
+            <relation from="c658fdf9aaad473b97ea7f8391bac934" from-iid="5a0fa172a3014f68a1676eca7d04b6dc" to="44eddff1bfaf49fc9a37b0e1d9089c9c" to-iid="ca8326b57a9d4b93819ee110abd5fd8c" />
             <communication-message />
           </item>
           <item id="198c151000794a9389408bb9094ba510" iid="c6de66cb63ef4956be98bc9c3fe07f05" creation-date="11/25/2020 15:10:30" order-index="9" type="relation">
@@ -264,6 +304,32 @@
               </points>
             </layout>
             <relation from="c658fdf9aaad473b97ea7f8391bac934" from-iid="5a0fa172a3014f68a1676eca7d04b6dc" to="89d894a78dce4bda82459cd77043e10c" to-iid="d44c1f5443f54a4e859d3cd729d50e43" />
+            <communication-message />
+          </item>
+          <item id="6768ed8a2cbe4fbc995e2a23491a541e" iid="f5ad4ff059a94e3aa3aa9db98d222a22" creation-date="12/04/2020 19:20:57" order-index="12" type="lifeline">
+            <layout line-disabled="true" ax="748" ay="-77" awidth="140" aheight="60" x="751" y="-79" width="140" height="60" container-layout="simple" />
+          </item>
+          <item id="e35ed8ee3c05499193339953d5864513" iid="8bfc8e5cd4974987841233e884942497" creation-date="12/04/2020 19:28:43" order-index="13" type="relation">
+            <layout normal-message-position="35,-16" reverse-message-position="0,30" line-style="oblique" lock-to-fields="false" auto-path="" x1="818" y1="121" x2="818" y2="-17" start-border-pos="0.125" end-border-pos="0.625">
+              <points>
+                <point x="818" y="121" />
+                <point x="818" y="-17" />
+              </points>
+            </layout>
+            <relation from="c658fdf9aaad473b97ea7f8391bac934" from-iid="5a0fa172a3014f68a1676eca7d04b6dc" to="6768ed8a2cbe4fbc995e2a23491a541e" to-iid="f5ad4ff059a94e3aa3aa9db98d222a22" />
+            <communication-message />
+          </item>
+          <item id="7e64da510f414313b49a229cf10ceeff" iid="cae5f399a4db48d1847aca77066a085c" creation-date="12/04/2020 19:28:59" order-index="14" type="lifeline">
+            <layout line-disabled="true" ax="1268" ay="-77" awidth="173" aheight="60" x="1268" y="-77" width="173" height="60" rotation-center="-16.5,0" container-layout="simple" />
+          </item>
+          <item id="7daf7f14ae9d4d739591c81528c52b9c" iid="a5fc1e0625f74bb1b62c734822e7e7c8" creation-date="12/04/2020 19:29:27" order-index="15" type="relation">
+            <layout normal-message-position="-83,-36" reverse-message-position="0,30" line-style="oblique" lock-to-fields="false" auto-path="" x1="888" y1="-47" x2="1268" y2="-47" start-border-pos="0.375" end-border-pos="0.875">
+              <points>
+                <point x="888" y="-47" />
+                <point x="1268" y="-47" />
+              </points>
+            </layout>
+            <relation from="6768ed8a2cbe4fbc995e2a23491a541e" from-iid="f5ad4ff059a94e3aa3aa9db98d222a22" to="7e64da510f414313b49a229cf10ceeff" to-iid="cae5f399a4db48d1847aca77066a085c" />
             <communication-message />
           </item>
         </layer>
