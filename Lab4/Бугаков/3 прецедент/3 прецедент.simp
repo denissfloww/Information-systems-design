@@ -15,7 +15,7 @@
     <entity-ids>
       <counter>
         <item-type type-id="group" type="Group" />
-        <value>166</value>
+        <value>180</value>
       </counter>
       <counter>
         <item-type type-id="lifeline" type="Lifeline" />
@@ -57,6 +57,16 @@
         <description />
         <color>#00000000</color>
         <working-schedule uid="ws-52c57ba48c364be0a4b8ef6349d92d64" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+      <person id="">
+        <first-name>Денис</first-name>
+        <last-name>бугаков</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+        <working-schedule uid="ws-82567d9b1078423d90b859a8e9e3b722" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
       </person>
       <person id="">
         <first-name>Денис</first-name>
@@ -123,14 +133,14 @@
           <item id="d96fb1d0fc9e428fb50ffbf48b846beb" cid="CMSG001" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:27:34" to="615eddbebeb741aaacee5e436a6fda5b">
             <communication-message to="615eddbebeb741aaacee5e436a6fda5b">
               <messages>
-                <message id="sf30b0226b1dd420c9b69232f0d1b9bf3556" seq-number="" text="info = GetOrder(orderId)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
+                <message id="sf30b0226b1dd420c9b69232f0d1b9bf3556" seq-number="" text="order = GetOrder(orderId)" reverse="false" guard="" iteration="false" concurrent="false" return-value="" assign-to-variable="">
                   <parameters />
                 </message>
               </messages>
             </communication-message>
           </item>
           <item id="9ee2f300ce224603815f3789e5df3f1c" cid="LL003" type="lifeline" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:28:21" visibility="undefined">
-            <lifeline classifier-name="orderRepo:GenericRepository" selector="" is-multi-object="false" />
+            <lifeline classifier-name="OrderRepository" selector="" is-multi-object="false" />
           </item>
           <item id="d0aafcc6c07a49588436af826968175a" cid="CMSG003" type="communication-message" name="" style-class="" change-tracking-state="added" creator="" creation-date="11/25/2020 15:29:07" from="615eddbebeb741aaacee5e436a6fda5b" to="d47f758c6bac414599213643f89055a2">
             <communication-message from="615eddbebeb741aaacee5e436a6fda5b" to="d47f758c6bac414599213643f89055a2">
@@ -159,7 +169,7 @@
             <layout line-disabled="true" ax="518" ay="65" awidth="140" aheight="60" x="518" y="65" width="140" height="60" container-layout="simple" />
           </item>
           <item id="d96fb1d0fc9e428fb50ffbf48b846beb" iid="ef95b725ca3349a0ab634b37d82495d7" creation-date="11/25/2020 15:27:34" order-index="2" type="relation">
-            <layout normal-message-position="-80,-32" reverse-message-position="0,30" line-style="oblique" lock-to-fields="false" auto-path="" x1="-65" y1="95" x2="152" y2="95" start-border-pos="-1" end-border-pos="0.875">
+            <layout normal-message-position="-89,-34" reverse-message-position="0,30" line-style="oblique" lock-to-fields="false" auto-path="" x1="-65" y1="95" x2="152" y2="95" start-border-pos="-1" end-border-pos="0.875">
               <points>
                 <point x="-65" y="95" />
                 <point x="152" y="95" />
@@ -169,7 +179,7 @@
             <communication-message />
           </item>
           <item id="9ee2f300ce224603815f3789e5df3f1c" iid="4629e8bdbc29446482b552065f3edb39" creation-date="11/25/2020 15:28:21" order-index="3" type="lifeline">
-            <layout line-disabled="true" ax="884" ay="65" awidth="246" aheight="60" x="893" y="62" width="246" height="60" rotation-center="-53,0" container-layout="simple" />
+            <layout line-disabled="true" ax="884" ay="65" awidth="185" aheight="60" x="893" y="62" width="185" height="60" rotation-center="-22.5,0" container-layout="simple" />
           </item>
           <item id="d0aafcc6c07a49588436af826968175a" iid="f48f4bd29e2f460e9a94d8b8368e1ca1" creation-date="11/25/2020 15:29:07" order-index="4" type="relation">
             <layout normal-message-position="-82,-32" reverse-message-position="0,30" line-style="oblique" lock-to-fields="false" auto-path="" x1="292" y1="95" x2="518" y2="95" start-border-pos="0.375" end-border-pos="0.875">
