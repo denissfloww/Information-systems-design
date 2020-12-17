@@ -32467,6 +32467,23 @@
 									"subViews": [
 										{
 											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF2Mv+izpX9Dfw=",
+											"_parent": {
+												"$ref": "AAAAAAF2MuHzpIm6Maw="
+											},
+											"model": {
+												"$ref": "AAAAAAF2Mv+iDZXo7xU="
+											},
+											"font": "Arial;13;0",
+											"left": 493,
+											"top": 78,
+											"width": 102.97802734375,
+											"height": 13,
+											"text": "+id",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
 											"_id": "AAAAAAF2MuHzpIm7krg=",
 											"_parent": {
 												"$ref": "AAAAAAF2MuHzpIm6Maw="
@@ -32476,7 +32493,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 493,
-											"top": 78,
+											"top": 93,
 											"width": 102.97802734375,
 											"height": 13,
 											"text": "+content",
@@ -32493,7 +32510,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 493,
-											"top": 93,
+											"top": 108,
 											"width": 102.97802734375,
 											"height": 13,
 											"text": "+type",
@@ -32510,7 +32527,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 493,
-											"top": 108,
+											"top": 123,
 											"width": 102.97802734375,
 											"height": 13,
 											"text": "+date",
@@ -32527,7 +32544,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 493,
-											"top": 123,
+											"top": 138,
 											"width": 102.97802734375,
 											"height": 13,
 											"text": "+user_id",
@@ -32538,7 +32555,7 @@
 									"left": 488,
 									"top": 73,
 									"width": 112.97802734375,
-									"height": 68
+									"height": 83
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -32551,7 +32568,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 488,
-									"top": 141,
+									"top": 156,
 									"width": 112.97802734375,
 									"height": 10
 								},
@@ -33432,6 +33449,14 @@
 					},
 					"name": "Notification",
 					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF2Mv+iDZXo7xU=",
+							"_parent": {
+								"$ref": "AAAAAAF2MuHzpooHGsQ="
+							},
+							"name": "id"
+						},
 						{
 							"_type": "UMLAttribute",
 							"_id": "AAAAAAF2MuHzp4oIO/Q=",
