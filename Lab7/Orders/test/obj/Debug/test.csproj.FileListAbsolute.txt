@@ -1,0 +1,15 @@
+E:\ПИС\Lab7\Registry\test\bin\Debug\test.exe.config
+E:\ПИС\Lab7\Registry\test\bin\Debug\test.exe
+E:\ПИС\Lab7\Registry\test\bin\Debug\test.pdb
+E:\ПИС\Lab7\Registry\test\bin\Debug\EntityFramework.dll
+E:\ПИС\Lab7\Registry\test\bin\Debug\EntityFramework.SqlServer.dll
+E:\ПИС\Lab7\Registry\test\bin\Debug\Orders.dll
+E:\ПИС\Lab7\Registry\test\bin\Debug\Orders.pdb
+E:\ПИС\Lab7\Registry\test\bin\Debug\Orders.dll.config
+E:\ПИС\Lab7\Registry\test\bin\Debug\EntityFramework.xml
+E:\ПИС\Lab7\Registry\test\bin\Debug\EntityFramework.SqlServer.xml
+E:\ПИС\Lab7\Registry\test\obj\Debug\test.csprojAssemblyReference.cache
+E:\ПИС\Lab7\Registry\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+E:\ПИС\Lab7\Registry\test\obj\Debug\test.csproj.CopyComplete
+E:\ПИС\Lab7\Registry\test\obj\Debug\test.exe
+E:\ПИС\Lab7\Registry\test\obj\Debug\test.pdb
