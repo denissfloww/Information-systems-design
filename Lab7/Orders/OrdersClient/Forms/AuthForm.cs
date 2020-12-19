@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Orders.Domain.Services;
 using MetroFramework;
 using OrdersClient.Forms;
+using OrdersClient.Controllers;
 
 namespace OrdersClient
 {
@@ -23,7 +23,7 @@ namespace OrdersClient
 
         private async void btnAuth_Click(object sender, EventArgs e)
         {
-            var id = await Task.Run(() => UserService.Auth(tbUserName.Text, tbPassword.Text));
+            var id = await Task.Run(() => UserController.Auth(tbUserName.Text, tbPassword.Text));
             var form = new OrdersForm();
             form.Show();
             this.Hide();

@@ -7,11 +7,11 @@ using Orders.Domain.Services;
 
 namespace OrdersClient.Controllers
 {
-    public static class UserController
+    public class UserController
     {
         public static int Auth(string username, string password)
         {
-            return 0;
+            return UserService.Auth(username, password);
         }
     }
 }
