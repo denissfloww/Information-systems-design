@@ -1,9 +1,10 @@
-namespace Orders.Domain.Models
+namespace Orders.Infrastructure
 {
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using Orders.Domain.Models;
 
     public partial class Context : DbContext
     {

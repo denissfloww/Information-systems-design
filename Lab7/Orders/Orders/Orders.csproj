@@ -53,18 +53,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\Context\Context.cs" />
+    <Compile Include="Infrastructure\Context.cs" />
     <Compile Include="Domain\Models\Notification.cs" />
     <Compile Include="Domain\Models\Order.cs" />
     <Compile Include="Domain\Models\Organization.cs" />
     <Compile Include="Domain\Models\Plan.cs" />
     <Compile Include="Domain\Models\Role.cs" />
     <Compile Include="Domain\Models\User.cs" />
+    <Compile Include="Domain\Repositories\GenericRepository.cs" />
+    <Compile Include="Domain\Services\OrderService.cs" />
+    <Compile Include="Domain\Services\UserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Domain\Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

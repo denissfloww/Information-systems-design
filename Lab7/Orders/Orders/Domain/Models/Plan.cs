@@ -29,7 +29,7 @@ namespace Orders.Domain.Models
         public int ClientId { get; set; }
 
         [Column("order_id", TypeName = "int")]
-        public int OrderId { get; set; }
+        public int? OrderId { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
