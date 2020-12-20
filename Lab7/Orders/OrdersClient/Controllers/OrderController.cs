@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Orders.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Orders.Domain.Models;
 
-namespace Orders.Domain.Services
+namespace OrdersClient.Controllers
 {
-    public class OrderService
+    public class OrderController
     {
         //TODO: Добавить GetOrders()
         //TODO: Dict это Dictionary типо? Если да то какие у него значения для ключа и значения?
@@ -18,13 +18,15 @@ namespace Orders.Domain.Services
         }
 
         public static void UpdateOrder(
-            int userId, 
+            int userId,
             int orderId, int planId,
-            string catchGoal = null, 
+            string catchGoal = null,
             object scan = null)
         {
 
         }
+
+        //TODO: Добавить Export методы, определиться с возвращаемым типом
 
         public static void CreateOrder(int userId, int planId, string cathcGoal)
         {

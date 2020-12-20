@@ -18,6 +18,11 @@ namespace Orders.Domain.Services
                 _user.Username == username && 
                 _user.Password == password);
             return (user.Count != 0) ? user.FirstOrDefault().Id : 0;
-        }               
+        }    
+        
+        public static User GetUser(int userId)
+        {
+            return new User();
+        }
     }
 }

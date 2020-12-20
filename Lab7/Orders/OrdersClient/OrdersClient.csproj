@@ -65,6 +65,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\PlanController.cs" />
     <Compile Include="Forms\AuthForm.cs">
       <SubType>Form</SubType>
     </Compile>

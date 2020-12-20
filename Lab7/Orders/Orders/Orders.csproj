@@ -53,6 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Services\ExportOrderService.cs" />
+    <Compile Include="Domain\Services\LogService.cs" />
+    <Compile Include="Domain\Services\PlanService.cs" />
     <Compile Include="Infrastructure\Context.cs" />
     <Compile Include="Domain\Models\Notification.cs" />
     <Compile Include="Domain\Models\Order.cs" />
