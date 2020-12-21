@@ -1,0 +1,9 @@
+E:\ПИС\Lab7\Orders\test2\bin\Debug\test2.exe.config
+E:\ПИС\Lab7\Orders\test2\bin\Debug\test2.exe
+E:\ПИС\Lab7\Orders\test2\bin\Debug\test2.pdb
+E:\ПИС\Lab7\Orders\test2\obj\Debug\test2.Form1.resources
+E:\ПИС\Lab7\Orders\test2\obj\Debug\test2.Properties.Resources.resources
+E:\ПИС\Lab7\Orders\test2\obj\Debug\test2.csproj.GenerateResource.cache
+E:\ПИС\Lab7\Orders\test2\obj\Debug\test2.csproj.CoreCompileInputs.cache
+E:\ПИС\Lab7\Orders\test2\obj\Debug\test2.exe
+E:\ПИС\Lab7\Orders\test2\obj\Debug\test2.pdb

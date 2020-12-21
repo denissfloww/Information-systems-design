@@ -28,27 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tcOrder = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateCreateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.catchGoalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.scanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.planIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plansDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.planGrid = new System.Windows.Forms.DataGridView();
+            this.lblPlan = new MetroFramework.Controls.MetroLabel();
             this.tcOrder.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.planGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // tcOrder
@@ -59,22 +46,23 @@
             this.tcOrder.Location = new System.Drawing.Point(20, 60);
             this.tcOrder.Name = "tcOrder";
             this.tcOrder.SelectedIndex = 0;
-            this.tcOrder.Size = new System.Drawing.Size(852, 469);
+            this.tcOrder.Size = new System.Drawing.Size(899, 549);
             this.tcOrder.Style = MetroFramework.MetroColorStyle.Green;
             this.tcOrder.TabIndex = 0;
             this.tcOrder.UseSelectable = true;
             // 
             // metroTabPage1
             // 
-            this.metroTabPage1.Controls.Add(this.metroGrid1);
+            this.metroTabPage1.Controls.Add(this.lblPlan);
+            this.metroTabPage1.Controls.Add(this.planGrid);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.HorizontalScrollbarSize = 10;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(844, 427);
+            this.metroTabPage1.Size = new System.Drawing.Size(891, 507);
             this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "metroTabPage1";
+            this.metroTabPage1.Text = "План-график";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
@@ -86,135 +74,57 @@
             this.metroTabPage2.HorizontalScrollbarSize = 10;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(844, 427);
+            this.metroTabPage2.Size = new System.Drawing.Size(891, 507);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "metroTabPage2";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
-            // metroGrid1
+            // planGrid
             // 
-            this.metroGrid1.AllowUserToResizeRows = false;
-            this.metroGrid1.AutoGenerateColumns = false;
-            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.userIdDataGridViewTextBoxColumn,
-            this.dateCreateDataGridViewTextBoxColumn,
-            this.catchGoalDataGridViewTextBoxColumn,
-            this.scanDataGridViewTextBoxColumn,
-            this.planIdDataGridViewTextBoxColumn,
-            this.plansDataGridViewTextBoxColumn,
-            this.usersDataGridViewTextBoxColumn});
-            this.metroGrid1.DataSource = this.orderBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.metroGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroGrid1.EnableHeadersVisualStyles = false;
-            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.Location = new System.Drawing.Point(0, 0);
-            this.metroGrid1.Name = "metroGrid1";
-            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(844, 427);
-            this.metroGrid1.TabIndex = 2;
+            this.planGrid.AllowUserToAddRows = false;
+            this.planGrid.AllowUserToDeleteRows = false;
+            this.planGrid.AllowUserToResizeColumns = false;
+            this.planGrid.AllowUserToResizeRows = false;
+            this.planGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.planGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
+            this.planGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.planGrid.Location = new System.Drawing.Point(-1, 45);
+            this.planGrid.Name = "planGrid";
+            this.planGrid.ReadOnly = true;
+            this.planGrid.Size = new System.Drawing.Size(889, 462);
+            this.planGrid.TabIndex = 2;
+            this.planGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.planGrid_CellClick);
             // 
-            // orderBindingSource
+            // lblPlan
             // 
-            this.orderBindingSource.DataSource = typeof(Orders.Domain.Models.Order);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // userIdDataGridViewTextBoxColumn
-            // 
-            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
-            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
-            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
-            this.userIdDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dateCreateDataGridViewTextBoxColumn
-            // 
-            this.dateCreateDataGridViewTextBoxColumn.DataPropertyName = "DateCreate";
-            this.dateCreateDataGridViewTextBoxColumn.HeaderText = "DateCreate";
-            this.dateCreateDataGridViewTextBoxColumn.Name = "dateCreateDataGridViewTextBoxColumn";
-            // 
-            // catchGoalDataGridViewTextBoxColumn
-            // 
-            this.catchGoalDataGridViewTextBoxColumn.DataPropertyName = "CatchGoal";
-            this.catchGoalDataGridViewTextBoxColumn.HeaderText = "CatchGoal";
-            this.catchGoalDataGridViewTextBoxColumn.Name = "catchGoalDataGridViewTextBoxColumn";
-            // 
-            // scanDataGridViewTextBoxColumn
-            // 
-            this.scanDataGridViewTextBoxColumn.DataPropertyName = "Scan";
-            this.scanDataGridViewTextBoxColumn.HeaderText = "Scan";
-            this.scanDataGridViewTextBoxColumn.Name = "scanDataGridViewTextBoxColumn";
-            // 
-            // planIdDataGridViewTextBoxColumn
-            // 
-            this.planIdDataGridViewTextBoxColumn.DataPropertyName = "PlanId";
-            this.planIdDataGridViewTextBoxColumn.HeaderText = "PlanId";
-            this.planIdDataGridViewTextBoxColumn.Name = "planIdDataGridViewTextBoxColumn";
-            // 
-            // plansDataGridViewTextBoxColumn
-            // 
-            this.plansDataGridViewTextBoxColumn.DataPropertyName = "Plans";
-            this.plansDataGridViewTextBoxColumn.HeaderText = "Plans";
-            this.plansDataGridViewTextBoxColumn.Name = "plansDataGridViewTextBoxColumn";
-            // 
-            // usersDataGridViewTextBoxColumn
-            // 
-            this.usersDataGridViewTextBoxColumn.DataPropertyName = "Users";
-            this.usersDataGridViewTextBoxColumn.HeaderText = "Users";
-            this.usersDataGridViewTextBoxColumn.Name = "usersDataGridViewTextBoxColumn";
+            this.lblPlan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblPlan.AutoSize = true;
+            this.lblPlan.Location = new System.Drawing.Point(376, 0);
+            this.lblPlan.Name = "lblPlan";
+            this.lblPlan.Size = new System.Drawing.Size(108, 19);
+            this.lblPlan.TabIndex = 3;
+            this.lblPlan.Text = "План-график на";
+            this.lblPlan.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // OrdersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 549);
+            this.ClientSize = new System.Drawing.Size(939, 629);
             this.Controls.Add(this.tcOrder);
             this.Name = "OrdersForm";
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "Реестр учёта выданных заказ-нарядов";
             this.Theme = MetroFramework.MetroThemeStyle.Default;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OrdersForm_FormClosing);
             this.tcOrder.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+            this.metroTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.planGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,16 +133,8 @@
 
         private MetroFramework.Controls.MetroTabControl tcOrder;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
-        private MetroFramework.Controls.MetroGrid metroGrid1;
-        private System.Windows.Forms.BindingSource orderBindingSource;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateCreateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn catchGoalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn scanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn planIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn plansDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usersDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView planGrid;
+        private MetroFramework.Controls.MetroLabel lblPlan;
     }
 }

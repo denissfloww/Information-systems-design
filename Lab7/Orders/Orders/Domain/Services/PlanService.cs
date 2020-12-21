@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Orders.Domain.Models;
+using Orders.Domain.Repositories;
 
 namespace Orders.Domain.Services
 {
@@ -16,7 +17,7 @@ namespace Orders.Domain.Services
 
         public static List<Plan> GetPlanInfo()
         {
-            return new List<Plan>();
+            return GenericRepository<Plan>.Get();
         }
     }
 }

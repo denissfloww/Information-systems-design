@@ -58,7 +58,8 @@
             this.tbUserName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbUserName.CustomButton.UseSelectable = true;
             this.tbUserName.CustomButton.Visible = false;
-            this.tbUserName.Lines = new string[0];
+            this.tbUserName.Lines = new string[] {
+        "test"};
             this.tbUserName.Location = new System.Drawing.Point(208, 91);
             this.tbUserName.MaxLength = 32767;
             this.tbUserName.Name = "tbUserName";
@@ -70,6 +71,7 @@
             this.tbUserName.ShortcutsEnabled = true;
             this.tbUserName.Size = new System.Drawing.Size(150, 23);
             this.tbUserName.TabIndex = 1;
+            this.tbUserName.Text = "test";
             this.tbUserName.UseSelectable = true;
             this.tbUserName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbUserName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -110,7 +112,8 @@
             this.tbPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbPassword.CustomButton.UseSelectable = true;
             this.tbPassword.CustomButton.Visible = false;
-            this.tbPassword.Lines = new string[0];
+            this.tbPassword.Lines = new string[] {
+        "1"};
             this.tbPassword.Location = new System.Drawing.Point(208, 138);
             this.tbPassword.MaxLength = 32767;
             this.tbPassword.Name = "tbPassword";
@@ -122,6 +125,7 @@
             this.tbPassword.ShortcutsEnabled = true;
             this.tbPassword.Size = new System.Drawing.Size(150, 23);
             this.tbPassword.TabIndex = 4;
+            this.tbPassword.Text = "1";
             this.tbPassword.UseSelectable = true;
             this.tbPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

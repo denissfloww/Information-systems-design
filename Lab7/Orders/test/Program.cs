@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Orders.Domain.Models;
+using Orders.Domain.Services;
+using Orders.Domain.Repositories;
+using Orders.Infrastructure;
 
 namespace test
 {
@@ -19,34 +23,24 @@ namespace test
                 dates.Add(date);
             }
 
-            var plans = Fill(places, dates);
-            var a = 0;
+            Fill(places, dates);
+            Console.WriteLine("Готово");
         }
 
-        public static List<Plan> Fill(string [] places, List<DateTime> dates)
+        public static void Fill(string [] places, List<DateTime> dates)
         {
             List<Plan> plan = new List<Plan>();
             foreach(var place in places)
             {
                 foreach(var date in dates)
                 {
-                    plan.Add(new Plan()
-                    {
+                    GenericRepository<Plan>.Create(new Plan() {
                         Place = place,
                         Date = date,
-                        OrgId = 1
+                        ClientId = 2
                     });
                 }
             }
-
-            return plan;
         }
-    }
-
-    public class Plan
-    {
-        public string Place { get; set; }
-        public DateTime Date { get; set; }
-        public int OrgId { get; set; }
     }
 }

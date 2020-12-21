@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Orders.Domain.Models;
+using Orders.Domain.Services;
 
 namespace OrdersClient.Controllers
 {
@@ -16,7 +17,7 @@ namespace OrdersClient.Controllers
 
         public static List<Plan> GetPlanInfo()
         {
-            return new List<Plan>();
+            return PlanService.GetPlanInfo();
         }
     }
 }

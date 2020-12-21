@@ -9,6 +9,7 @@ namespace Orders.Domain.Models
     [Table("Orders")]
     public partial class Order
     {
+        [Key]
         [Column("id", TypeName = "int")]
         public int Id { get; set; }
 

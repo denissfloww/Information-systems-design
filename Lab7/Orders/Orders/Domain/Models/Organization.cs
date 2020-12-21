@@ -16,6 +16,7 @@ namespace Orders.Domain.Models
             Users = new HashSet<User>();
         }
 
+        [Key]
         [Column("id", TypeName = "int")]
         public int Id { get; set; }
 
