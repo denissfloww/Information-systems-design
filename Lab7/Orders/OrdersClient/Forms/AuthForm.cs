@@ -24,7 +24,7 @@ namespace OrdersClient
         private async void btnAuth_Click(object sender, EventArgs e)
         {
             var id = await Task.Run(() => UserController.Auth(tbUserName.Text, tbPassword.Text));
-            var form = new OrdersForm();
+            var form = new OrdersForm(id);
             form.Show();
             this.Hide();
         }

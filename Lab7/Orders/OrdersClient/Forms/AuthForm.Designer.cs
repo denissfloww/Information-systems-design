@@ -141,6 +141,7 @@
             this.Controls.Add(this.tbUserName);
             this.Controls.Add(this.lbUserName);
             this.Name = "AuthForm";
+            this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "Авторизация";
             this.ResumeLayout(false);

@@ -15,9 +15,11 @@ namespace OrdersClient.Forms
 {
     public partial class OrdersForm : MetroForm
     {
-        public OrdersForm()
+        public int UserId { get; set; }
+        public OrdersForm(int userId)
         {
             InitializeComponent();
+            UserId = userId;
             PlanGridFill();
         }
 
@@ -54,8 +56,9 @@ namespace OrdersClient.Forms
                     planGrid.Rows[rowNumber].Cells[date.Day.ToString()].Tag = currentPlan.Id;
                     if (currentPlan.OrderId != null)
                     {
-                        planGrid.Rows[rowNumber].Cells[date.Day.ToString()].Value = currentPlan.Id;
-                        planGrid.Rows[rowNumber].Cells[date.Day.ToString()].Style.BackColor = Color.Black;
+                        planGrid.Rows[rowNumber].Cells[date.Day.ToString()].Value = " ";
+                        planGrid.Rows[rowNumber].Cells[date.Day.ToString()].Style.BackColor = Color.Gray;
+                        planGrid.Rows[rowNumber].Cells[date.Day.ToString()].Style.ForeColor = Color.Gray;
 
                     }
                 }
@@ -74,9 +77,9 @@ namespace OrdersClient.Forms
                 if (planGrid.CurrentCell.Value == null)
                 {
                     int id = (int)planGrid.CurrentCell.Tag;
-                    MessageBox.Show(id.ToString());
-                }
-                
+                    var addForm = new AddOrderForm(id, UserId);
+                    addForm.ShowDialog();
+                }               
             }
         }
     }

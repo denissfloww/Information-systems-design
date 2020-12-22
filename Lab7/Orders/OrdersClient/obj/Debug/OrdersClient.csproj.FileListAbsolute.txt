@@ -20,3 +20,4 @@ E:\ПИС\Lab7\Orders\OrdersClient\bin\Debug\EntityFramework.xml
 E:\ПИС\Lab7\Orders\OrdersClient\bin\Debug\EntityFramework.SqlServer.dll
 E:\ПИС\Lab7\Orders\OrdersClient\bin\Debug\EntityFramework.SqlServer.xml
 E:\ПИС\Lab7\Orders\OrdersClient\obj\Debug\OrdersClient.Forms.OrdersForm.resources
+E:\ПИС\Lab7\Orders\OrdersClient\obj\Debug\OrdersClient.Forms.AddOrderForm.resources
