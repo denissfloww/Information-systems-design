@@ -16,10 +16,13 @@ namespace OrdersClient.Forms
     public partial class OrdersForm : MetroForm
     {
         public int UserId { get; set; }
+
+        public Dictionary<string, string> Filter;
         public OrdersForm(int userId)
         {
             InitializeComponent();
             UserId = userId;
+            Filter= new Dictionary<string, string>();
         }
 
         private void OrdersForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -41,7 +44,8 @@ namespace OrdersClient.Forms
 
         private void OrdersForm_Load(object sender, EventArgs e)
         {
-            var orders = OrderController.GetOrders(UserId);
+            ordersGrid.Rows.Clear();
+            var orders = OrderController.GetOrders(UserId,Filter);
             foreach(var order in orders)
             {
                 ordersGrid.Rows.Add(order.Id, 
@@ -50,8 +54,20 @@ namespace OrdersClient.Forms
                     order.DateCreate, 
                     order.Users.Organizations.Name);
             }
-
-            var a = 0;
         }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            var filter = new FilterForm(this,OrdersForm_Load);
+            filter.ShowDialog();
+            OrdersForm_Load(null,null);
+        }
+
+        private void btnDeleteAllFilters_Click(object sender, EventArgs e)
+        {
+            Filter.Clear();
+            OrdersForm_Load(null,null);
+        }
+
     }
 }

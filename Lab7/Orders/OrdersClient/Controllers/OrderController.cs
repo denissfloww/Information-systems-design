@@ -13,11 +13,11 @@ namespace OrdersClient.Controllers
         //TODO: Dict это Dictionary типо? Если да то какие у него значения для ключа и значения?
 
         public static List<Order> GetOrders(int userId,
-            Dictionary<string, string> filter = null,
+            Dictionary<string, string> filter,
             Tuple<string, bool> sort = null,
             int page = 1)
         {
-            return OrderService.GetOrders(userId);            
+            return OrderService.GetOrders(userId,filter);            
         }
     
         public static Order GetOrder(int orderId)

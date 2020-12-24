@@ -45,12 +45,14 @@
             this.btnExport = new System.Windows.Forms.ToolStripButton();
             this.btnOpenOrder = new System.Windows.Forms.ToolStripButton();
             this.ordersGrid = new System.Windows.Forms.DataGridView();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.place = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.catchGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.performerOrg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnFilter = new System.Windows.Forms.ToolStripButton();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnDeleteAllFilters = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ordersGrid)).BeginInit();
@@ -75,7 +77,9 @@
             this.btnAdd,
             this.btnDelete,
             this.btnExport,
-            this.btnOpenOrder});
+            this.btnOpenOrder,
+            this.btnFilter,
+            this.btnDeleteAllFilters});
             this.bindingNavigator1.Location = new System.Drawing.Point(20, 60);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -238,6 +242,26 @@
             this.performerOrg.HeaderText = "Исполнитель";
             this.performerOrg.Name = "performerOrg";
             // 
+            // btnFilter
+            // 
+            this.btnFilter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
+            this.btnFilter.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(23, 22);
+            this.btnFilter.Text = "btnFilter";
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            // 
+            // btnDeleteAllFilters
+            // 
+            this.btnDeleteAllFilters.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnDeleteAllFilters.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteAllFilters.Image")));
+            this.btnDeleteAllFilters.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDeleteAllFilters.Name = "btnDeleteAllFilters";
+            this.btnDeleteAllFilters.Size = new System.Drawing.Size(23, 22);
+            this.btnDeleteAllFilters.Text = "toolStripButton1";
+            this.btnDeleteAllFilters.Click += new System.EventHandler(this.btnDeleteAllFilters_Click);
+            // 
             // OrdersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,5 +307,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn catchGoal;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateCreate;
         private System.Windows.Forms.DataGridViewTextBoxColumn performerOrg;
+        private System.Windows.Forms.ToolStripButton btnFilter;
+        private System.Windows.Forms.ToolStripButton btnDeleteAllFilters;
     }
 }
