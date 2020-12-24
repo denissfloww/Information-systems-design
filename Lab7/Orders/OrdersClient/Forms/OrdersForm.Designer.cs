@@ -62,7 +62,7 @@
             this.metroTabPage1.Name = "metroTabPage1";
             this.metroTabPage1.Size = new System.Drawing.Size(891, 507);
             this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "План-график";
+            this.metroTabPage1.Text = "t";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;

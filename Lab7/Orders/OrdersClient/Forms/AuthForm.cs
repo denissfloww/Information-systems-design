@@ -19,15 +19,34 @@ namespace OrdersClient
         public AuthForm()
         {
             InitializeComponent();
+
+            AcceptButton = btnAuth;
         }
 
         private async void btnAuth_Click(object sender, EventArgs e)
         {
-            var id = await Task.Run(() => UserController.Auth(tbUserName.Text, tbPassword.Text));
-            var form = new OrdersForm(id);
-            form.Show();
-            this.Hide();
-        }
+            if (string.IsNullOrEmpty(tbPassword.Text) || string.IsNullOrEmpty(tbUserName.Text))
+            {
+                MetroMessageBox.Show(this, "Введите лоигн и пароль", "Ошибка авторизации", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                return;
+            }
 
+            UseWaitCursor = true;
+            tbPassword.Enabled = tbUserName.Enabled = btnAuth.Enabled = false;
+            var userId = await Task.Run(() => UserController.Auth(tbUserName.Text, tbPassword.Text));
+            tbPassword.Enabled = tbUserName.Enabled = btnAuth.Enabled = true;
+            UseWaitCursor = false;
+
+            if (userId == 0)
+            {
+                MetroMessageBox.Show(this, "Неверный лоигн или пароль", "Ошибка авторизации", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                return;
+            }
+
+            this.Hide();
+            var ordersForm = new OrdersForm(userId);
+            ordersForm.FormClosed += (s, args) => this.Close();
+            ordersForm.Show();
+        }
     }
 }
