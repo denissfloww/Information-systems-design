@@ -93,6 +93,7 @@
             this.planGrid.MultiSelect = false;
             this.planGrid.Name = "planGrid";
             this.planGrid.ReadOnly = true;
+            this.planGrid.RowHeadersVisible = false;
             this.planGrid.Size = new System.Drawing.Size(889, 462);
             this.planGrid.TabIndex = 2;
             this.planGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.planGrid_CellClick);
