@@ -21,8 +21,15 @@ namespace Orders.Domain.Services
         {
             var orgId = UserService.GetUser(userId).OrganizationId;
             var role = UserService.GetUser(userId).RoleId.ToString();
+
+            #region Trash
+
             //GenericRepository<Order>.Get().Where(o=>filter.ContainsValue(o.CatchGoal)&&filter.ContainsValue(o.Id.ToString())&&);
             // var loh= GenericRepository<Order>.Get().AsQueryable().ToDictionary(o => o.CatchGoal);
+            //GenericRepository<Order>.Get().Where(o => o.Users.OrganizationId == orgId || o.Plans.ClientId == orgId).ToList(); 
+
+            #endregion
+
             if (!filter.ContainsKey("Пользователь"))
                     filter.Add("Пользователь", orgId.ToString());
 
@@ -68,7 +75,6 @@ namespace Orders.Domain.Services
                 }
             }
             return orders;
-            //GenericRepository<Order>.Get().Where(o => o.Users.OrganizationId == orgId || o.Plans.ClientId == orgId).ToList();           
         }
 
         public static List<Order> GetOrders(List<int> orderIds)

@@ -14,20 +14,18 @@ namespace OrdersClient.Forms
 {
     public partial class FilterForm : MetroForm
     {
-        private OrdersForm OrdersForm { get; set; }
-        private Action<object, EventArgs> RefreshAction;
+        private OrdersForm OrdersForm { get; }
 
-        public FilterForm(OrdersForm ordersForm, Action<object, EventArgs> refreshAction)
+        public FilterForm(OrdersForm ordersForm)
         {
             InitializeComponent();
             OrdersForm = ordersForm;
-            RefreshAction = refreshAction;
+            cbField.SelectedIndex = 0;
         }
 
         private void btnApply_Click(object sender, EventArgs e)
         {
             OrdersForm.Filter.Add(cbField.SelectedItem.ToString(),tbValue.Text);
-           // RefreshAction(null, null);
             this.Close();
         }
     }

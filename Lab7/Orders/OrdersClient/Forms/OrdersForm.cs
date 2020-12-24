@@ -58,7 +58,7 @@ namespace OrdersClient.Forms
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            var filter = new FilterForm(this,OrdersForm_Load);
+            var filter = new FilterForm(this);
             filter.ShowDialog();
             OrdersForm_Load(null,null);
         }

@@ -249,7 +249,7 @@
             this.btnFilter.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(23, 22);
-            this.btnFilter.Text = "btnFilter";
+            this.btnFilter.Text = "Добавить фильтр";
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // btnDeleteAllFilters
@@ -259,7 +259,7 @@
             this.btnDeleteAllFilters.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDeleteAllFilters.Name = "btnDeleteAllFilters";
             this.btnDeleteAllFilters.Size = new System.Drawing.Size(23, 22);
-            this.btnDeleteAllFilters.Text = "toolStripButton1";
+            this.btnDeleteAllFilters.Text = "Отменить фильтры";
             this.btnDeleteAllFilters.Click += new System.EventHandler(this.btnDeleteAllFilters_Click);
             // 
             // OrdersForm
