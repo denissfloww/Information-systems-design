@@ -14,17 +14,18 @@ namespace test
     {
         static void Main(string[] args)
         {
-            var places = new[] {"Восточный","Центральный"};
-            var dates = new List<DateTime>();
-            var year = 2020;
-            var month = 12;
-            for (var date = new DateTime(year, month, 1); date.Month == month; date = date.AddDays(1))
-            {
-                dates.Add(date);
-            }
+            //var places = new[] {"Восточный","Центральный"};
+            //var dates = new List<DateTime>();
+            //var year = 2020;
+            //var month = 12;
+            //for (var date = new DateTime(year, month, 1); date.Month == month; date = date.AddDays(1))
+            //{
+            //    dates.Add(date);
+            //}
 
-            Fill(places, dates);
-            Console.WriteLine("Готово");
+            //Fill(places, dates);
+            //Console.WriteLine("Готово");
+
         }
 
         public static void Fill(string [] places, List<DateTime> dates)

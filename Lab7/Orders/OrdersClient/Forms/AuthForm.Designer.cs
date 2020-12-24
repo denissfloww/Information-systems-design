@@ -39,7 +39,7 @@
             // 
             // 
             this.tbUserName.CustomButton.Image = null;
-            this.tbUserName.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.tbUserName.CustomButton.Location = new System.Drawing.Point(213, 1);
             this.tbUserName.CustomButton.Name = "";
             this.tbUserName.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.tbUserName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -47,7 +47,8 @@
             this.tbUserName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbUserName.CustomButton.UseSelectable = true;
             this.tbUserName.CustomButton.Visible = false;
-            this.tbUserName.Lines = new string[0];
+            this.tbUserName.Lines = new string[] {
+        "test"};
             this.tbUserName.Location = new System.Drawing.Point(23, 70);
             this.tbUserName.MaxLength = 32767;
             this.tbUserName.Name = "tbUserName";
@@ -60,6 +61,7 @@
             this.tbUserName.ShortcutsEnabled = true;
             this.tbUserName.Size = new System.Drawing.Size(235, 23);
             this.tbUserName.TabIndex = 1;
+            this.tbUserName.Text = "test";
             this.tbUserName.UseSelectable = true;
             this.tbUserName.WaterMark = "Логин";
             this.tbUserName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -84,7 +86,7 @@
             // 
             // 
             this.tbPassword.CustomButton.Image = null;
-            this.tbPassword.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.tbPassword.CustomButton.Location = new System.Drawing.Point(213, 1);
             this.tbPassword.CustomButton.Name = "";
             this.tbPassword.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.tbPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -92,7 +94,8 @@
             this.tbPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbPassword.CustomButton.UseSelectable = true;
             this.tbPassword.CustomButton.Visible = false;
-            this.tbPassword.Lines = new string[0];
+            this.tbPassword.Lines = new string[] {
+        "1"};
             this.tbPassword.Location = new System.Drawing.Point(23, 110);
             this.tbPassword.MaxLength = 32767;
             this.tbPassword.Name = "tbPassword";
@@ -105,6 +108,7 @@
             this.tbPassword.ShortcutsEnabled = true;
             this.tbPassword.Size = new System.Drawing.Size(235, 23);
             this.tbPassword.TabIndex = 2;
+            this.tbPassword.Text = "1";
             this.tbPassword.UseSelectable = true;
             this.tbPassword.WaterMark = "Пароль";
             this.tbPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));

@@ -28,115 +28,260 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tcOrder = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.lblPlan = new MetroFramework.Controls.MetroLabel();
-            this.planGrid = new System.Windows.Forms.DataGridView();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.tcOrder.SuspendLayout();
-            this.metroTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.planGrid)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdersForm));
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnAdd = new System.Windows.Forms.ToolStripButton();
+            this.btnDelete = new System.Windows.Forms.ToolStripButton();
+            this.btnExport = new System.Windows.Forms.ToolStripButton();
+            this.btnOpenOrder = new System.Windows.Forms.ToolStripButton();
+            this.ordersGrid = new System.Windows.Forms.DataGridView();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.place = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.catchGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.performerOrg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tcOrder
+            // bindingNavigator1
             // 
-            this.tcOrder.Controls.Add(this.metroTabPage1);
-            this.tcOrder.Controls.Add(this.metroTabPage2);
-            this.tcOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tcOrder.Location = new System.Drawing.Point(20, 60);
-            this.tcOrder.Name = "tcOrder";
-            this.tcOrder.SelectedIndex = 0;
-            this.tcOrder.Size = new System.Drawing.Size(899, 549);
-            this.tcOrder.Style = MetroFramework.MetroColorStyle.Green;
-            this.tcOrder.TabIndex = 0;
-            this.tcOrder.UseSelectable = true;
+            this.bindingNavigator1.AddNewItem = null;
+            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
+            this.bindingNavigator1.DeleteItem = null;
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.btnAdd,
+            this.btnDelete,
+            this.btnExport,
+            this.btnOpenOrder});
+            this.bindingNavigator1.Location = new System.Drawing.Point(20, 60);
+            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
+            this.bindingNavigator1.Size = new System.Drawing.Size(899, 25);
+            this.bindingNavigator1.TabIndex = 2;
+            this.bindingNavigator1.Text = "bindingNavigator1";
             // 
-            // metroTabPage1
+            // bindingNavigatorCountItem
             // 
-            this.metroTabPage1.Controls.Add(this.lblPlan);
-            this.metroTabPage1.Controls.Add(this.planGrid);
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(891, 507);
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "t";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
-            // lblPlan
+            // bindingNavigatorMoveFirstItem
             // 
-            this.lblPlan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblPlan.AutoSize = true;
-            this.lblPlan.Location = new System.Drawing.Point(376, 0);
-            this.lblPlan.Name = "lblPlan";
-            this.lblPlan.Size = new System.Drawing.Size(108, 19);
-            this.lblPlan.TabIndex = 3;
-            this.lblPlan.Text = "План-график на";
-            this.lblPlan.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
-            // planGrid
+            // bindingNavigatorMovePreviousItem
             // 
-            this.planGrid.AllowUserToAddRows = false;
-            this.planGrid.AllowUserToDeleteRows = false;
-            this.planGrid.AllowUserToResizeColumns = false;
-            this.planGrid.AllowUserToResizeRows = false;
-            this.planGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.planGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
-            this.planGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.planGrid.Location = new System.Drawing.Point(-1, 45);
-            this.planGrid.MultiSelect = false;
-            this.planGrid.Name = "planGrid";
-            this.planGrid.ReadOnly = true;
-            this.planGrid.RowHeadersVisible = false;
-            this.planGrid.Size = new System.Drawing.Size(889, 462);
-            this.planGrid.TabIndex = 2;
-            this.planGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.planGrid_CellClick);
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
-            // metroTabPage2
+            // bindingNavigatorSeparator
             // 
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 10;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(891, 507);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "metroTabPage2";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Положение";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(23, 22);
+            this.btnAdd.Text = "btnAdd";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(23, 22);
+            this.btnDelete.Text = "btnDelete";
+            // 
+            // btnExport
+            // 
+            this.btnExport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
+            this.btnExport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(23, 22);
+            this.btnExport.Text = "toolStripButton1";
+            // 
+            // btnOpenOrder
+            // 
+            this.btnOpenOrder.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnOpenOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenOrder.Image")));
+            this.btnOpenOrder.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnOpenOrder.Name = "btnOpenOrder";
+            this.btnOpenOrder.Size = new System.Drawing.Size(23, 22);
+            this.btnOpenOrder.Text = "toolStripButton1";
+            this.btnOpenOrder.Click += new System.EventHandler(this.btnOpenOrder_Click);
+            // 
+            // ordersGrid
+            // 
+            this.ordersGrid.AllowUserToAddRows = false;
+            this.ordersGrid.AllowUserToDeleteRows = false;
+            this.ordersGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ordersGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ordersGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.place,
+            this.catchGoal,
+            this.dateCreate,
+            this.performerOrg});
+            this.ordersGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ordersGrid.Location = new System.Drawing.Point(20, 85);
+            this.ordersGrid.Name = "ordersGrid";
+            this.ordersGrid.RowHeadersVisible = false;
+            this.ordersGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ordersGrid.Size = new System.Drawing.Size(899, 524);
+            this.ordersGrid.TabIndex = 3;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Номер";
+            this.Id.Name = "Id";
+            // 
+            // place
+            // 
+            this.place.HeaderText = "Место";
+            this.place.Name = "place";
+            // 
+            // catchGoal
+            // 
+            this.catchGoal.HeaderText = "Цель";
+            this.catchGoal.Name = "catchGoal";
+            // 
+            // dateCreate
+            // 
+            this.dateCreate.HeaderText = "Дата создания";
+            this.dateCreate.Name = "dateCreate";
+            // 
+            // performerOrg
+            // 
+            this.performerOrg.HeaderText = "Исполнитель";
+            this.performerOrg.Name = "performerOrg";
             // 
             // OrdersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 629);
-            this.Controls.Add(this.tcOrder);
+            this.Controls.Add(this.ordersGrid);
+            this.Controls.Add(this.bindingNavigator1);
             this.Name = "OrdersForm";
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "Реестр учёта выданных заказ-нарядов";
             this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OrdersForm_FormClosing);
-            this.tcOrder.ResumeLayout(false);
-            this.metroTabPage1.ResumeLayout(false);
-            this.metroTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.planGrid)).EndInit();
+            this.Load += new System.EventHandler(this.OrdersForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroTabControl tcOrder;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage2;
-        private System.Windows.Forms.DataGridView planGrid;
-        private MetroFramework.Controls.MetroLabel lblPlan;
+        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton btnAdd;
+        private System.Windows.Forms.ToolStripButton btnDelete;
+        private System.Windows.Forms.ToolStripButton btnExport;
+        private System.Windows.Forms.DataGridView ordersGrid;
+        private System.Windows.Forms.ToolStripButton btnOpenOrder;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn place;
+        private System.Windows.Forms.DataGridViewTextBoxColumn catchGoal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateCreate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn performerOrg;
     }
 }

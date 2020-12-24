@@ -22,7 +22,7 @@ namespace Orders.Domain.Services
         
         public static User GetUser(int userId)
         {
-            return new User();
+            return GenericRepository<User>.GetById(userId);
         }
     }
 }

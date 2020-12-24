@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Orders.Domain.Services;
 namespace OrdersClient.Controllers
 {
     public class OrderController
@@ -12,6 +12,14 @@ namespace OrdersClient.Controllers
         //TODO: Добавить GetOrders()
         //TODO: Dict это Dictionary типо? Если да то какие у него значения для ключа и значения?
 
+        public static List<Order> GetOrders(int userId,
+            Dictionary<string, string> filter = null,
+            Tuple<string, bool> sort = null,
+            int page = 1)
+        {
+            return OrderService.GetOrders(userId);            
+        }
+    
         public static Order GetOrder(int orderId)
         {
             return new Order();

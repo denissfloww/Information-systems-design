@@ -20,49 +20,6 @@ namespace OrdersClient.Forms
         {
             InitializeComponent();
             UserId = userId;
-            PlanGridFill();
-        }
-
-        
-
-        public void PlanGridFill()
-        {
-            planGrid.Rows.Clear();
-            planGrid.Columns.Clear();
-            lblPlan.Text = null;
-
-            
-            List<Plan> planItems = PlanController.GetPlanInfo();
-            var allPlaces = planItems.Select(plan => plan.Place).Distinct().ToList();
-            var allDates = planItems.Select(plan => plan.Date).Distinct().ToList();
-
-            var currDate = allDates.FirstOrDefault();
-            lblPlan.Text = $"План-график на {currDate.ToString("MMM")}. {currDate.Year} года";
-
-            planGrid.Columns.Add("empty", " ");
-            foreach (var date in allDates)
-            {
-                planGrid.Columns.Add(date.Day.ToString(), date.Day.ToString());
-            }
-
-
-
-            foreach (var place in allPlaces)
-            {
-                int rowNumber = planGrid.Rows.Add(place);
-                foreach (var date in allDates)
-                {
-                    var currentPlan = planItems.FirstOrDefault(p => p.Place == place && p.Date == date);
-                    planGrid.Rows[rowNumber].Cells[date.Day.ToString()].Tag = currentPlan.Id;
-                    if (currentPlan.OrderId != null)
-                    {
-                        planGrid.Rows[rowNumber].Cells[date.Day.ToString()].Value = " ";
-                        planGrid.Rows[rowNumber].Cells[date.Day.ToString()].Style.BackColor = Color.Gray;
-                        planGrid.Rows[rowNumber].Cells[date.Day.ToString()].Style.ForeColor = Color.Gray;
-
-                    }
-                }
-            }
         }
 
         private void OrdersForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -70,17 +27,31 @@ namespace OrdersClient.Forms
             Application.Exit();
         }
 
-        private void planGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (e.ColumnIndex > 0)
+            var planForm = new PlanForm(UserId);
+            planForm.ShowDialog();
+        }
+
+        private void btnOpenOrder_Click(object sender, EventArgs e)
+        {
+            var order = new OrderForm();
+            order.ShowDialog();
+        }
+
+        private void OrdersForm_Load(object sender, EventArgs e)
+        {
+            var orders = OrderController.GetOrders(UserId);
+            foreach(var order in orders)
             {
-                if (planGrid.CurrentCell.Value == null)
-                {
-                    int id = (int)planGrid.CurrentCell.Tag;
-                    var addForm = new AddOrderForm(id, UserId);
-                    addForm.ShowDialog();
-                }               
+                ordersGrid.Rows.Add(order.Id, 
+                    order.Plans.Place, 
+                    order.CatchGoal, 
+                    order.DateCreate, 
+                    order.Users.Organizations.Name);
             }
+
+            var a = 0;
         }
     }
 }

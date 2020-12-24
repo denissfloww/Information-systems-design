@@ -51,6 +51,7 @@
             this.tbPlace.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbPlace.CustomButton.UseSelectable = true;
             this.tbPlace.CustomButton.Visible = false;
+            this.tbPlace.Enabled = false;
             this.tbPlace.Lines = new string[0];
             this.tbPlace.Location = new System.Drawing.Point(154, 164);
             this.tbPlace.MaxLength = 32767;
