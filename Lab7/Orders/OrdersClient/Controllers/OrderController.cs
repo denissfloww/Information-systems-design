@@ -32,7 +32,7 @@ namespace OrdersClient.Controllers
             string catchGoal = null,
             object scan = null)
         {
-
+            OrderService.UpdateOrder(userId, orderId, planId, catchGoal, scan);
         }
 
         //TODO: Добавить Export методы, определиться с возвращаемым типом

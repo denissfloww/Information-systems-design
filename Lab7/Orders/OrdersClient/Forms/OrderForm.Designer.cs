@@ -276,6 +276,7 @@
             // 
             // dtCatch
             // 
+            this.dtCatch.Enabled = false;
             this.dtCatch.Location = new System.Drawing.Point(136, 388);
             this.dtCatch.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtCatch.Name = "dtCatch";
@@ -499,6 +500,7 @@
             this.btnChangePlan.TabIndex = 2;
             this.btnChangePlan.Text = "Изменить место и дату отлова";
             this.btnChangePlan.UseSelectable = true;
+            this.btnChangePlan.Click += new System.EventHandler(this.btnChangePlan_Click);
             // 
             // metroLabel9
             // 

@@ -85,12 +85,24 @@ namespace Orders.Domain.Services
         }
 
         public static void UpdateOrder(
-            int userId, 
-            int orderId, int planId,
-            string catchGoal = null, 
+            int userId,
+            int orderId, 
+            int planId,
+            string catchGoal = null,
             object scan = null)
         {
+            if (UserService.CanEdit(userId))
+            {
+                var order = GenericRepository<Order>.GetById(orderId);
+                PlanService.UpdatePlan((int)order.PlanId);
+                PlanService.UpdatePlan(planId, orderId);
 
+                order.PlanId = planId;
+                if (catchGoal != null) order.CatchGoal = catchGoal;
+                // if (scan != null) order.Scan = scan;
+
+                GenericRepository<Order>.Update(order);
+            }
         }
 
         public static void CreateOrder(int userId, int planId, string cathcGoal)
@@ -102,7 +114,7 @@ namespace Orders.Domain.Services
                 DateCreate = DateTime.Now
             };
             var orderId = GenericRepository<Order>.Create(order);
-            PlanService.UpdatePlan(planId, orderId);                       
+            PlanService.UpdatePlan(planId, orderId);
         }
 
         public static void DeleteOrder(int userId, int orderId)
