@@ -20,8 +20,7 @@ namespace Orders.Domain.Services
             int page = 1)
         {
             var orgId = UserService.GetUser(userId).OrganizationId;
-            var role = UserService.GetUser(userId).RoleId.ToString();
-
+            var seeOrganizationAll = UserService.SeeOrganizationAll(userId);
             #region Trash
 
             //GenericRepository<Order>.Get().Where(o=>filter.ContainsValue(o.CatchGoal)&&filter.ContainsValue(o.Id.ToString())&&);
@@ -40,7 +39,7 @@ namespace Orders.Domain.Services
             {
                 switch (row.Key)
                 {
-                    case "Пользователь" when role == "2" || role == "5" || role == "7":
+                    case "Пользователь" when seeOrganizationAll:
                         continue;
                     case "Пользователь":
                         orders = orders
@@ -69,7 +68,7 @@ namespace Orders.Domain.Services
                         break;
                     case "Исполнитель":
                         orders = orders
-                            .Where(o => o.Users.Organizations.Name == row.Value || o.Users.Organizations.Id.ToString() == row.Value)
+                            .Where(o => o.Plans.Organizations.Name == row.Value || o.Plans.Organizations.Id.ToString() == row.Value)
                             .ToList();
                         break;
                 }
@@ -110,7 +109,7 @@ namespace Orders.Domain.Services
         {
             var order = OrderService.GetOrder(orderId);
             PlanService.UpdatePlan((int)order.PlanId);
-            GenericRepository<Order>.Remove(order);            
+            GenericRepository<Order>.Remove(order);
         }
     }
 }

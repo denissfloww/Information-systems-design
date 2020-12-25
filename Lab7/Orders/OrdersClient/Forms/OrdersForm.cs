@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using Orders.Domain.Models;
+using Excel = Microsoft.Office.Interop.Excel;
 using OrdersClient.Controllers;
 
 namespace OrdersClient.Forms
@@ -76,9 +77,32 @@ namespace OrdersClient.Forms
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
-        {         
+        {
             OrderController.DeleteOrder(UserId, (int)ordersGrid.CurrentRow.Cells[0].Value);
             OrderGridFill();
+        }
+
+        private void btnExportSelect_Click(object sender, EventArgs e)
+        {
+ 
+        }
+
+        private void btnExportAll_Click(object sender, EventArgs e)
+        {
+            var orderIds = new List<int>();
+            for (int i = 0; i < ordersGrid.Rows.Count; i++)
+                orderIds.Add(int.Parse(ordersGrid.Rows[i].Cells[0].Value.ToString()));
+
+            var excelApp = new Excel.Application();
+
+            //Excel.Application excelApp = new Excel.Application();
+            Excel.Workbook workBook;
+            Excel.Worksheet workSheet = OrderController.ExportOrders(orderIds);
+            workBook = excelApp.Workbooks.Add();
+            workSheet = (Excel.Worksheet)workBook.Worksheets.get_Item(1);
+
+            excelApp.Visible = true;
+            excelApp.UserControl = true;
         }
     }
 }

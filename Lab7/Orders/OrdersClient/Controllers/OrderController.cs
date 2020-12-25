@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Orders.Domain.Services;
+using Excel = Microsoft.Office.Interop.Excel;
 namespace OrdersClient.Controllers
 {
     public class OrderController
@@ -35,6 +36,11 @@ namespace OrdersClient.Controllers
         }
 
         //TODO: Добавить Export методы, определиться с возвращаемым типом
+
+        public static Excel.Worksheet ExportOrders(List<int> orderIds)
+            => ExportOrderService.ExportOrders(OrderService.GetOrders(orderIds));
+        
+
 
         public static void CreateOrder(int userId, int planId, string cathcGoal)
         {
