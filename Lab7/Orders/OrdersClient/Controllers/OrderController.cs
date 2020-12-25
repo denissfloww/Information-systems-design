@@ -41,9 +41,9 @@ namespace OrdersClient.Controllers
             OrderService.CreateOrder(userId, planId, cathcGoal);
         }
 
-        public static void DeleteOrder(int userId, List<int> ordersId)
+        public static void DeleteOrder(int userId, int orderId)
         {
-            OrderService.DeleteOrder(userId, ordersId);
+            OrderService.DeleteOrder(userId, orderId);
         }
     }
 }

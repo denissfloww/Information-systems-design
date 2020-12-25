@@ -77,15 +77,8 @@ namespace Orders.Domain.Services
             return orders;
         }
 
-        public static List<Order> GetOrders(List<int> orderIds)
-        {
-            var orders = new List<Order>();
-            foreach(var id in orderIds)
-            {
-                orders.Add(GenericRepository<Order>.GetById(id));
-            }
-            return orders;
-        }
+        public static List<Order> GetOrders(List<int> orderIds) 
+            => GenericRepository<Order>.Get().Where(o => orderIds.Contains(o.Id)).ToList();
 
         public static Order GetOrder(int orderId)
         {
@@ -113,14 +106,11 @@ namespace Orders.Domain.Services
             PlanService.UpdatePlan(planId, orderId);                       
         }
 
-        public static void DeleteOrder(int userId, List<int> ordersIds)
+        public static void DeleteOrder(int userId, int orderId)
         {
-            foreach(var id in ordersIds)
-            {
-                var order = GetOrder(id);
-                PlanService.UpdatePlan((int)order.PlanId);
-                GenericRepository<Order>.Remove(order);               
-            }            
+            var order = OrderService.GetOrder(orderId);
+            PlanService.UpdatePlan((int)order.PlanId);
+            GenericRepository<Order>.Remove(order);            
         }
     }
 }

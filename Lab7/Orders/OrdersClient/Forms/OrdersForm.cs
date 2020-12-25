@@ -76,13 +76,8 @@ namespace OrdersClient.Forms
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
-        {
-            var ordersIds = new List<int>();
-            foreach(DataGridViewRow row in ordersGrid.SelectedRows)
-            {
-                ordersIds.Add(Convert.ToInt32(row.Cells[0].Value));
-            }
-            OrderController.DeleteOrder(UserId, ordersIds);
+        {         
+            OrderController.DeleteOrder(UserId, (int)ordersGrid.CurrentRow.Cells[0].Value);
             OrderGridFill();
         }
     }
