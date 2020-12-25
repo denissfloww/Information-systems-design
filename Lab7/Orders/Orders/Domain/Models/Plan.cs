@@ -15,8 +15,8 @@ namespace Orders.Domain.Models
             Orders = new HashSet<Order>();
         }
 
-        [Column("id", TypeName = "int")]        
         [Key]
+        [Column("id", TypeName = "int")]               
         public int Id { get; set; }
 
         [Column("place", TypeName = "nvarchar")]

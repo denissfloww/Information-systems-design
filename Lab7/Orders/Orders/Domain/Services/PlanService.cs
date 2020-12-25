@@ -12,7 +12,9 @@ namespace Orders.Domain.Services
     {
         public static void UpdatePlan(int planId, int? orderId = null)
         {
-
+            var planItem = PlanService.GetPlanInfo().FirstOrDefault(p => p.Id == planId);
+            planItem.OrderId = orderId;
+            GenericRepository<Plan>.Update(planItem);
         }
 
         public static List<Plan> GetPlanInfo()

@@ -32,26 +32,32 @@ namespace OrdersClient.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            var planForm = new PlanForm(UserId);
-            planForm.ShowDialog();
+            var addForm = new AddOrderForm(UserId, this);
+            addForm.ShowDialog(this);                  
         }
 
         private void btnOpenOrder_Click(object sender, EventArgs e)
         {
             var order = new OrderForm();
             order.ShowDialog();
+            OrdersForm_Load(null, null);
         }
 
         private void OrdersForm_Load(object sender, EventArgs e)
         {
+            OrderGridFill();
+        }
+
+        public void OrderGridFill()
+        {
             ordersGrid.Rows.Clear();
-            var orders = OrderController.GetOrders(UserId,Filter);
-            foreach(var order in orders)
+            var orders = OrderController.GetOrders(UserId, Filter);
+            foreach (var order in orders)
             {
-                ordersGrid.Rows.Add(order.Id, 
-                    order.Plans.Place, 
-                    order.CatchGoal, 
-                    order.DateCreate, 
+                ordersGrid.Rows.Add(order.Id,
+                    order.Plans.Place,
+                    order.CatchGoal,
+                    order.DateCreate,
                     order.Users.Organizations.Name);
             }
         }
@@ -69,5 +75,15 @@ namespace OrdersClient.Forms
             OrdersForm_Load(null,null);
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            var ordersIds = new List<int>();
+            foreach(DataGridViewRow row in ordersGrid.SelectedRows)
+            {
+                ordersIds.Add(Convert.ToInt32(row.Cells[0].Value));
+            }
+            OrderController.DeleteOrder(UserId, ordersIds);
+            OrderGridFill();
+        }
     }
 }

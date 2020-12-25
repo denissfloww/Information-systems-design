@@ -22,7 +22,7 @@ namespace OrdersClient.Controllers
     
         public static Order GetOrder(int orderId)
         {
-            return new Order();
+            return OrderService.GetOrder(orderId);
         }
 
         public static void UpdateOrder(
@@ -38,12 +38,12 @@ namespace OrdersClient.Controllers
 
         public static void CreateOrder(int userId, int planId, string cathcGoal)
         {
-
+            OrderService.CreateOrder(userId, planId, cathcGoal);
         }
 
-        public static void DeleteOrder(int userId, int orderId)
+        public static void DeleteOrder(int userId, List<int> ordersId)
         {
-
+            OrderService.DeleteOrder(userId, ordersId);
         }
     }
 }

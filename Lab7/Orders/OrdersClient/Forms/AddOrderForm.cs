@@ -14,25 +14,52 @@ namespace OrdersClient.Forms
 {
     public partial class AddOrderForm : MetroForm
     {
-        public int PlanId { get; set; }
+        private int PlanId { get; set; }
         public int UserId { get; set; }
-        public AddOrderForm(int planId, int userId)
+
+        OrdersForm parent = null;
+
+        public AddOrderForm(int userId, OrdersForm parent)
         {
             UserId = userId;
-            PlanId = planId;
+            this.parent = parent;
             InitializeComponent();
         }
 
         private void AddOrderForm_Load(object sender, EventArgs e)
         {
-            var currPlanItem = PlanController.GetPlanInfo().FirstOrDefault(p => p.Id == PlanId);
-            dtDate.Value = currPlanItem.Date;
-            tbPlace.Text = currPlanItem.Place;
+           
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             OrderController.CreateOrder(UserId, PlanId, tbCatch.Text);
+            parent.OrderGridFill();
+            this.Close();
+        }
+
+        private void btnPlan_Click(object sender, EventArgs e)
+        {
+            var planForm = new PlanForm(UserId, GetPlanId);
+            planForm.ShowDialog();
+        }
+
+        private void GetPlanId(int planId)
+        {
+            PlanId = planId;
+            DateAndPlaceTbFill();
+        }
+
+        private void DateAndPlaceTbFill()
+        {
+            lblDate.Visible = true;
+            lblPlace.Visible = true;
+            tbPlace.Visible = true;
+            dtDate.Visible = true;
+            this.Height = 375;
+            var currPlanItem = PlanController.GetPlanInfo().FirstOrDefault(p => p.Id == PlanId);
+            tbPlace.Text = currPlanItem.Place;
+            dtDate.Value = currPlanItem.Date;
         }
     }
 }

@@ -44,15 +44,15 @@
             this.btnDelete = new System.Windows.Forms.ToolStripButton();
             this.btnExport = new System.Windows.Forms.ToolStripButton();
             this.btnOpenOrder = new System.Windows.Forms.ToolStripButton();
+            this.btnFilter = new System.Windows.Forms.ToolStripButton();
+            this.btnDeleteAllFilters = new System.Windows.Forms.ToolStripButton();
             this.ordersGrid = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.place = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.catchGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.performerOrg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnFilter = new System.Windows.Forms.ToolStripButton();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.btnDeleteAllFilters = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ordersGrid)).BeginInit();
@@ -166,7 +166,7 @@
             this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(23, 22);
-            this.btnAdd.Text = "btnAdd";
+            this.btnAdd.Text = "Добавить";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
@@ -176,7 +176,8 @@
             this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(23, 22);
-            this.btnDelete.Text = "btnDelete";
+            this.btnDelete.Text = "Удалить";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnExport
             // 
@@ -185,7 +186,7 @@
             this.btnExport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(23, 22);
-            this.btnExport.Text = "toolStripButton1";
+            this.btnExport.Text = "Экспорт";
             // 
             // btnOpenOrder
             // 
@@ -194,8 +195,28 @@
             this.btnOpenOrder.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnOpenOrder.Name = "btnOpenOrder";
             this.btnOpenOrder.Size = new System.Drawing.Size(23, 22);
-            this.btnOpenOrder.Text = "toolStripButton1";
+            this.btnOpenOrder.Text = "Учетная карточка";
             this.btnOpenOrder.Click += new System.EventHandler(this.btnOpenOrder_Click);
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
+            this.btnFilter.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(23, 22);
+            this.btnFilter.Text = "Добавить фильтр";
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            // 
+            // btnDeleteAllFilters
+            // 
+            this.btnDeleteAllFilters.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnDeleteAllFilters.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteAllFilters.Image")));
+            this.btnDeleteAllFilters.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDeleteAllFilters.Name = "btnDeleteAllFilters";
+            this.btnDeleteAllFilters.Size = new System.Drawing.Size(23, 22);
+            this.btnDeleteAllFilters.Text = "Отменить фильтры";
+            this.btnDeleteAllFilters.Click += new System.EventHandler(this.btnDeleteAllFilters_Click);
             // 
             // ordersGrid
             // 
@@ -241,26 +262,6 @@
             // 
             this.performerOrg.HeaderText = "Исполнитель";
             this.performerOrg.Name = "performerOrg";
-            // 
-            // btnFilter
-            // 
-            this.btnFilter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
-            this.btnFilter.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(23, 22);
-            this.btnFilter.Text = "Добавить фильтр";
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
-            // 
-            // btnDeleteAllFilters
-            // 
-            this.btnDeleteAllFilters.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnDeleteAllFilters.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteAllFilters.Image")));
-            this.btnDeleteAllFilters.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnDeleteAllFilters.Name = "btnDeleteAllFilters";
-            this.btnDeleteAllFilters.Size = new System.Drawing.Size(23, 22);
-            this.btnDeleteAllFilters.Text = "Отменить фильтры";
-            this.btnDeleteAllFilters.Click += new System.EventHandler(this.btnDeleteAllFilters_Click);
             // 
             // OrdersForm
             // 

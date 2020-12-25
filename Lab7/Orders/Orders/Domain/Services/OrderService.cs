@@ -79,12 +79,17 @@ namespace Orders.Domain.Services
 
         public static List<Order> GetOrders(List<int> orderIds)
         {
-            throw new NotImplementedException();
+            var orders = new List<Order>();
+            foreach(var id in orderIds)
+            {
+                orders.Add(GenericRepository<Order>.GetById(id));
+            }
+            return orders;
         }
 
         public static Order GetOrder(int orderId)
         {
-            throw new NotImplementedException();
+            return GenericRepository<Order>.GetById(orderId);
         }
 
         public static void UpdateOrder(
@@ -98,12 +103,24 @@ namespace Orders.Domain.Services
 
         public static void CreateOrder(int userId, int planId, string cathcGoal)
         {
-            throw new NotImplementedException();
+            var order = new Order() { 
+                UserId = userId, 
+                PlanId = planId,
+                CatchGoal = cathcGoal,
+                DateCreate = DateTime.Now
+            };
+            var orderId = GenericRepository<Order>.Create(order);
+            PlanService.UpdatePlan(planId, orderId);                       
         }
 
-        public static void DeleteOrder(int userId, int orderId)
+        public static void DeleteOrder(int userId, List<int> ordersIds)
         {
-            throw new NotImplementedException();
+            foreach(var id in ordersIds)
+            {
+                var order = GetOrder(id);
+                PlanService.UpdatePlan((int)order.PlanId);
+                GenericRepository<Order>.Remove(order);               
+            }            
         }
     }
 }

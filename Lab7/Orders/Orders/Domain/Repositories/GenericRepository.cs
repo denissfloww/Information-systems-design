@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,17 +38,26 @@ namespace Orders.Domain.Repositories
         public static void Create(TEntity item)
         {
             _dbSet.Add(item);
-            _context.SaveChanges();
+            _context.SaveChanges();            
         }
+        public static int Create(Order order)
+        {
+            var dbSetOrder = _context.Set<Order>();
+            dbSetOrder.Add(order);
+            _context.SaveChanges();
+            return order.Id;
+        }
+
         public static void Update(TEntity item)
         {
-            _context.Entry(item).State = EntityState.Modified;
+            _dbSet.AddOrUpdate(item);
             _context.SaveChanges();
         }
         public static void Remove(TEntity item)
         {
-            _dbSet.Remove(item);
+            _dbSet.Attach(item);
+            _context.Entry(item).State = EntityState.Deleted;
             _context.SaveChanges();
-        }
+        }       
     }
 }

@@ -16,10 +16,12 @@ namespace OrdersClient.Forms
     public partial class PlanForm : MetroForm
     {
         public int UserId { get; set; }
-        public PlanForm(int userId)
+        Action<int> GetPlanId;
+        public PlanForm(int userId, Action<int> getPlanId)
         {
             InitializeComponent();
             UserId = userId;
+            GetPlanId = getPlanId;
         }
 
 
@@ -28,9 +30,9 @@ namespace OrdersClient.Forms
             planGrid.Rows.Clear();
             planGrid.Columns.Clear();
             lblPlan.Text = null;
-            List<Plan> planItems = PlanController.GetPlanInfo();
-            var allPlaces = planItems.Select(plan => plan.Place).Distinct().ToList();
-            var allDates = planItems.Select(plan => plan.Date).Distinct().ToList();
+            var plan = PlanController.GetPlanInfo();
+            var allPlaces = plan.Select(p => p.Place).Distinct().ToList();
+            var allDates = plan.Select(p => p.Date).Distinct().ToList();
             var currDate = allDates.FirstOrDefault();
             lblPlan.Text = $"План-график на {currDate.ToString("MMM")}. {currDate.Year} года";
             planGrid.Columns.Add("empty", " ");
@@ -43,7 +45,7 @@ namespace OrdersClient.Forms
                 int rowNumber = planGrid.Rows.Add(place);
                 foreach (var date in allDates)
                 {
-                    var currentPlan = planItems.FirstOrDefault(p => p.Place == place && p.Date == date);
+                    var currentPlan = plan.FirstOrDefault(p => p.Place == place && p.Date == date);
                     planGrid.Rows[rowNumber].Cells[date.Day.ToString()].Tag = currentPlan.Id;
                     if (currentPlan.OrderId != null)
                     {
@@ -68,8 +70,8 @@ namespace OrdersClient.Forms
                 if (planGrid.CurrentCell.Value == null)
                 {
                     int id = (int)planGrid.CurrentCell.Tag;
-                    var addForm = new AddOrderForm(id, UserId);
-                    addForm.ShowDialog();
+                    GetPlanId(id);
+                    this.Close();                  
                 }
             }
         }

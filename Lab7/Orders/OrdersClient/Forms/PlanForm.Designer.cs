@@ -72,6 +72,7 @@
             this.Controls.Add(this.lblPlan);
             this.Controls.Add(this.planGrid);
             this.Name = "PlanForm";
+            this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "План-график";
             this.Load += new System.EventHandler(this.PlanForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.planGrid)).EndInit();
