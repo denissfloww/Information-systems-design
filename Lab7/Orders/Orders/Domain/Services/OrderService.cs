@@ -69,7 +69,7 @@ namespace Orders.Domain.Services
                         break;
                     case "Исполнитель":
                         orders = orders
-                            .Where(o => o.Users.Organizations.Name == row.Value || o.Users.Organizations.Id.ToString() == row.Value)
+                            .Where(o => o.Plans.Organizations.Name == row.Value || o.Plans.Organizations.Id.ToString() == row.Value)
                             .ToList();
                         break;
                 }
@@ -77,10 +77,8 @@ namespace Orders.Domain.Services
             return orders;
         }
 
-        public static List<Order> GetOrders(List<int> orderIds)
-        {
-            throw new NotImplementedException();
-        }
+        public static List<Order> GetOrders(List<int> orderIds) =>GenericRepository<Order>.Get().Where(o=>orderIds.Contains(o.Id)).ToList();
+        
 
         public static Order GetOrder(int orderId)
         {
