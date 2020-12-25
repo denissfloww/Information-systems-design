@@ -12,7 +12,7 @@ namespace Orders.Domain.Services
 {
     public class UserService
     {
-        private static List<string> Roles = new List<string> {"2", "5", "7"};
+        private static List<int> Roles = new List<int> {2, 5, 7};
         public static int Auth(string username, string password)
         {
             var user = GenericRepository<User>.Get(_user => 
@@ -22,12 +22,11 @@ namespace Orders.Domain.Services
         }
 
         public static bool SeeOrganizationAll(int userId)
-            => Roles.Contains(GenericRepository<User>.Get(_user => _user.Id == userId).Select(_user=>_user.Id).ToString());
+            => Roles.Contains(GenericRepository<User>.Get().Where(_user => _user.Id == userId).Select(_user => _user.RoleId).SingleOrDefault());
+
+        public static User GetUser(int userId) 
+            => GenericRepository<User>.GetById(userId);
         
-        public static User GetUser(int userId)
-        {
-            return GenericRepository<User>.GetById(userId);
-        }
 
         public static bool CanEdit(int userId)
         {
