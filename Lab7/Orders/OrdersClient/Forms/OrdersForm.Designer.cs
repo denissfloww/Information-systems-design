@@ -45,12 +45,12 @@
             this.btnExport = new System.Windows.Forms.ToolStripButton();
             this.btnOpenOrder = new System.Windows.Forms.ToolStripButton();
             this.ordersGrid = new System.Windows.Forms.DataGridView();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.place = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.catchGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.performerOrg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ordersGrid)).BeginInit();
@@ -90,8 +90,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
-            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
             // bindingNavigatorMoveFirstItem
@@ -212,6 +212,7 @@
             this.ordersGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ordersGrid.Size = new System.Drawing.Size(899, 524);
             this.ordersGrid.TabIndex = 3;
+            this.ordersGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ordersGrid_CellDoubleClick);
             // 
             // Id
             // 

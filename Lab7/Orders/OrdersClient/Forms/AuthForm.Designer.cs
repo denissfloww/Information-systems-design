@@ -122,6 +122,7 @@
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.btnAuth);
             this.Controls.Add(this.tbUserName);
+            this.MaximizeBox = false;
             this.Name = "AuthForm";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Green;

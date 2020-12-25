@@ -29,7 +29,7 @@ namespace Orders.Domain.Services
 
         public static Order GetOrder(int orderId)
         {
-            throw new NotImplementedException();
+            return GenericRepository<Order>.GetById(orderId);
         }
 
         public static void UpdateOrder(

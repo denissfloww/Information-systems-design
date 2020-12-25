@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework;
 using MetroFramework.Forms;
 using Orders.Domain.Models;
 using OrdersClient.Controllers;
@@ -22,6 +23,20 @@ namespace OrdersClient.Forms
             UserId = userId;
         }
 
+        private void OrdersForm_Load(object sender, EventArgs e)
+        {
+            var orders = OrderController.GetOrders(UserId);
+            foreach (var order in orders)
+            {
+                ordersGrid.Rows.Add(
+                    order.Id,
+                    order.Plans.Place,
+                    order.CatchGoal,
+                    order.DateCreate,
+                    order.Users.Organizations.Name);
+            }
+        }
+
         private void OrdersForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -33,25 +48,44 @@ namespace OrdersClient.Forms
             planForm.ShowDialog();
         }
 
-        private void btnOpenOrder_Click(object sender, EventArgs e)
+        private void OpenOrderForm()
         {
-            var order = new OrderForm();
-            order.ShowDialog();
-        }
-
-        private void OrdersForm_Load(object sender, EventArgs e)
-        {
-            var orders = OrderController.GetOrders(UserId);
-            foreach(var order in orders)
+            if (ordersGrid.SelectedRows.Count == 0)
             {
-                ordersGrid.Rows.Add(order.Id, 
-                    order.Plans.Place, 
-                    order.CatchGoal, 
-                    order.DateCreate, 
-                    order.Users.Organizations.Name);
+                MetroMessageBox.Show(this, "Не выбран заказ-наряд", "Первое предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                return;
             }
 
-            var a = 0;
+            int orderId;
+            if (int.TryParse(ordersGrid.SelectedRows[0].Cells[0].Value.ToString(), out orderId))
+            {
+                var orderForm = new OrderForm(orderId);
+                orderForm.ShowDialog();
+            }
+            else
+            {
+                MetroMessageBox.Show(this, "Совсем тук-тук", "Второе предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+            }
+        }
+
+        private void btnOpenOrder_Click(object sender, EventArgs e)
+        {
+            OpenOrderForm();
+        }
+
+        private void ordersGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            OpenOrderForm();
+        }
+
+        private bool CheckOneRowSelected()
+        {
+            if (ordersGrid.SelectedRows.Count > 1)
+            {
+                MetroMessageBox.Show(this, "Выберите одну строку", "Ошибка выбор строки", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                return false;
+            }
+            return true;
         }
     }
 }

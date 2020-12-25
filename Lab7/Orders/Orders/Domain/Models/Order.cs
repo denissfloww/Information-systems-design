@@ -32,5 +32,9 @@ namespace Orders.Domain.Models
         public virtual Plan Plans { get; set; }
 
         public virtual User Users { get; set; }
+
+        public int NumMK { get => (int)Math.Pow(Id + 10, 2) % 307; }
+
+        public DateTime DateMK { get => DateCreate.Value.Subtract(TimeSpan.FromDays(NumMK % 30)); }
     }
 }

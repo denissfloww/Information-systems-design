@@ -17,12 +17,12 @@ namespace OrdersClient.Controllers
             Tuple<string, bool> sort = null,
             int page = 1)
         {
-            return OrderService.GetOrders(userId);            
+            return OrderService.GetOrders(userId);
         }
     
         public static Order GetOrder(int orderId)
         {
-            return new Order();
+            return OrderService.GetOrder(orderId);
         }
 
         public static void UpdateOrder(
