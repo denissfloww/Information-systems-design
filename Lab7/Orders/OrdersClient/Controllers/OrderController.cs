@@ -18,7 +18,7 @@ namespace OrdersClient.Controllers
             Tuple<string, bool> sort = null,
             int page = 1)
         {
-            return OrderService.GetOrders(userId,filter);            
+            return OrderService.GetOrders(userId,filter);
         }
     
         public static Order GetOrder(int orderId)

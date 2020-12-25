@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework;
 using MetroFramework.Forms;
 using Orders.Domain.Models;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -23,7 +24,12 @@ namespace OrdersClient.Forms
         {
             InitializeComponent();
             UserId = userId;
-            Filter= new Dictionary<string, string>();
+            Filter = new Dictionary<string, string>();
+        }
+
+        private void OrdersForm_Load(object sender, EventArgs e)
+        {
+            OrderGridFill();
         }
 
         private void OrdersForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -37,16 +43,34 @@ namespace OrdersClient.Forms
             addForm.ShowDialog(this);                  
         }
 
-        private void btnOpenOrder_Click(object sender, EventArgs e)
+        private void OpenOrderForm()
         {
-            var order = new OrderForm();
-            order.ShowDialog();
-            OrdersForm_Load(null, null);
+            if (ordersGrid.SelectedRows.Count == 0)
+            {
+                MetroMessageBox.Show(this, "Не выбран заказ-наряд", "Первое предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                return;
+            }
+
+            int orderId;
+            if (int.TryParse(ordersGrid.SelectedRows[0].Cells[0].Value.ToString(), out orderId))
+            {
+                var orderForm = new OrderForm(orderId);
+                orderForm.ShowDialog();
+            }
+            else
+            {
+                MetroMessageBox.Show(this, "Совсем тук-тук", "Второе предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+            }
         }
 
-        private void OrdersForm_Load(object sender, EventArgs e)
+        private void btnOpenOrder_Click(object sender, EventArgs e)
         {
-            OrderGridFill();
+            OpenOrderForm();
+        }
+
+        private void ordersGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            OpenOrderForm();
         }
 
         public void OrderGridFill()
@@ -103,6 +127,17 @@ namespace OrdersClient.Forms
 
             excelApp.Visible = true;
             excelApp.UserControl = true;
+
+        }
+
+        private bool CheckOneRowSelected()
+        {
+            if (ordersGrid.SelectedRows.Count > 1)
+            {
+                MetroMessageBox.Show(this, "Выберите одну строку", "Ошибка выбор строки", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                return false;
+            }
+            return true;
         }
     }
 }
