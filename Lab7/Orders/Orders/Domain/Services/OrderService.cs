@@ -20,8 +20,7 @@ namespace Orders.Domain.Services
             int page = 1)
         {
             var orgId = UserService.GetUser(userId).OrganizationId;
-            var role = UserService.GetUser(userId).RoleId.ToString();
-
+            var seeOrganizationAll = UserService.SeeOrganizationAll(userId);
             #region Trash
 
             //GenericRepository<Order>.Get().Where(o=>filter.ContainsValue(o.CatchGoal)&&filter.ContainsValue(o.Id.ToString())&&);
@@ -40,7 +39,7 @@ namespace Orders.Domain.Services
             {
                 switch (row.Key)
                 {
-                    case "Пользователь" when role == "2" || role == "5" || role == "7":
+                    case "Пользователь" when seeOrganizationAll:
                         continue;
                     case "Пользователь":
                         orders = orders
@@ -99,9 +98,13 @@ namespace Orders.Domain.Services
             throw new NotImplementedException();
         }
 
-        public static void DeleteOrder(int userId, int orderId)
+        public static void DeleteOrder(int userId, List<int> ordersIds)
         {
-            throw new NotImplementedException();
+            foreach (var order in ordersIds.Select(GetOrder))
+            {
+                PlanService.UpdatePlan((int)order.PlanId);
+                GenericRepository<Order>.Remove(order);
+            }
         }
     }
 }

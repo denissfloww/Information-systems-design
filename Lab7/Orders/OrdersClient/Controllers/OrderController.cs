@@ -37,7 +37,7 @@ namespace OrdersClient.Controllers
 
         //TODO: Добавить Export методы, определиться с возвращаемым типом
 
-        public static Excel.Application ExportOrders(List<int> orderIds)
+        public static Excel.Worksheet ExportOrders(List<int> orderIds)
             => ExportOrderService.ExportOrders(OrderService.GetOrders(orderIds));
         
 

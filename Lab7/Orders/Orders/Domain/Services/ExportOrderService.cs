@@ -12,7 +12,7 @@ namespace Orders.Domain.Services
     {
         //TODO: Добавить Export методы, определиться с возвращаемым типом
 
-        public static Excel.Application ExportOrders(List<Order> orders)
+        public static Excel.Worksheet ExportOrders(List<Order> orders)
         {
             var columns = new List<string>()
             {
@@ -42,7 +42,7 @@ namespace Orders.Domain.Services
             }
 
 
-            return excelApp;
+            return workSheet;
         }
     }
 }

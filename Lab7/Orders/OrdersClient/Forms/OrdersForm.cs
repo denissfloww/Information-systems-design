@@ -81,10 +81,11 @@ namespace OrdersClient.Forms
             for (int i = 0; i < ordersGrid.Rows.Count; i++)
                 orderIds.Add(int.Parse(ordersGrid.Rows[i].Cells[0].Value.ToString()));
 
-            var excelApp = OrderController.ExportOrders(orderIds);
+            var excelApp = new Excel.Application();
+
             //Excel.Application excelApp = new Excel.Application();
             Excel.Workbook workBook;
-            Excel.Worksheet workSheet;
+            Excel.Worksheet workSheet = OrderController.ExportOrders(orderIds);
             workBook = excelApp.Workbooks.Add();
             workSheet = (Excel.Worksheet)workBook.Worksheets.get_Item(1);
 
