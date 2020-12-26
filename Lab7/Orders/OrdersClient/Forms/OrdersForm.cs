@@ -120,9 +120,12 @@ namespace OrdersClient.Forms
 
         private async void btnDelete_Click(object sender, EventArgs e)
         {
-            ordersGrid.Rows.Remove(ordersGrid.SelectedRows[0]);
-            await Task.Run(() => OrderController.DeleteOrder(UserId, (int)ordersGrid.SelectedRows[0].Cells[0].Value));            
-            await Task.Run(() => OrderGridFill());
+            if (CheckOneRowSelected())
+            {
+                ordersGrid.Rows.Remove(ordersGrid.SelectedRows[0]);
+                await Task.Run(() => OrderController.DeleteOrder(UserId, (int)ordersGrid.SelectedRows[0].Cells[0].Value));
+                await Task.Run(() => OrderGridFill());
+            }           
         }
 
         private void btnExportSelect_Click(object sender, EventArgs e)
