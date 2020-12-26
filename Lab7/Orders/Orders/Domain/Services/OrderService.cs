@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.Pkcs;
 using System.Text;
@@ -99,7 +100,20 @@ namespace Orders.Domain.Services
 
                 order.PlanId = planId;
                 if (catchGoal != null) order.CatchGoal = catchGoal;
-                // if (scan != null) order.Scan = scan;
+
+                FileStream fileScan = scan as FileStream;
+                if (fileScan != null)
+                {
+                    order.Scan = Path.Combine("scans", Path.GetFileName(fileScan.Name));
+                    var buffer = new byte[fileScan.Length];
+                    fileScan.Read(buffer, 0, buffer.Length);
+                    File.WriteAllBytes(order.Scan, buffer);
+                    fileScan.Close();
+                }
+                else
+                {
+                    order.Scan = null;
+                }
 
                 GenericRepository<Order>.Update(order);
             }
