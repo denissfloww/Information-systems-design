@@ -29,6 +29,13 @@ namespace OrdersClient.Forms
 
         private void OrdersForm_Load(object sender, EventArgs e)
         {
+            if (!UserController.CanEdit(UserId))
+            {
+                btnAdd.Enabled = false;
+                btnDelete.Enabled = false;
+                btnAdd.Visible = false;
+                btnDelete.Visible = false;
+            }
             OrderGridFill();
         }
 
@@ -100,10 +107,11 @@ namespace OrdersClient.Forms
             OrdersForm_Load(null,null);
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private async void btnDelete_Click(object sender, EventArgs e)
         {
-            OrderController.DeleteOrder(UserId, (int)ordersGrid.CurrentRow.Cells[0].Value);
-            OrderGridFill();
+            ordersGrid.Rows.Remove(ordersGrid.SelectedRows[0]);
+            await Task.Run(() => OrderController.DeleteOrder(UserId, (int)ordersGrid.SelectedRows[0].Cells[0].Value));            
+            await Task.Run(() => OrderGridFill());
         }
 
         private void btnExportSelect_Click(object sender, EventArgs e)
@@ -116,10 +124,7 @@ namespace OrdersClient.Forms
             var orderIds = new List<int>();
             for (int i = 0; i < ordersGrid.Rows.Count; i++)
                 orderIds.Add(int.Parse(ordersGrid.Rows[i].Cells[0].Value.ToString()));
-
             var excelApp = new Excel.Application();
-
-            //Excel.Application excelApp = new Excel.Application();
             Excel.Workbook workBook;
             Excel.Worksheet workSheet = OrderController.ExportOrders(orderIds);
             workBook = excelApp.Workbooks.Add();

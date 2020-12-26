@@ -12,6 +12,11 @@ namespace OrdersClient.Controllers
         public static int Auth(string username, string password)
         {
             return UserService.Auth(username, password);
-        }        
+        }
+
+        public static bool CanEdit(int userId)
+        {
+            return UserService.CanEdit(userId);
+        }
     }
 }
