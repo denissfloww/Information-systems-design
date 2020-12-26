@@ -37,7 +37,7 @@ namespace OrdersClient.Forms
                 btnDelete.Visible = false;
             }
             OrderGridFill();
-        }
+        } 
 
         private void OrdersForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -124,11 +124,8 @@ namespace OrdersClient.Forms
             var orderIds = new List<int>();
             for (int i = 0; i < ordersGrid.Rows.Count; i++)
                 orderIds.Add(int.Parse(ordersGrid.Rows[i].Cells[0].Value.ToString()));
-            var excelApp = new Excel.Application();
-            Excel.Workbook workBook;
-            Excel.Worksheet workSheet = OrderController.ExportOrders(orderIds);
-            workBook = excelApp.Workbooks.Add();
-            workSheet = (Excel.Worksheet)workBook.Worksheets.get_Item(1);
+
+            var excelApp = OrderController.ExportOrders(orderIds);
 
             excelApp.Visible = true;
             excelApp.UserControl = true;
