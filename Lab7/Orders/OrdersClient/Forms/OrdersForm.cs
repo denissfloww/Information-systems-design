@@ -18,6 +18,8 @@ namespace OrdersClient.Forms
     public partial class OrdersForm : MetroForm
     {
         public int UserId { get; set; }
+        delegate void InvokeDelegate();
+
 
         public Dictionary<string, string> Filter;
         public OrdersForm(int userId)
@@ -83,29 +85,37 @@ namespace OrdersClient.Forms
 
         public void OrderGridFill()
         {
-            ordersGrid.Rows.Clear();
-            var orders = OrderController.GetOrders(UserId, Filter);
-            foreach (var order in orders)
+            BeginInvoke(new MethodInvoker(delegate
             {
-                ordersGrid.Rows.Add(order.Id,
-                    order.Plans.Place,
-                    order.CatchGoal,
-                    order.DateCreate,
-                    order.Users.Organizations.Name);
-            }
+                ordersGrid.Rows.Clear();
+                var orders = OrderController.GetOrders(UserId, Filter);
+                foreach (var order in orders)
+                {
+                    ordersGrid.Rows.Add(order.Id,
+                        order.Plans.Place,
+                        order.CatchGoal,
+                        order.DateCreate,
+                        order.Users.Organizations.Name);
+                }
+            }));
         }
 
-        private void btnFilter_Click(object sender, EventArgs e)
+        private async void btnFilter_Click(object sender, EventArgs e)
         {
             var filter = new FilterForm(this);
             filter.ShowDialog();
-            OrdersForm_Load(null,null);
+            metroProgressSpinner1.Visible = true;
+            await Task.Run(() => OrderGridFill());
+            metroProgressSpinner1.Visible = false;
         }
 
-        private void btnDeleteAllFilters_Click(object sender, EventArgs e)
+        private async void btnDeleteAllFilters_Click(object sender, EventArgs e)
         {
+            metroProgressSpinner1.Visible = true;
             Filter.Clear();
-            OrdersForm_Load(null,null);
+            await Task.Run(() => OrderGridFill());
+            metroProgressSpinner1.Visible = false;
+
         }
 
         private async void btnDelete_Click(object sender, EventArgs e)
