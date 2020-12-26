@@ -75,17 +75,19 @@ namespace OrdersClient.Forms
 
         private void btnOpenOrder_Click(object sender, EventArgs e)
         {
+            if (!CheckOneRowSelected()) return;
             OpenOrderForm();
         }
 
         private void ordersGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (!CheckOneRowSelected()) return;
             OpenOrderForm();
         }
 
         public void OrderGridFill()
         {
-            BeginInvoke(new MethodInvoker(delegate
+            Invoke(new MethodInvoker(delegate
             {
                 ordersGrid.Rows.Clear();
                 var orders = OrderController.GetOrders(UserId, Filter);
