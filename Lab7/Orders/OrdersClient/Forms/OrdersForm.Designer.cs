@@ -177,6 +177,7 @@
             this.ordersGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ordersGrid.Location = new System.Drawing.Point(20, 85);
             this.ordersGrid.Name = "ordersGrid";
+            this.ordersGrid.ReadOnly = true;
             this.ordersGrid.RowHeadersVisible = false;
             this.ordersGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ordersGrid.Size = new System.Drawing.Size(899, 524);
