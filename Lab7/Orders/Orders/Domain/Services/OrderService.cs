@@ -82,7 +82,7 @@ namespace Orders.Domain.Services
 
         public static Order GetOrder(int orderId)
         {
-            return GenericRepository<Order>.GetById(orderId);
+            return GenericRepository<Order>.Get(order => order.Id == orderId).First();
         }
 
         public static void UpdateOrder(
