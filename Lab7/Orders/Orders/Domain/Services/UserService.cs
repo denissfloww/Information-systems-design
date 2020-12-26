@@ -12,8 +12,7 @@ namespace Orders.Domain.Services
 {
     public class UserService
     {
-        private static List<int> Roles = new List<int> {2, 5, 7};
-
+        private static List<int> Roles = new List<int> { 2, 5, 7 };
         public static int Auth(string username, string password)
         {
             var user = GenericRepository<User>.Get(_user => 

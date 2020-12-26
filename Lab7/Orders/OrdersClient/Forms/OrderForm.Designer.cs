@@ -57,6 +57,9 @@
             this.btnChangePlan = new MetroFramework.Controls.MetroButton();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.tbNum = new MetroFramework.Controls.MetroTextBox();
+            this.btnScan = new MetroFramework.Controls.MetroButton();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.tbScan = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // tbPerformerOrg
@@ -92,11 +95,15 @@
             // 
             // btnUpdateOrder
             // 
-            this.btnUpdateOrder.Location = new System.Drawing.Point(542, 488);
+            this.btnUpdateOrder.BackColor = System.Drawing.Color.Coral;
+            this.btnUpdateOrder.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnUpdateOrder.Location = new System.Drawing.Point(542, 485);
             this.btnUpdateOrder.Name = "btnUpdateOrder";
             this.btnUpdateOrder.Size = new System.Drawing.Size(200, 46);
             this.btnUpdateOrder.TabIndex = 3;
-            this.btnUpdateOrder.Text = "Внести изменения";
+            this.btnUpdateOrder.Text = "Сохранить внесённые изменения";
+            this.btnUpdateOrder.UseCustomBackColor = true;
+            this.btnUpdateOrder.UseCustomForeColor = true;
             this.btnUpdateOrder.UseSelectable = true;
             this.btnUpdateOrder.Click += new System.EventHandler(this.btnUpdateOrder_Click);
             // 
@@ -276,6 +283,7 @@
             // 
             // dtCatch
             // 
+            this.dtCatch.Enabled = false;
             this.dtCatch.Location = new System.Drawing.Point(136, 388);
             this.dtCatch.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtCatch.Name = "dtCatch";
@@ -444,12 +452,13 @@
             // 
             // btnExportOrder
             // 
-            this.btnExportOrder.Location = new System.Drawing.Point(136, 511);
+            this.btnExportOrder.Location = new System.Drawing.Point(542, 552);
             this.btnExportOrder.Name = "btnExportOrder";
             this.btnExportOrder.Size = new System.Drawing.Size(200, 23);
             this.btnExportOrder.TabIndex = 32;
             this.btnExportOrder.Text = "Экспортировать заказ-наряд";
             this.btnExportOrder.UseSelectable = true;
+            this.btnExportOrder.Click += new System.EventHandler(this.btnExportOrder_Click);
             // 
             // tbCatchPlace
             // 
@@ -499,6 +508,7 @@
             this.btnChangePlan.TabIndex = 2;
             this.btnChangePlan.Text = "Изменить место и дату отлова";
             this.btnChangePlan.UseSelectable = true;
+            this.btnChangePlan.Click += new System.EventHandler(this.btnChangePlan_Click);
             // 
             // metroLabel9
             // 
@@ -540,12 +550,63 @@
             this.tbNum.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbNum.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // btnScan
+            // 
+            this.btnScan.Location = new System.Drawing.Point(136, 552);
+            this.btnScan.Name = "btnScan";
+            this.btnScan.Size = new System.Drawing.Size(200, 23);
+            this.btnScan.TabIndex = 32;
+            this.btnScan.Text = "Загрузить скан-образ";
+            this.btnScan.UseSelectable = true;
+            this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
+            // 
+            // metroLabel14
+            // 
+            this.metroLabel14.AutoSize = true;
+            this.metroLabel14.Location = new System.Drawing.Point(33, 510);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(82, 19);
+            this.metroLabel14.TabIndex = 15;
+            this.metroLabel14.Text = "Скан-образ";
+            // 
+            // tbScan
+            // 
+            // 
+            // 
+            // 
+            this.tbScan.CustomButton.Image = null;
+            this.tbScan.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.tbScan.CustomButton.Name = "";
+            this.tbScan.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbScan.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tbScan.CustomButton.TabIndex = 1;
+            this.tbScan.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tbScan.CustomButton.UseSelectable = true;
+            this.tbScan.CustomButton.Visible = false;
+            this.tbScan.Lines = new string[0];
+            this.tbScan.Location = new System.Drawing.Point(136, 510);
+            this.tbScan.MaxLength = 32767;
+            this.tbScan.Name = "tbScan";
+            this.tbScan.PasswordChar = '\0';
+            this.tbScan.ReadOnly = true;
+            this.tbScan.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbScan.SelectedText = "";
+            this.tbScan.SelectionLength = 0;
+            this.tbScan.SelectionStart = 0;
+            this.tbScan.ShortcutsEnabled = true;
+            this.tbScan.Size = new System.Drawing.Size(200, 23);
+            this.tbScan.TabIndex = 7;
+            this.tbScan.UseSelectable = true;
+            this.tbScan.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tbScan.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 557);
+            this.ClientSize = new System.Drawing.Size(765, 598);
             this.Controls.Add(this.btnChangePlan);
+            this.Controls.Add(this.btnScan);
             this.Controls.Add(this.btnExportOrder);
             this.Controls.Add(this.metroLabel12);
             this.Controls.Add(this.tbPerformerOrgTel);
@@ -556,6 +617,7 @@
             this.Controls.Add(this.metroLabel10);
             this.Controls.Add(this.tbClintOrgAddress);
             this.Controls.Add(this.dtCatch);
+            this.Controls.Add(this.metroLabel14);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.tbClientOrg);
             this.Controls.Add(this.metroLabel6);
@@ -566,6 +628,7 @@
             this.Controls.Add(this.tbNumMK);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel8);
+            this.Controls.Add(this.tbScan);
             this.Controls.Add(this.tbCatchPlace);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.tbCatchGoal);
@@ -579,6 +642,7 @@
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Учетная карточка заказ-наряда по план-графику";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OrderForm_FormClosing);
             this.Load += new System.EventHandler(this.OrderForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -616,5 +680,8 @@
         private MetroFramework.Controls.MetroButton btnChangePlan;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroTextBox tbNum;
+        private MetroFramework.Controls.MetroButton btnScan;
+        private MetroFramework.Controls.MetroLabel metroLabel14;
+        private MetroFramework.Controls.MetroTextBox tbScan;
     }
 }

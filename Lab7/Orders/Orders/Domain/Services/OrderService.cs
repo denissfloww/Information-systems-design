@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.Pkcs;
 using System.Text;
@@ -85,12 +86,39 @@ namespace Orders.Domain.Services
         }
 
         public static void UpdateOrder(
-            int userId, 
-            int orderId, int planId,
-            string catchGoal = null, 
+            int userId,
+            int orderId, 
+            int planId,
+            string catchGoal = null,
             object scan = null)
         {
+            if (UserService.CanEdit(userId))
+            {
+                var order = GenericRepository<Order>.GetById(orderId);
+                PlanService.UpdatePlan((int)order.PlanId);
+                PlanService.UpdatePlan(planId, orderId);
 
+                order.PlanId = planId;
+                if (catchGoal != null) order.CatchGoal = catchGoal;
+
+                FileStream fileScan = scan as FileStream;
+                if (fileScan != null)
+                {
+                    if (!Directory.Exists("scans")) Directory.CreateDirectory("scans");
+
+                    order.Scan = Path.Combine("scans", Path.GetFileName(fileScan.Name));
+                    var buffer = new byte[fileScan.Length];
+                    fileScan.Read(buffer, 0, buffer.Length);
+                    File.WriteAllBytes(order.Scan, buffer);
+                    fileScan.Close();
+                }
+                else
+                {
+                    order.Scan = null;
+                }
+
+                GenericRepository<Order>.Update(order);
+            }
         }
 
         public static void CreateOrder(int userId, int planId, string cathcGoal)
@@ -102,7 +130,7 @@ namespace Orders.Domain.Services
                 DateCreate = DateTime.Now
             };
             var orderId = GenericRepository<Order>.Create(order);
-            PlanService.UpdatePlan(planId, orderId);                       
+            PlanService.UpdatePlan(planId, orderId);
         }
 
         public static void DeleteOrder(int userId, int orderId)
