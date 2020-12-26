@@ -122,8 +122,9 @@ namespace OrdersClient.Forms
         {
             if (CheckOneRowSelected())
             {
+                var id = (int)ordersGrid.SelectedRows[0].Cells[0].Value;
                 ordersGrid.Rows.Remove(ordersGrid.SelectedRows[0]);
-                await Task.Run(() => OrderController.DeleteOrder(UserId, (int)ordersGrid.SelectedRows[0].Cells[0].Value));
+                await Task.Run(() => OrderController.DeleteOrder(UserId, id));
                 await Task.Run(() => OrderGridFill());
             }           
         }
