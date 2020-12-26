@@ -98,7 +98,7 @@
             this.Controls.Add(this.cbField);
             this.Controls.Add(this.btnApply);
             this.Name = "FilterForm";
-            this.Text = "FilterForm";
+            this.Text = "Выбирете поле и значение фильтра";
             this.ResumeLayout(false);
 
         }

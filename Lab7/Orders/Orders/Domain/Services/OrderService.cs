@@ -68,7 +68,7 @@ namespace Orders.Domain.Services
                         break;
                     case "Исполнитель":
                         orders = orders
-                            .Where(o => o.Plans.Organizations.Name == row.Value || o.Plans.Organizations.Id.ToString() == row.Value)
+                            .Where(o => o.Users.Organizations.Name == row.Value || o.Users.OrganizationId.ToString() == row.Value)
                             .ToList();
                         break;
                 }
