@@ -104,6 +104,8 @@ namespace Orders.Domain.Services
                 FileStream fileScan = scan as FileStream;
                 if (fileScan != null)
                 {
+                    if (!Directory.Exists("scans")) Directory.CreateDirectory("scans");
+
                     order.Scan = Path.Combine("scans", Path.GetFileName(fileScan.Name));
                     var buffer = new byte[fileScan.Length];
                     fileScan.Read(buffer, 0, buffer.Length);

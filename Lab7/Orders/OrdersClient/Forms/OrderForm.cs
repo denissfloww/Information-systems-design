@@ -76,7 +76,8 @@ namespace OrdersClient.Forms
 
         private void btnExportOrder_Click(object sender, EventArgs e)
         {
-
+            var wordApp = OrderController.ExportOrder(order.Id);
+            wordApp.Visible = true;
         }
 
         private void btnScan_Click(object sender, EventArgs e)
@@ -93,7 +94,7 @@ namespace OrdersClient.Forms
             }
             else
             {
-                ((FileStream)scan).Close();
+                if (scan != null) ((FileStream)scan).Close();
                 scan = null;
                 tbScan.Text = "";
             }

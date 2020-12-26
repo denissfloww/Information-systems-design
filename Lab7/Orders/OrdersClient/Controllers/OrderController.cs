@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Orders.Domain.Services;
 using Excel = Microsoft.Office.Interop.Excel;
+using Word = Microsoft.Office.Interop.Word;
+
 namespace OrdersClient.Controllers
 {
     public class OrderController
@@ -40,6 +42,9 @@ namespace OrdersClient.Controllers
 
         public static Excel.Worksheet ExportOrders(List<int> orderIds)
             => ExportOrderService.ExportOrders(OrderService.GetOrders(orderIds));
+
+        public static Word.Application ExportOrder(int orderId) 
+            => ExportOrderService.ExportOrder(OrderService.GetOrder(orderId));
         
 
 

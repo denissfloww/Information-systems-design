@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Office.Interop.Word;
 using Orders.Domain.Models;
 using Excel = Microsoft.Office.Interop.Excel;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace Orders.Domain.Services
 {
@@ -43,6 +46,27 @@ namespace Orders.Domain.Services
 
 
             return workSheet;
+        }
+
+        public static Word.Application ExportOrder(Order order)
+        {
+            Word.Application wordApp = new Word.Application();
+            _Document oDoc = wordApp.Documents.Add(Path.Combine(Environment.CurrentDirectory, "template.dotx"));
+
+            oDoc.Bookmarks["Id"].Range.Text = order.Id.ToString();
+            var dd = $"\"{order.DateCreate.Value.ToString("dd")}\"";
+            oDoc.Bookmarks["DateCreate"].Range.Text = dd + order.DateCreate.Value.ToString(" MMMM yyyy г.");
+            oDoc.Bookmarks["City"].Range.Text = "г. Тюмень";
+            oDoc.Bookmarks["Date"].Range.Text = order.Plans.Date.ToShortDateString();
+            oDoc.Bookmarks["Place"].Range.Text = order.Plans.Place;
+            oDoc.Bookmarks["ClientOrg"].Range.Text = order.Plans.Organizations.Name;
+            oDoc.Bookmarks["ClientOrgAddress"].Range.Text = order.Plans.Organizations.Address;
+            oDoc.Bookmarks["ClientOrgTel"].Range.Text = order.Plans.Organizations.Number;
+            oDoc.Bookmarks["PerformerOrg"].Range.Text = order.Users.Organizations.Name;
+            oDoc.Bookmarks["PerformerOrgAddress"].Range.Text = order.Users.Organizations.Address;
+            oDoc.Bookmarks["PerformerOrgTel"].Range.Text = order.Users.Organizations.Number;
+
+            return wordApp;
         }
     }
 }
