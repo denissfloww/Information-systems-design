@@ -31,6 +31,7 @@
             this.tbUserName = new MetroFramework.Controls.MetroTextBox();
             this.btnAuth = new MetroFramework.Controls.MetroButton();
             this.tbPassword = new MetroFramework.Controls.MetroTextBox();
+            this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
             this.SuspendLayout();
             // 
             // tbUserName
@@ -114,11 +115,26 @@
             this.tbPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // metroProgressSpinner1
+            // 
+            this.metroProgressSpinner1.Location = new System.Drawing.Point(174, 23);
+            this.metroProgressSpinner1.Maximum = 100;
+            this.metroProgressSpinner1.Name = "metroProgressSpinner1";
+            this.metroProgressSpinner1.Size = new System.Drawing.Size(32, 32);
+            this.metroProgressSpinner1.Speed = 2F;
+            this.metroProgressSpinner1.Style = MetroFramework.MetroColorStyle.Green;
+            this.metroProgressSpinner1.TabIndex = 5;
+            this.metroProgressSpinner1.UseSelectable = true;
+            this.metroProgressSpinner1.UseStyleColors = true;
+            this.metroProgressSpinner1.Value = 25;
+            this.metroProgressSpinner1.Visible = false;
+            // 
             // AuthForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(281, 200);
+            this.Controls.Add(this.metroProgressSpinner1);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.btnAuth);
             this.Controls.Add(this.tbUserName);
@@ -135,6 +151,7 @@
         private MetroFramework.Controls.MetroTextBox tbUserName;
         private MetroFramework.Controls.MetroButton btnAuth;
         private MetroFramework.Controls.MetroTextBox tbPassword;
+        private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner1;
     }
 }
 

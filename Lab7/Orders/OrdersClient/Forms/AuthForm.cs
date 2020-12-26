@@ -32,9 +32,11 @@ namespace OrdersClient
             }
 
             UseWaitCursor = true;
+            metroProgressSpinner1.Visible = true;
             tbPassword.Enabled = tbUserName.Enabled = btnAuth.Enabled = false;
             var userId = await Task.Run(() => UserController.Auth(tbUserName.Text, tbPassword.Text));
             tbPassword.Enabled = tbUserName.Enabled = btnAuth.Enabled = true;
+            metroProgressSpinner1.Visible = false;
             UseWaitCursor = false;
 
             if (userId == 0)

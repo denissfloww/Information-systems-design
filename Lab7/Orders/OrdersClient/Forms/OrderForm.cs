@@ -30,7 +30,7 @@ namespace OrdersClient.Forms
             this.order = OrderController.GetOrder(orderId);
             this.planId = (int)order.PlanId;
 
-            btnChangePlan.Enabled = btnUpdateOrder.Enabled = UserController.CanEdit(userId);
+             btnScan.Enabled = btnChangePlan.Enabled = btnUpdateOrder.Enabled = UserController.CanEdit(userId);
         }
 
         private void OrderForm_Load(object sender, EventArgs e)
@@ -76,8 +76,10 @@ namespace OrdersClient.Forms
 
         private void btnExportOrder_Click(object sender, EventArgs e)
         {
+            metroProgressSpinner1.Visible = true;
             var wordApp = OrderController.ExportOrder(order.Id);
             wordApp.Visible = true;
+            metroProgressSpinner1.Visible = false;
         }
 
         private void btnScan_Click(object sender, EventArgs e)

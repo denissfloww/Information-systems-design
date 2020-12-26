@@ -60,6 +60,7 @@
             this.btnScan = new MetroFramework.Controls.MetroButton();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.tbScan = new MetroFramework.Controls.MetroTextBox();
+            this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
             this.SuspendLayout();
             // 
             // tbPerformerOrg
@@ -600,11 +601,26 @@
             this.tbScan.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbScan.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // metroProgressSpinner1
+            // 
+            this.metroProgressSpinner1.Location = new System.Drawing.Point(551, 26);
+            this.metroProgressSpinner1.Maximum = 100;
+            this.metroProgressSpinner1.Name = "metroProgressSpinner1";
+            this.metroProgressSpinner1.Size = new System.Drawing.Size(32, 32);
+            this.metroProgressSpinner1.Speed = 2F;
+            this.metroProgressSpinner1.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroProgressSpinner1.TabIndex = 102;
+            this.metroProgressSpinner1.UseSelectable = true;
+            this.metroProgressSpinner1.UseStyleColors = true;
+            this.metroProgressSpinner1.Value = 25;
+            this.metroProgressSpinner1.Visible = false;
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(765, 598);
+            this.Controls.Add(this.metroProgressSpinner1);
             this.Controls.Add(this.btnChangePlan);
             this.Controls.Add(this.btnScan);
             this.Controls.Add(this.btnExportOrder);
@@ -683,5 +699,6 @@
         private MetroFramework.Controls.MetroButton btnScan;
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroTextBox tbScan;
+        private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner1;
     }
 }

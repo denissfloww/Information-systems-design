@@ -120,13 +120,16 @@ namespace OrdersClient.Forms
  
         }
 
-        private void btnExportAll_Click(object sender, EventArgs e)
+        private async void btnExportAll_Click(object sender, EventArgs e)
         {
             var orderIds = new List<int>();
             for (int i = 0; i < ordersGrid.Rows.Count; i++)
                 orderIds.Add(int.Parse(ordersGrid.Rows[i].Cells[0].Value.ToString()));
 
-            var excelApp = OrderController.ExportOrders(orderIds);
+
+            metroProgressSpinner1.Visible = true;
+            var excelApp = await Task.Run(() => OrderController.ExportOrders(orderIds));
+            metroProgressSpinner1.Visible = false;
 
             excelApp.Visible = true;
             excelApp.UserControl = true;

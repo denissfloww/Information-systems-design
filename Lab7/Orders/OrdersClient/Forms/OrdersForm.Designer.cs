@@ -48,6 +48,7 @@
             this.dateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.performerOrg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ordersGrid)).BeginInit();
@@ -207,11 +208,26 @@
             this.performerOrg.HeaderText = "Исполнитель";
             this.performerOrg.Name = "performerOrg";
             // 
+            // metroProgressSpinner1
+            // 
+            this.metroProgressSpinner1.Location = new System.Drawing.Point(440, 25);
+            this.metroProgressSpinner1.Maximum = 100;
+            this.metroProgressSpinner1.Name = "metroProgressSpinner1";
+            this.metroProgressSpinner1.Size = new System.Drawing.Size(32, 32);
+            this.metroProgressSpinner1.Speed = 2F;
+            this.metroProgressSpinner1.Style = MetroFramework.MetroColorStyle.Green;
+            this.metroProgressSpinner1.TabIndex = 4;
+            this.metroProgressSpinner1.UseSelectable = true;
+            this.metroProgressSpinner1.UseStyleColors = true;
+            this.metroProgressSpinner1.Value = 25;
+            this.metroProgressSpinner1.Visible = false;
+            // 
             // OrdersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 629);
+            this.Controls.Add(this.metroProgressSpinner1);
             this.Controls.Add(this.ordersGrid);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "OrdersForm";
@@ -249,5 +265,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner1;
     }
 }
