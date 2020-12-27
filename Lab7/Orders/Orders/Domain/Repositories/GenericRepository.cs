@@ -51,13 +51,12 @@ namespace Orders.Domain.Repositories
 
         public static void Update(TEntity item)
         {
-            _dbSet.AddOrUpdate(item);
+            _dbSet.AddOrUpdate(item);            
             _context.SaveChanges();
         }
         public static void Remove(TEntity item)
         {
-            _dbSet.Attach(item);
-            _context.Entry(item).State = EntityState.Deleted;
+            _dbSet.Remove(item);            
             _context.SaveChanges();
         }       
     }
