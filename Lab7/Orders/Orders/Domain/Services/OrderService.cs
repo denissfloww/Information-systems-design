@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography.Pkcs;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Orders.Domain.Models;
 using Orders.Domain.Repositories;
@@ -135,9 +136,11 @@ namespace Orders.Domain.Services
 
         public static void DeleteOrder(int userId, int orderId)
         {
-            var order = OrderService.GetOrder(orderId);
-            PlanService.UpdatePlan((int)order.PlanId);
+            Thread.Sleep(1000);
+            var order = GenericRepository<Order>.GetById(orderId);
+            var planId = order.PlanId;
             GenericRepository<Order>.Remove(order);
+            PlanService.UpdatePlan((int)planId);
         }
     }
 }
