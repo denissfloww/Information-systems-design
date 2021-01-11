@@ -44,8 +44,8 @@
 												"$ref": "AAAAAAF1ob5MV1s7yzs="
 											},
 											"font": "Arial;13;0",
-											"left": 214.97900390625,
-											"top": 77,
+											"left": 174.97900390625,
+											"top": 61,
 											"width": 80.47900390625,
 											"height": 13,
 											"text": "OpenRegistry"
@@ -57,16 +57,16 @@
 												"$ref": "AAAAAAF1ob5MV1s7yzs="
 											},
 											"font": "Arial;13;1",
-											"left": 149,
-											"top": 77,
+											"left": 109,
+											"top": 61,
 											"width": 60.97900390625,
 											"height": 13,
 											"text": "interaction"
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 144,
-									"top": 72,
+									"left": 104,
+									"top": 56,
 									"width": 1377,
 									"height": 281,
 									"nameLabel": {
@@ -539,7 +539,7 @@
 											"height": 13,
 											"alpha": -3.6901423032314327,
 											"distance": 21.095023109728988,
-											"text": "1 : orders = GetOrders(userId, filter, sort, page)"
+											"text": "1 : orders = GetOrders(userId, filter, sort)"
 										},
 										{
 											"_type": "NodeLabelView",
@@ -1193,7 +1193,7 @@
 											"height": 13,
 											"alpha": -4.451786899840695,
 											"distance": 31.04834939252005,
-											"text": "GetOrders(userId, filter, sort, page)"
+											"text": "GetOrders(userId, filter, sort)"
 										},
 										{
 											"_type": "NodeLabelView",
@@ -1611,7 +1611,7 @@
 													"top": 159,
 													"width": 189.9853515625,
 													"height": 13,
-													"text": "orderRepo: GenericRepository"
+													"text": ":GenericRepository"
 												},
 												{
 													"_type": "LabelView",
@@ -1930,7 +1930,7 @@
 											"height": 13,
 											"alpha": 1.5707955575641275,
 											"distance": 13,
-											"text": "1.2 : orders = GetOrders(userId, filter, sort, page)"
+											"text": "1.2 : orders = GetOrders(userId, filter, sort)"
 										},
 										{
 											"_type": "NodeLabelView",
@@ -2131,7 +2131,7 @@
 													"top": 263,
 													"width": 184.21533203125,
 													"height": 13,
-													"text": "userRepo: GenericRepository"
+													"text": ":GenericRepository"
 												},
 												{
 													"_type": "LabelView",
@@ -2876,7 +2876,7 @@
 								"$ref": "AAAAAAF1ofy51lv/4AY="
 							},
 							"sequenceNumber": "1",
-							"arguments": "userId, filter, sort, page",
+							"arguments": "userId, filter, sort",
 							"assignmentTarget": "orders"
 						},
 						{
@@ -2895,7 +2895,7 @@
 							"connector": {
 								"$ref": "AAAAAAF1wbRsJTkOM64="
 							},
-							"arguments": "userId, filter, sort, page"
+							"arguments": "userId, filter, sort"
 						},
 						{
 							"_type": "UMLMessage",
@@ -2931,7 +2931,7 @@
 								"$ref": "AAAAAAF168hqbvdrOLM="
 							},
 							"sequenceNumber": "1.2",
-							"arguments": "userId, filter, sort, page",
+							"arguments": "userId, filter, sort",
 							"assignmentTarget": "orders"
 						},
 						{
@@ -3031,7 +3031,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF1ob5MVls59H4="
 							},
-							"name": "orderRepo",
+							"name": ":GenericRepository",
 							"represent": {
 								"$ref": "AAAAAAF168fzufYce/g="
 							},
@@ -3055,7 +3055,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF1ob5MVls59H4="
 							},
-							"name": "userRepo",
+							"name": ":GenericRepository",
 							"represent": {
 								"$ref": "AAAAAAF2BGyQ8DxHWdY="
 							},
@@ -3877,8 +3877,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF1ob5MVls4ddY="
 					},
-					"name": "Role8",
-					"type": "GenericRepository"
+					"name": "Role8"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -3933,8 +3932,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF1ob5MVls4ddY="
 					},
-					"name": "Role11",
-					"type": "GenericRepository"
+					"name": "Role11"
 				}
 			]
 		},
@@ -3979,9 +3977,9 @@
 												"$ref": "AAAAAAF16iZFyI3jOxg="
 											},
 											"font": "Arial;13;0",
-											"left": 182.97900390625,
+											"left": 178.58642578125,
 											"top": 77,
-											"width": 77.5654296875,
+											"width": 73.21728515625,
 											"height": 13,
 											"text": "FilterRegistry"
 										},
@@ -3994,7 +3992,7 @@
 											"font": "Arial;13;1",
 											"left": 117,
 											"top": 77,
-											"width": 60.97900390625,
+											"width": 56.58642578125,
 											"height": 13,
 											"text": "interaction"
 										}
@@ -7542,9 +7540,9 @@
 												"$ref": "AAAAAAF16k3f5qnZBd0="
 											},
 											"font": "Arial;13;0",
-											"left": 198.97900390625,
+											"left": 194.58642578125,
 											"top": 53,
-											"width": 70.34814453125,
+											"width": 64.552734375,
 											"height": 13,
 											"text": "sortRegistry"
 										},
@@ -7557,7 +7555,7 @@
 											"font": "Arial;13;1",
 											"left": 133,
 											"top": 53,
-											"width": 60.97900390625,
+											"width": 56.58642578125,
 											"height": 13,
 											"text": "interaction"
 										}
@@ -12865,7 +12863,7 @@
 												"$ref": "AAAAAAF16luRGbV9Yhs="
 											},
 											"font": "Arial;13;0",
-											"left": 206.97900390625,
+											"left": 190.97900390625,
 											"top": 77,
 											"width": 88.43896484375,
 											"height": 13,
@@ -12878,7 +12876,7 @@
 												"$ref": "AAAAAAF16luRGbV9Yhs="
 											},
 											"font": "Arial;13;1",
-											"left": 141,
+											"left": 125,
 											"top": 77,
 											"width": 60.97900390625,
 											"height": 13,
@@ -12886,10 +12884,10 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 136,
+									"left": 120,
 									"top": 72,
-									"width": 1057,
-									"height": 225,
+									"width": 1145,
+									"height": 329,
 									"nameLabel": {
 										"$ref": "AAAAAAF16luRGbV+u4o="
 									},
@@ -14932,7 +14930,7 @@
 													"top": 161,
 													"width": 189.9853515625,
 													"height": 13,
-													"text": "orderRepo: GenericRepository"
+													"text": ":GenericRepository"
 												},
 												{
 													"_type": "LabelView",
@@ -15645,7 +15643,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF16luRGbV7ngE="
 							},
-							"name": "orderRepo",
+							"name": ":GenericRepository",
 							"represent": {
 								"$ref": "AAAAAAF16+9CvSk4Rl4="
 							},
@@ -16139,8 +16137,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF1whoz+348MsY="
 					},
-					"name": "Role7",
-					"type": "GenericRepository"
+					"name": "Role7"
 				},
 				{
 					"_type": "UMLAttribute",
